@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --color-ink-navy: #10192C;
+  --color-brass: #B8894F;
+  --color-paper: #FAFAF9;
+  --color-charcoal: #1F2733;
+  --color-slate: #5C6470;
+
+  --font-fraunces: var(--font-fraunces), Georgia, serif;
+  --font-public-sans: var(--font-public-sans), system-ui, sans-serif;
+}
+
+/* === CSS Custom Properties === */
+:root {
+  --ink-navy: #10192C;
+  --brass: #B8894F;
+  --paper: #FAFAF9;
+  --charcoal: #1F2733;
+  --slate: #5C6470;
+
+  /* 8px base spacing scale */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-5: 2.5rem;   /* 40px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 5rem;    /* 80px */
+  --space-12: 6rem;    /* 96px */
+  --space-16: 8rem;    /* 128px */
+}
+
+/* === Base Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Focus States (WCAG AA) === */
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* === Pipeline Animation === */
+@keyframes pipelineIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pipeline-row {
+  opacity: 0;
+  animation: pipelineIn 0.35s ease-out forwards;
+}
+
+.pipeline-row:nth-child(1) { animation-delay: 0.3s; }
+.pipeline-row:nth-child(2) { animation-delay: 0.5s; }
+.pipeline-row:nth-child(3) { animation-delay: 0.7s; }
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .pipeline-row {
+    opacity: 1;
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* === Utility Classes === */
+.section-padding {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.container-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+  .container-main {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}
+
+.panel-border {
+  border: 1px solid rgba(31, 39, 51, 0.14);
+  border-radius: 4px;
+}
+
+.panel-border-brass {
+  border: 2px solid var(--brass);
+  border-radius: 4px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--ink-navy);
+  color: #FAFAF9;
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.18s ease, transform 0.12s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: var(--brass);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--ink-navy);
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border: 1px solid var(--ink-navy);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--ink-navy);
+  color: var(--paper);
+}
+
+.eyebrow {
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--slate);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.stat-number {
+  font-family: var(--font-public-sans), system-ui, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--brass);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* ROI Calculator output animation */
+@keyframes numberFlash {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.roi-output-anim {
+  animation: numberFlash 0.2s ease-out;
+}
