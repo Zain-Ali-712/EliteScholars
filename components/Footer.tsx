@@ -4,14 +4,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#070B14] text-paper pt-16 pb-12 font-public-sans border-t-2 border-brass/40">
+    <footer className="bg-[#121F38] text-paper pt-16 pb-12 font-public-sans border-t-2 border-brass/40">
       <div className="container-main">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           
           {/* Col 1: Brand & Monogram */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xs bg-brass text-ink-navy flex items-center justify-center font-fraunces font-bold text-sm shadow-xs">
+              <div className="w-9 h-9 rounded-xl bg-brass text-ink-navy flex items-center justify-center font-fraunces font-bold text-sm shadow-xs">
                 ES
               </div>
               <span className="font-fraunces font-bold text-xl text-white">
@@ -22,7 +22,7 @@ export default function Footer() {
               Done-for-you lead generation and verified seller appointment-setting engineered exclusively for business brokers and M&amp;A advisors.
             </p>
             <div className="pt-2">
-              <span className="inline-block px-2.5 py-1 bg-brass/10 border border-brass/30 text-brass text-[10px] font-bold uppercase tracking-wider rounded-xs">
+              <span className="inline-block px-3 py-1 bg-brass/10 border border-brass/30 text-brass text-[10px] font-bold uppercase tracking-wider rounded-full">
                 Institutional Quality Standard
               </span>
             </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 bg-white/5 border border-white/10 rounded-xs hover:border-brass hover:text-brass transition-colors text-white"
+                className="p-2.5 bg-white/5 border border-white/10 rounded-xl hover:border-brass hover:text-brass transition-colors text-white"
                 aria-label="LinkedIn Profile"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

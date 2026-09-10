@@ -37,10 +37,10 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#FAFAF9]/95 backdrop-blur-md border-b border-[rgba(31,39,51,0.12)] py-3 shadow-xs'
-          : 'bg-[#FAFAF9] border-b border-[rgba(31,39,51,0.08)] py-4'
+          ? 'bg-white/90 backdrop-blur-md border-b border-ink-navy/10 py-3 shadow-md'
+          : 'bg-[#FAFAF9] border-b border-ink-navy/5 py-4'
       }`}
     >
       <div className="container-main flex items-center justify-between">
@@ -49,7 +49,7 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
           href="#hero"
           className="flex items-center gap-2.5 group text-decoration-none focus-visible:outline-2"
         >
-          <div className="w-8 h-8 rounded-sm bg-ink-navy flex items-center justify-center text-paper font-fraunces font-bold text-sm tracking-widest border border-brass/40 transition-colors group-hover:bg-brass">
+          <div className="w-9 h-9 rounded-xl bg-ink-navy flex items-center justify-center text-paper font-fraunces font-bold text-sm tracking-widest border border-brass/40 transition-all duration-300 group-hover:bg-brass group-hover:scale-105 shadow-xs">
             ES
           </div>
           <span className="font-fraunces font-bold text-lg tracking-tight text-ink-navy">

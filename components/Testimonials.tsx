@@ -1,146 +1,142 @@
 'use client'
 
 import { useState } from 'react'
-import { TESTIMONIALS, Testimonial } from '@/data/config'
+import Image from 'next/image'
+import { TESTIMONIALS } from '@/data/config'
 
 export default function Testimonials() {
-  const [activeVideo, setActiveVideo] = useState<Testimonial | null>(null)
+  const [startIndex, setStartIndex] = useState(0)
+
+  const handleNext = () => {
+    setStartIndex((prev) => (prev + 1) % TESTIMONIALS.length)
+  }
+
+  const handlePrev = () => {
+    setStartIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)
+  }
+
+  // Display 3 testimonials in rotation
+  const visibleTestimonials = [
+    TESTIMONIALS[startIndex % TESTIMONIALS.length],
+    TESTIMONIALS[(startIndex + 1) % TESTIMONIALS.length],
+    TESTIMONIALS[(startIndex + 2) % TESTIMONIALS.length],
+  ]
+
+  const getAvatarImage = (name: string) => {
+    if (name.includes('Marcus')) return '/images/testimonial-marcus.jpg'
+    if (name.includes('Elena')) return '/images/testimonial-elena.jpg'
+    if (name.includes('David')) return '/images/testimonial-david.jpg'
+    return '/images/testimonial-marcus.jpg'
+  }
 
   return (
-    <section id="testimonials" className="section-padding bg-white border-b border-[rgba(31,39,51,0.08)]">
-      <div className="container-main">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-12 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-brass/10 border border-brass/30 rounded-full mb-4">
+    <section id="testimonials" className="py-10 md:py-14 bg-gradient-to-b from-[#F4F6F9]/70 via-white to-[#F4F6F9]/70 border-b border-[rgba(31,39,51,0.08)] relative overflow-hidden">
+      {/* Background glow effect */}
+      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-72 h-72 bg-brass/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-main relative z-10">
+        {/* Centered Section Header */}
+        <div className="max-w-2xl mx-auto text-center mb-10">
+          <div className="agency-pill mb-3 inline-flex">
             <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span className="font-public-sans text-xs font-semibold text-[#8B6332] uppercase tracking-wider">
-              Verified Advisor Testimonials
-            </span>
+            <span>Verified Advisor Testimonials</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-fraunces text-ink-navy mb-4">
-            Proven results for business brokers
+          <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-ink-navy leading-tight">
+            What Our <span className="text-brass">Clients</span> Say
           </h2>
-          <p className="text-base md:text-lg text-slate font-public-sans">
+          <p className="text-xs sm:text-sm text-slate font-public-sans leading-relaxed mt-2">
             Hear directly from M&amp;A advisors and firm principals who scaled listing inventory with Elite Scholars.
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {TESTIMONIALS.map((item) => (
+        {/* 3 Compact Testimonials Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto pt-4">
+          {visibleTestimonials.map((item, idx) => (
             <div
-              key={item.id}
-              className="panel-border bg-paper p-8 flex flex-col justify-between hover:border-brass hover:shadow-md transition-all duration-300 rounded-sm"
+              key={`${item.id}-${idx}`}
+              className="bg-white rounded-[24px] border border-slate-200/80 p-6 shadow-sm hover:shadow-md hover:border-brass/40 transition-all duration-300 relative flex flex-col justify-between group overflow-visible"
             >
-              <div>
-                {/* Star Rating & Stat Badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1 text-brass text-sm">
-                    ★★★★★
-                  </div>
-                  {item.stats && (
-                    <span className="text-[11px] font-bold text-brass px-2.5 py-1 bg-brass/10 border border-brass/30 rounded-xs">
-                      {item.stats}
-                    </span>
-                  )}
-                </div>
-
-                {/* Quote */}
-                <p className="text-charcoal/90 text-base font-public-sans italic mb-6 leading-relaxed">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-
-                {/* Video Facade Thumbnail */}
-                <div
-                  onClick={() => setActiveVideo(item)}
-                  className="mb-6 relative rounded-xs overflow-hidden bg-ink-navy h-36 flex items-center justify-center cursor-pointer group border border-[rgba(31,39,51,0.15)] shadow-inner"
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`Watch video testimonial from ${item.name}`}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      setActiveVideo(item)
-                    }
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink-navy via-ink-navy/40 to-transparent opacity-90" />
-                  
-                  {/* Play Button Icon */}
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-brass text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg border border-white/20">
-                    <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-
-                  <span className="absolute bottom-3 left-4 text-xs font-semibold text-white/90 z-10 font-public-sans flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-brass" />
-                    Watch Verified Case Study (1:45)
-                  </span>
-                </div>
+              {/* Top Right Circular Avatar */}
+              <div className="w-11 h-11 rounded-full border-2 border-brass bg-ink-navy text-brass flex items-center justify-center font-fraunces font-bold text-xs shadow-md absolute -top-4 right-6 overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+                <Image
+                  src={getAvatarImage(item.name)}
+                  alt={item.name}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
 
-              {/* Author Details */}
-              <div className="pt-4 border-t border-[rgba(31,39,51,0.08)] flex items-center justify-between">
-                <div>
-                  <h3 className="text-sm font-bold text-ink-navy font-public-sans">
-                    {item.name}
-                  </h3>
-                  <p className="text-xs text-slate font-public-sans">
-                    {item.title}, {item.firm} ({item.location})
-                  </p>
+              <div>
+                {/* 5-Star Rating Row */}
+                <div className="flex items-center gap-1 text-brass mb-3 pt-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
                 </div>
+
+                {/* Testimonial Quote */}
+                <p className="text-xs sm:text-sm text-charcoal/90 leading-relaxed font-public-sans italic mb-4">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
+              </div>
+
+              {/* Author Info & Stat Badge */}
+              <div className="pt-3 border-t border-slate-100">
+                <h3 className="text-xs sm:text-sm font-bold text-ink-navy font-public-sans">
+                  {item.name}
+                </h3>
+                <p className="text-[11px] text-slate font-public-sans">
+                  {item.title}, {item.firm}
+                </p>
+                {item.stats && (
+                  <span className="inline-block mt-2 text-[10px] font-bold text-brass bg-brass/10 border border-brass/30 px-2.5 py-0.5 rounded-full font-public-sans">
+                    {item.stats}
+                  </span>
+                )}
               </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Video Modal Facade */}
-      {activeVideo && (
-        <div
-          className="fixed inset-0 z-50 bg-ink-navy/85 backdrop-blur-xs flex items-center justify-center p-4"
-          onClick={() => setActiveVideo(null)}
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Video player for ${activeVideo.name}`}
-        >
-          <div
-            className="bg-white max-w-2xl w-full panel-border p-6 relative shadow-2xl animate-pipeline-in rounded-sm"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-[rgba(31,39,51,0.1)]">
-              <div>
-                <h3 className="text-base font-bold text-ink-navy font-public-sans">
-                  {activeVideo.name} &mdash; {activeVideo.firm}
-                </h3>
-                <p className="text-xs text-slate">{activeVideo.location}</p>
-              </div>
-              <button
-                onClick={() => setActiveVideo(null)}
-                className="text-slate hover:text-ink-navy font-bold text-xl px-2 focus-visible:outline-2"
-                aria-label="Close video"
-              >
-                ✕
-              </button>
+        {/* Navigation Arrow Controls & Rating Metric Badge (Matching Reference Image) */}
+        <div className="mt-8 flex flex-col items-center gap-4">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handlePrev}
+              className="w-9 h-9 rounded-full bg-slate-100 text-ink-navy flex items-center justify-center hover:bg-ink-navy hover:text-white transition-colors shadow-xs"
+              aria-label="Previous Testimonials"
+            >
+              <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <button
+              onClick={handleNext}
+              className="w-9 h-9 rounded-full bg-ink-navy text-white flex items-center justify-center hover:bg-brass transition-colors shadow-xs"
+              aria-label="Next Testimonials"
+            >
+              <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Rating Summary Box (Matching 4.9/5 & 500+ Box in Screenshot) */}
+          <div className="bg-white rounded-[20px] border border-slate-200/80 p-3.5 px-6 shadow-xs flex items-center gap-6 text-center divide-x divide-slate-100">
+            <div className="pr-3">
+              <p className="text-lg sm:text-xl font-extrabold text-ink-navy font-public-sans leading-none">4.9/5</p>
+              <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Average Rating</p>
             </div>
-
-            {/* Video Player Placeholder / Frame */}
-            <div className="aspect-video bg-ink-navy rounded-xs flex flex-col items-center justify-center text-center p-6 border border-brass/30">
-              <div className="w-14 h-14 rounded-full bg-brass/20 text-brass flex items-center justify-center mb-3">
-                <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="text-sm font-bold text-white font-public-sans mb-1">
-                Client Video Testimonial Player
-              </p>
-              <p className="text-xs text-paper/60 font-public-sans max-w-md">
-                Lazy-loaded facade video. In production, this embeds your verified Vimeo/YouTube case study for {activeVideo.name}.
-              </p>
+            <div className="pl-6">
+              <p className="text-lg sm:text-xl font-extrabold text-brass font-public-sans leading-none">100+</p>
+              <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Verified Reviews</p>
             </div>
           </div>
         </div>
-      )}
+
+      </div>
     </section>
   )
 }

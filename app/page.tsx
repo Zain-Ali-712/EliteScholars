@@ -40,7 +40,7 @@ export default function Home() {
         <Problem />
 
         {/* 5. What makes Elite Scholars different */}
-        <Differentiators />
+        <Differentiators onOpenBooking={handleOpenBooking} />
 
         {/* 6. The guarantee */}
         <Guarantee />
@@ -64,7 +64,7 @@ export default function Home() {
         <ImpactBanner />
 
         {/* 13. FAQ */}
-        <FaqAccordion />
+        <FaqAccordion onOpenBooking={handleOpenBooking} />
 
         {/* 14. Final CTA banner */}
         <FinalCta onOpenBooking={handleOpenBooking} />

@@ -10,7 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'ink-navy': '#10192C',
+        'ink-navy': '#1A2B4C',
+        'navy-light': '#243A66',
+        'navy-dark': '#121F38',
         'brass': '#B8894F',
         'paper': '#FAFAF9',
         'charcoal': '#1F2733',
