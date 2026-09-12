@@ -2,7 +2,7 @@ import { HERO_STATS } from '@/data/config'
 import AnimatedCounter from '@/components/AnimatedCounter'
 
 export default function TrustBar() {
-  const statBadges = ['Nationwide Network', 'Rapid Activation SLA', '100% Written SLA', 'High Payback Return']
+  const statBadges = ['Nationwide', 'Fast Start', 'All Qualified', 'Strong Returns']
 
   return (
     <section id="trust" className="py-8 sm:py-10 bg-white border-b border-[rgba(31,39,51,0.08)]">

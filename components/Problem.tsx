@@ -15,7 +15,7 @@ export default function Problem() {
           <div className="lg:col-span-5 relative min-h-[420px] lg:min-h-full rounded-[28px] overflow-hidden border border-slate-200/80 shadow-lg group">
             <Image
               src="/images/problem-analytics.jpg"
-              alt="M&A Advisory Diligence Strategy Session"
+              alt="M&A Advisory Strategy Session"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -42,8 +42,8 @@ export default function Problem() {
                 </svg>
               </div>
               <div>
-                <p className="text-xs font-bold text-brass uppercase tracking-wider font-public-sans leading-none">100% Diligence</p>
-                <p className="text-[10px] text-white/90 font-medium font-public-sans mt-0.5">Pre-screened seller authority</p>
+                <p className="text-xs font-bold text-brass uppercase tracking-wider font-public-sans leading-none">100% Checked</p>
+                <p className="text-[10px] text-white/90 font-medium font-public-sans mt-0.5">Pre-screened sellers</p>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Problem() {
               {/* Eyebrow */}
               <div className="agency-pill mb-3">
                 <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-                <span>Industry Bottleneck Analysis</span>
+                <span>The Problem</span>
               </div>
 
               {/* Heading */}
@@ -68,7 +68,7 @@ export default function Problem() {
                   Most business brokers lose up to 70% of their week chasing unvetted contact sheets, navigating gatekeepers, and holding initial discovery calls with unmotivated owners who have no real intention to exit.
                 </p>
                 <p>
-                  This isn&apos;t an effort problem. It is a research and targeting problem. When prospect verification is handled with institutional rigor before outreach begins, your calendar fills exclusively with qualified decision-makers ready for immediate valuation conversations.
+                  This isn&apos;t an effort problem. It is a research and targeting problem. When every prospect is properly checked before outreach begins, your calendar fills exclusively with qualified decision-makers ready for immediate valuation conversations.
                 </p>
               </div>
             </div>
@@ -80,9 +80,6 @@ export default function Problem() {
                   <span className="w-2 h-2 rounded-full bg-brass" />
                   The Pipeline Reality Gap
                 </h3>
-                <span className="text-[10px] font-bold text-slate-500 bg-slate-100 border border-slate-200 px-2.5 py-0.5 rounded-full uppercase tracking-wider font-public-sans">
-                  Direct Comparison
-                </span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -90,10 +87,7 @@ export default function Problem() {
                 <div className="p-4 bg-white border border-slate-200/90 rounded-xl shadow-xs hover:shadow-sm transition-shadow">
                   <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                     <span className="text-[11px] font-bold text-slate-700 font-public-sans uppercase tracking-wider">
-                      Generic Lead Services
-                    </span>
-                    <span className="text-[9px] font-bold text-red-600 bg-red-50 border border-red-200 px-2 py-0.5 rounded-full font-public-sans">
-                      High Churn
+                      Other Lead Services
                     </span>
                   </div>
                   <ul className="text-[11px] text-slate-600 space-y-2 font-public-sans">
@@ -103,7 +97,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
-                      <span>Unverified numbers &amp; dead emails</span>
+                      <span>Old contact lists that don&apos;t answer</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-4 h-4 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
@@ -111,7 +105,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
-                      <span>Zero visibility into history</span>
+                      <span>No idea who you&apos;re actually talking to</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-4 h-4 rounded-full bg-red-50 text-red-500 flex items-center justify-center shrink-0">
@@ -119,7 +113,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </div>
-                      <span>Calls with non-owners</span>
+                      <span>Calls with people who can&apos;t say yes</span>
                     </li>
                   </ul>
                 </div>
@@ -128,10 +122,7 @@ export default function Problem() {
                 <div className="p-4 bg-white border-2 border-brass/50 rounded-xl shadow-xs hover:shadow-sm transition-shadow relative">
                   <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                     <span className="text-[11px] font-bold text-ink-navy font-public-sans uppercase tracking-wider">
-                      Elite Scholars Diligence Engine
-                    </span>
-                    <span className="text-[9px] font-bold text-ink-navy bg-brass/20 border border-brass/40 px-2 py-0.5 rounded-full font-public-sans">
-                      Written Guarantee
+                      Elite Scholars
                     </span>
                   </div>
                   <ul className="text-[11px] text-ink-navy space-y-2 font-public-sans font-medium">
@@ -141,7 +132,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span>Pre-qualified SDE &amp; revenue</span>
+                      <span>Leads matched to your exact criteria</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-4 h-4 rounded-full bg-brass/15 text-brass-dark flex items-center justify-center shrink-0">
@@ -149,7 +140,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span>100% recorded call transcripts</span>
+                      <span>Meetings booked with the actual decision-maker</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-4 h-4 rounded-full bg-brass/15 text-brass-dark flex items-center justify-center shrink-0">
@@ -157,7 +148,7 @@ export default function Problem() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span>Direct decision-maker bookings</span>
+                      <span>Clear tracking so you always know what&apos;s happening</span>
                     </li>
                   </ul>
                 </div>
@@ -169,7 +160,7 @@ export default function Problem() {
               <div className="w-8 h-8 relative rounded-lg overflow-hidden shrink-0 border border-brass/40">
                 <Image
                   src="/images/problem-diligence.jpg"
-                  alt="Financial Diligence Documents"
+                  alt="Financial Documents"
                   fill
                   className="object-cover"
                 />

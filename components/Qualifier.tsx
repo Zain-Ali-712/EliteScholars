@@ -37,13 +37,13 @@ export default function Qualifier() {
         <div className="max-w-2xl mb-10 text-left">
           <div className="agency-pill mb-3">
             <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span>Broker Eligibility Filter</span>
+            <span>Who We Work With</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-fraunces text-ink-navy mb-2.5">
             Is Elite Scholars <span className="text-brass">right</span> for your brokerage?
           </h2>
           <p className="text-sm md:text-base text-slate font-public-sans">
-            We partner exclusively with serious brokers built to scale listing volume. Review our standard criteria below.
+            We work best with brokers who are serious about growing their deal flow. Here&apos;s who we&apos;re built for.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export default function Qualifier() {
                 </div>
                 <div>
                   <p className="text-[10px] sm:text-xs font-bold text-brass uppercase tracking-wider font-public-sans mb-1">
-                    Honest Disqualification Standard
+                    Not the right fit?
                   </p>
                   <p className="text-xs sm:text-sm font-semibold text-white font-public-sans leading-snug">
                     &ldquo;{DISQUALIFIER_STATEMENT}&rdquo;
@@ -149,8 +149,8 @@ export default function Qualifier() {
                 </svg>
               </div>
               <div>
-                <p className="text-[10px] sm:text-xs font-bold text-brass uppercase tracking-wider font-public-sans">Strict Vetting Standard</p>
-                <p className="text-xs text-white/90 font-medium font-public-sans">100% Pre-Qualified Seller Appointments</p>
+                <p className="text-[10px] sm:text-xs font-bold text-brass uppercase tracking-wider font-public-sans">Our Standard</p>
+                <p className="text-xs text-white/90 font-medium font-public-sans">Every appointment is checked</p>
               </div>
             </div>
           </div>

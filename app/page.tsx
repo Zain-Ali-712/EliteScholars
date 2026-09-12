@@ -4,11 +4,10 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import TrustBar from '@/components/TrustBar'
+import HowItWorks from '@/components/HowItWorks'
 import Problem from '@/components/Problem'
 import Differentiators from '@/components/Differentiators'
-import Guarantee from '@/components/Guarantee'
 import Qualifier from '@/components/Qualifier'
-import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
 import RoiCalculator from '@/components/RoiCalculator'
 import Testimonials from '@/components/Testimonials'
@@ -33,44 +32,41 @@ export default function Home() {
         {/* 2. Hero */}
         <Hero onOpenBooking={handleOpenBooking} />
 
-        {/* 3. Trust bar / stat strip */}
+        {/* 3. Trust bar & stats strip */}
         <TrustBar />
 
-        {/* 4. The problem */}
-        <Problem />
-
-        {/* 5. What makes Elite Scholars different */}
-        <Differentiators onOpenBooking={handleOpenBooking} />
-
-        {/* 6. The guarantee */}
-        <Guarantee />
-
-        {/* 7. Is this right for you */}
-        <Qualifier />
-
-        {/* 8. How it works */}
+        {/* 4. How we build your pipeline (moved up) */}
         <HowItWorks />
 
-        {/* 9. Pricing */}
+        {/* 5. The problem */}
+        <Problem />
+
+        {/* 6. What makes Elite Scholars different */}
+        <Differentiators onOpenBooking={handleOpenBooking} />
+
+        {/* 7. Who we work with */}
+        <Qualifier />
+
+        {/* 8. Pricing */}
         <Pricing onOpenBooking={handleOpenBooking} />
 
-        {/* 10. Interactive ROI calculator */}
+        {/* 9. Interactive ROI calculator */}
         <RoiCalculator />
 
-        {/* 11. Testimonials */}
+        {/* 10. Testimonials */}
         <Testimonials />
 
-        {/* 12. Impact stats banner */}
+        {/* 11. Impact stats banner */}
         <ImpactBanner />
 
-        {/* 13. FAQ */}
+        {/* 12. FAQ */}
         <FaqAccordion onOpenBooking={handleOpenBooking} />
 
-        {/* 14. Final CTA banner */}
+        {/* 13. Final CTA banner */}
         <FinalCta onOpenBooking={handleOpenBooking} />
       </main>
 
-      {/* 15. Footer */}
+      {/* 14. Footer */}
       <Footer />
 
       {/* Interactive Booking Strategy Call Modal */}

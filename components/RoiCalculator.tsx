@@ -51,7 +51,7 @@ export default function RoiCalculator() {
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brass/10 border border-brass/25 text-brass text-[10px] sm:text-xs font-bold tracking-widest uppercase font-public-sans mb-2.5">
             <span className="w-1.5 h-1.5 rounded-full bg-brass" />
-            Interactive Return Model
+            ROI Calculator
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-fraunces text-ink-navy mb-2.5">
             Calculate your <span className="text-brass">pipeline</span> ROI
@@ -197,23 +197,21 @@ export default function RoiCalculator() {
             </div>
 
             {/* Output Visual Box (5 Cols) */}
-            <div className="lg:col-span-5 bg-ink-navy text-paper p-5 sm:p-6 rounded-2xl border border-brass/30 shadow-xl relative overflow-hidden flex flex-col justify-between">
+            <div className="lg:col-span-5 bg-white border-2 border-slate-200 text-ink-navy p-5 sm:p-6 rounded-2xl shadow-lg relative overflow-hidden flex flex-col justify-between">
               
-              <div aria-hidden="true" className="absolute -right-16 -top-16 w-48 h-48 bg-brass/15 rounded-full blur-2xl pointer-events-none" />
-
               <div className="relative z-10 space-y-4">
                 
                 {/* Panel Header */}
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="eyebrow uppercase text-brass text-[10px] font-bold tracking-widest font-public-sans">
+                    <span className="eyebrow uppercase text-brass-dark text-[10px] font-bold tracking-widest font-public-sans">
                       Projected Output
                     </span>
-                    <h3 className="text-lg sm:text-xl font-bold font-fraunces text-white">
+                    <h3 className="text-lg sm:text-xl font-bold font-fraunces text-ink-navy">
                       Annual Financial Impact
                     </h3>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-brass/10 border border-brass/30 text-brass flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-ink-navy text-brass flex items-center justify-center">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
@@ -221,17 +219,17 @@ export default function RoiCalculator() {
                 </div>
 
                 {/* Visual Bar Comparison Graphic */}
-                <div className="p-3 bg-[#0c1938] rounded-xl border border-white/10 relative z-10">
-                  <p className="text-[10px] font-bold text-brass uppercase tracking-wider font-public-sans mb-2">
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl relative z-10">
+                  <p className="text-[10px] font-bold text-ink-navy uppercase tracking-wider font-public-sans mb-2">
                     Investment vs Revenue Breakdown
                   </p>
-                  <div className="flex items-end justify-between gap-3 h-20 pt-1 px-1 border-b border-white/10">
+                  <div className="flex items-end justify-between gap-3 h-20 pt-1 px-1 border-b border-slate-200">
                     
                     {/* Spend Bar */}
                     <div className="flex-1 flex flex-col items-center gap-1 h-full justify-end">
-                      <span className="text-[9px] font-bold text-slate-300">{formatCurrency(annualInvestment)}</span>
+                      <span className="text-[9px] font-bold text-slate">{formatCurrency(annualInvestment)}</span>
                       <div
-                        className="w-full bg-slate-400/50 rounded-t-xs transition-all duration-300"
+                        className="w-full bg-slate-300 rounded-t-xs transition-all duration-300"
                         style={{ height: `${investmentBarHeight}%` }}
                       />
                       <span className="text-[8px] font-bold text-slate-400 uppercase">Spend</span>
@@ -261,17 +259,17 @@ export default function RoiCalculator() {
                 </div>
 
                 {/* Metric Summary Rows */}
-                <div className="space-y-2 pt-1 border-t border-white/10">
+                <div className="space-y-2 pt-1 border-t border-slate-200">
                   <div className="flex justify-between items-baseline text-xs font-public-sans">
-                    <span className="text-paper/70">Deals Closed / Year</span>
-                    <span className="font-bold text-paper">
+                    <span className="text-slate">Deals Closed / Year</span>
+                    <span className="font-bold text-ink-navy">
                       {annualDeals.toFixed(1)} deals
                     </span>
                   </div>
 
-                  <div className="pt-2 border-t border-white/10">
-                    <p className="text-[11px] text-paper/70 font-public-sans mb-0.5">Net Projected Profit</p>
-                    <p className="text-2xl sm:text-3xl font-extrabold font-public-sans text-white tracking-tight">
+                  <div className="pt-2 border-t border-slate-200">
+                    <p className="text-[11px] text-slate font-public-sans mb-0.5">Net Projected Profit</p>
+                    <p className="text-2xl sm:text-3xl font-extrabold font-public-sans text-ink-navy tracking-tight">
                       {formatCurrency(netProfit)}
                     </p>
                   </div>
@@ -280,16 +278,16 @@ export default function RoiCalculator() {
               </div>
 
               {/* ROI Multiple Pill Badge */}
-              <div className="mt-4 p-3 bg-white/5 border border-brass/40 rounded-xl text-center relative z-10">
+              <div className="mt-4 p-3 bg-brass/5 border border-brass/30 rounded-xl text-center relative z-10">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-bold text-brass font-public-sans uppercase tracking-wider">
                     Return Multiple
                   </span>
-                  <span className="text-base sm:text-lg font-extrabold text-white font-public-sans bg-brass/20 px-2.5 py-0.5 rounded-full border border-brass/40">
+                  <span className="text-base sm:text-lg font-extrabold text-ink-navy font-public-sans bg-brass/15 px-2.5 py-0.5 rounded-full border border-brass/40">
                     {roiMultiple > 0 ? `${roiMultiple.toFixed(1)}x ROI` : '0.0x'}
                   </span>
                 </div>
-                <p className="text-[10px] text-paper/60 font-public-sans mt-1 text-left">
+                <p className="text-[10px] text-slate font-public-sans mt-1 text-left">
                   For every $1 invested, projected return is ${roiMultiple.toFixed(2)}
                 </p>
               </div>

@@ -88,7 +88,7 @@ export default function FaqAccordion({ onOpenBooking }: FaqAccordionProps) {
                 <span className="text-brass">Answered</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate font-public-sans leading-relaxed mb-4 mt-2">
-                Our expert research team provides institutional-grade seller diligence and verified appointments you can always trust.
+                Got questions? We've got clear answers about how Elite Scholars works.
               </p>
               <button
                 onClick={onOpenBooking}
@@ -104,14 +104,14 @@ export default function FaqAccordion({ onOpenBooking }: FaqAccordionProps) {
                 <div className="w-20 h-20 relative rounded-xl overflow-hidden shrink-0 border border-brass/30 shadow-xs">
                   <Image
                     src="/images/faq-dashboard.jpg"
-                    alt="Seller Diligence Dashboard"
+                    alt="Seller Dashboard"
                     fill
                     className="object-cover object-top"
                   />
                 </div>
                 <div>
                   <span className="text-[9px] font-bold text-brass bg-brass/10 border border-brass/30 px-2 py-0.5 rounded-full font-public-sans uppercase">
-                    Verified SLA Protocol
+                    Quality Standard
                   </span>
                   <h4 className="text-xs sm:text-sm font-bold text-ink-navy font-public-sans mt-1 leading-snug">
                     100% Pre-Screened Revenue &amp; Seller Authority

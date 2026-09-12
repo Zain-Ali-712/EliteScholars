@@ -15,13 +15,13 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
         <div className="max-w-2xl mb-10 text-left">
           <div className="agency-pill mb-3">
             <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span>Transparent Retainer &amp; System Investment</span>
+            <span>Pricing</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-fraunces text-ink-navy mb-2.5">
             Simple, <span className="text-brass">transparent</span> pricing
           </h2>
           <p className="text-sm md:text-base text-slate font-public-sans">
-            Every plan includes our written lead quality guarantee, verified call recordings, and live dashboard tracking.
+            Every plan includes real-time lead tracking and dedicated outreach support.
           </p>
         </div>
 
@@ -34,14 +34,14 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                 key={idx}
                 className={`flex flex-col justify-between relative transition-all duration-300 rounded-2xl p-6 sm:p-7 ${
                   isRec
-                    ? 'bg-ink-navy text-white border-2 border-brass/70 shadow-xl ring-1 ring-brass/30'
+                    ? 'bg-brass/5 border-2 border-brass/40 shadow-xl ring-1 ring-brass/30'
                     : 'bg-white text-ink-navy border border-slate-200/80 shadow-sm hover:shadow-md hover:border-slate-300'
                 }`}
               >
                 {/* Popular Badge */}
                 {isRec && (
-                  <div className="absolute -top-3.5 left-6 inline-flex items-center gap-1.5 px-3 py-0.5 bg-brass text-ink-navy text-[10px] font-extrabold font-public-sans uppercase tracking-wider rounded-full shadow-md">
-                    <span className="w-1.5 h-1.5 rounded-full bg-ink-navy" />
+                  <div className="absolute -top-3.5 left-6 inline-flex items-center gap-1.5 px-3 py-0.5 bg-ink-navy text-white text-[10px] font-extrabold font-public-sans uppercase tracking-wider rounded-full shadow-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white" />
                     Most Popular Broker Choice
                   </div>
                 )}
@@ -49,10 +49,10 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                 <div>
                   {/* Card Title & Description */}
                   <div className="mb-5 pb-5 border-b border-current/10">
-                    <h3 className={`text-xl font-bold font-fraunces mb-1 ${isRec ? 'text-white' : 'text-ink-navy'}`}>
+                    <h3 className={`text-xl font-bold font-fraunces mb-1 ${isRec ? 'text-ink-navy' : 'text-ink-navy'}`}>
                       {plan.name}
                     </h3>
-                    <p className={`text-xs leading-relaxed font-public-sans min-h-[36px] ${isRec ? 'text-paper/75' : 'text-slate'}`}>
+                    <p className={`text-xs leading-relaxed font-public-sans min-h-[36px] ${isRec ? 'text-slate' : 'text-slate'}`}>
                       {plan.description}
                     </p>
 
@@ -62,7 +62,7 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                         {plan.price}
                       </span>
                       {plan.period && (
-                        <span className={`text-xs font-semibold font-public-sans ${isRec ? 'text-paper/70' : 'text-slate'}`}>
+                        <span className={`text-xs font-semibold font-public-sans ${isRec ? 'text-slate' : 'text-slate'}`}>
                           {plan.period}
                         </span>
                       )}
@@ -94,7 +94,7 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className={`leading-snug ${isRec ? 'text-paper/90' : 'text-charcoal'}`}>{feat}</span>
+                        <span className={`leading-snug ${isRec ? 'text-charcoal' : 'text-charcoal'}`}>{feat}</span>
                       </li>
                     ))}
                   </ul>

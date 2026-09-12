@@ -3,9 +3,9 @@ import { PROCESS_STEPS } from '@/data/config'
 
 export default function HowItWorks() {
   const stepTags = [
-    'Strategy & Alignment',
-    'Active Outreach',
-    'Closed Transactions',
+    'Step 1',
+    'Step 2',
+    'Step 3',
   ]
 
   const stepIcons = [
@@ -34,13 +34,13 @@ export default function HowItWorks() {
         <div className="max-w-2xl mb-10 text-left">
           <div className="agency-pill mb-3">
             <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span>Operational Roadmap</span>
+            <span>Our Process</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-fraunces text-ink-navy mb-2.5">
             How we <span className="text-brass">build</span> your pipeline
           </h2>
           <p className="text-sm md:text-base text-slate font-public-sans">
-            A 3-step done-for-you execution framework engineered to deliver verified seller appointments into your calendar.
+            Here&apos;s how we get qualified sellers onto your calendar, step by step.
           </p>
         </div>
 
@@ -88,13 +88,7 @@ export default function HowItWorks() {
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-public-sans relative z-10">
                   <span className="font-bold text-ink-navy flex items-center gap-1.5 text-[11px]">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    Phase 0{step.step} SLA
-                  </span>
-                  <span className="text-brass font-bold text-[10px] bg-brass/10 border border-brass/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Written Approval
+                    Step 0{step.step}
                   </span>
                 </div>
               </div>

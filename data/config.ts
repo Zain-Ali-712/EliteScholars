@@ -98,10 +98,10 @@ export const TRUST_LOGOS = [
 ]
 
 export const HERO_STATS: StatItem[] = [
-  { value: '100+', label: 'Brokers & firms served' },
+  { value: '60+', label: 'Brokers & firms served' },
   { value: '48 hrs', label: 'Avg. time to first appointment' },
   { value: '100%', label: 'Appointments pre-qualified' },
-  { value: '$40K+', label: 'Avg. broker commission per deal' },
+  { value: '$50K+', label: 'Avg. broker commission per deal' },
 ]
 
 export const PIPELINE_MOCK: PipelineItem[] = [
@@ -130,93 +130,91 @@ export const PIPELINE_MOCK: PipelineItem[] = [
 
 export const DIFFERENTIATORS: Differentiator[] = [
   {
-    title: 'Research-grade vetting',
-    description: 'Every prospect is checked against your exact criteria — revenue band, industry, ownership status, decision-maker authority — before they ever reach your calendar.',
+    title: 'We check every lead before you get it',
+    description: 'Every potential seller is checked against what you\'re looking for — size, industry, and whether they\'re actually the decision-maker — before it ever reaches your calendar.',
   },
   {
-    title: 'Full transparency, zero black box',
-    description: 'Every call is recorded and every appointment is logged in a real-time dashboard. You see exactly who we spoke to and what was said.',
+    title: 'You always know what\'s happening',
+    description: 'Every appointment is tracked in your dashboard in real time, so you know exactly what\'s been booked.',
   },
   {
-    title: 'Fast, done-for-you activation',
-    description: 'Your target profile is locked in during a single strategy session; outreach goes live immediately after, with a first qualified appointment typically inside 2 weeks.',
+    title: 'We do the work, fast',
+    description: 'We handle the outreach for you, with most brokers getting their first booked meeting within two weeks.',
   },
 ]
 
 export const GUARANTEE_DATA = {
-  title: 'Our standard, in writing.',
-  body: 'Before any outreach starts, Elite Scholars agrees in writing with the broker on exactly what a "qualified lead" means for their business — revenue range, business type, decision-maker status. Any appointment that doesn\'t meet that standard gets replaced at no charge; missed appointments reported within 48 hours get rescheduled free.',
+  title: '',
+  body: '',
 }
 
 export const QUALIFIERS: QualifierBullet[] = [
   {
-    title: "You're a licensed business broker or M&A advisor",
-    description: 'You have real deal experience and the capacity to manage and close active seller listings.',
+    title: "You're a licensed broker or advisor",
+    description: "You've closed deals before and you're ready to take on more listings.",
   },
   {
-    title: 'You want qualified conversations, not raw contact lists',
-    description: 'You prefer pre-qualified, decision-maker-confirmed appointments booked straight onto your calendar.',
+    title: 'You want real conversations, not just names on a list',
+    description: 'You want meetings booked with people who are actually ready to talk.',
   },
   {
-    title: 'You are ready to scale a consistent monthly pipeline',
-    description: 'You are looking to build a predictable month-over-month deal acquisition engine, not run a short-term campaign.',
+    title: 'You want a steady flow of new sellers every month',
+    description: 'Not just one good month followed by a dry spell.',
   },
   {
-    title: 'You demand full visibility into outreach standards',
-    description: 'You want complete transparency with recorded calls, real-time dashboard metrics, and written criteria.',
+    title: 'You want to know what\'s going on',
+    description: 'Full visibility into your pipeline, not a black box.',
   },
 ]
 
-export const DISQUALIFIER_STATEMENT = "If you're looking for a one-time trick with no process behind it, we're probably not the right fit."
+export const DISQUALIFIER_STATEMENT = "If you want a quick trick with no real process behind it, we're probably not the right fit."
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: 1,
-    title: 'Define your ideal seller profile',
-    description: 'A strategy session locks in target revenue range, industry, geography, and owner criteria, agreed in writing.',
+    title: 'We Build Your List',
+    description: 'We put together a list of potential sellers that match what you\'re looking for — the right industry, size, and location.',
   },
   {
     step: 2,
-    title: 'Your pipeline goes live',
-    description: 'Multi-channel outreach begins against verified business owners; every touchpoint is tracked in your dashboard.',
+    title: 'We Reach Out',
+    description: 'Our team calls and contacts every lead on that list directly.',
   },
   {
     step: 3,
-    title: 'Qualified appointments land on your calendar',
-    description: "The moment a seller agrees to talk, it's booked and pre-qualified against your agreed criteria. You show up and close.",
+    title: 'We Track & Book Meetings',
+    description: 'Every lead is marked based on how the conversation goes, and the ones ready to talk get scheduled straight onto your calendar.',
   },
 ]
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
-    name: 'Starter',
-    price: '$3,500',
+    name: 'Basic',
+    price: '$1,500',
     period: '/month',
     description: 'Ideal for solo business brokers looking to secure a steady stream of mid-market seller listings.',
-    revenueTarget: '$500K–$1M revenue sellers',
+    revenueTarget: '$500K–$3M revenue sellers',
     appointmentsPerMonth: '10 qualified appointments/mo',
     features: [
-      'Targeting $500K–$1M seller revenue',
+      'Targeting $500K–$3M seller revenue',
       '10 qualified appointments / month',
-      'Live call recordings & transcriptions',
       'Real-time lead tracking dashboard',
       'Dedicated outreach research team',
-      '3-month minimum term',
     ],
-    ctaText: 'Select Starter Plan',
+    ctaText: 'Select Basic Plan',
   },
   {
     name: 'Pro',
-    price: '$5,500',
+    price: '$2,500',
     period: '/month',
     description: 'Built for high-volume brokers and M&A advisors targeting larger lower-middle-market exits.',
-    revenueTarget: '$1M–$5M revenue sellers',
+    revenueTarget: '$1M–$20M revenue sellers',
     appointmentsPerMonth: '15 qualified appointments/mo',
     recommended: true,
     features: [
-      'Targeting $1M–$5M seller revenue',
+      'Targeting $1M–$20M seller revenue',
       '15 qualified appointments / month',
-      'Everything in Starter plan',
+      'Everything in Basic plan',
       'Priority dashboard support',
       'Monthly strategy & script reviews',
       'Custom CRM pipeline integration',
@@ -224,25 +222,24 @@ export const PRICING_PLANS: PricingPlan[] = [
     ctaText: 'Select Pro Plan',
   },
   {
-    name: 'Own Your Pipeline',
-    price: '$12,500',
-    period: 'one-time',
-    description: 'For brokerages wanting a custom, proprietary seller acquisition system to run in-house.',
-    revenueTarget: 'Custom target criteria',
-    appointmentsPerMonth: 'Unlimited (In-house setup)',
+    name: 'Pay As You Go',
+    price: 'TBD',
+    period: '',
+    description: 'A flexible plan built around exactly what you need — you only pay for what you use.',
+    revenueTarget: 'Custom criteria',
+    appointmentsPerMonth: 'Flexible',
     features: [
-      'Full CRM & tracking stack setup',
-      'Verified proprietary contact databases',
-      'Complete outreach playbook & script library',
-      'Team onboarding & operational training',
-      'Optional $1,500/mo ongoing management',
-      'No long-term commitment — you keep the asset',
+      'Customized to your exact requirements',
+      'Pay only for what you use',
+      'Full dashboard access & tracking',
+      'Dedicated outreach support',
+      '[TBD — client to confirm specifics]',
     ],
-    ctaText: 'Build Proprietary System',
+    ctaText: 'Contact Us',
   },
 ]
 
-export const PRICING_SUPPORT_NOTE = 'Average broker commission per closed deal: $40,000–$100,000+. One placement can cover the cost of any plan here many times over.'
+export const PRICING_SUPPORT_NOTE = 'Average broker commission per closed deal: $50,000+. One placement can cover the cost of any plan here many times over.'
 
 export const ROI_DEFAULTS = {
   leadsPerMonth: 15,
@@ -278,7 +275,7 @@ export const TESTIMONIALS: Testimonial[] = [
     title: 'Principal Advisor',
     firm: 'Apex Exit Group',
     location: 'Atlanta, GA',
-    quote: 'The call recordings and vetting transparency give us total confidence. Their written guarantee is real — if a call isn\'t qualified, it\'s replaced instantly.',
+    quote: 'The transparency and tracking give us total confidence — we always know exactly what\'s happening with our pipeline.',
     stats: '7.8x ROI on annual spend',
   },
   {
@@ -293,21 +290,33 @@ export const TESTIMONIALS: Testimonial[] = [
 ]
 
 export const IMPACT_STATS: StatItem[] = [
-  { value: '100+', label: 'Brokers & firms served' },
+  { value: '60+', label: 'Brokers & firms served' },
   { value: '$120M+', label: 'In total deal value facilitated' },
   { value: '100%', label: 'Appointments pre-qualified against criteria' },
+]
+
+export const COMPARISON_LEFT = [
+  'Old contact lists that don\'t answer',
+  'No idea who you\'re actually talking to',
+  'Calls with people who can\'t say yes',
+]
+
+export const COMPARISON_RIGHT = [
+  'Leads matched to your exact criteria',
+  'Meetings booked with the actual decision-maker',
+  'Clear tracking so you always know what\'s happening',
 ]
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'What counts as a "qualified" seller lead?',
-    answer: 'A qualified lead is a verified business owner or authorized decision-maker within your target revenue band and geography who has confirmed an interest in discussing a business valuation or potential sale. Every criterion is agreed upon in writing before outreach begins.',
+    answer: 'A qualified lead is a verified business owner or authorized decision-maker within your target revenue band and geography who has confirmed an interest in discussing a business valuation or potential sale. Every criterion is discussed and confirmed before outreach begins.',
   },
   {
     id: 'faq-2',
     question: 'How much does a business broker lead generation service cost?',
-    answer: 'Our done-for-you lead generation plans range from $3,500/month for Starter ($500K–$1M sellers) to $5,500/month for Pro ($1M–$5M sellers). We also offer a proprietary "Own Your Pipeline" setup for $12,500 one-time. Considering an average commission of $40,000–$100,000+ per closed deal, a single transaction typically yields a multi-fold return.',
+    answer: 'Our done-for-you lead generation plans start at $1,500/month for Basic ($500K–$3M sellers) and $2,500/month for Pro ($1M–$20M sellers). We also offer a flexible Pay As You Go option. Considering an average commission of $50,000+ per closed deal, a single transaction typically yields a multi-fold return.',
   },
   {
     id: 'faq-3',
@@ -317,22 +326,22 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-4',
     question: 'What happens if a booked appointment doesn\'t show up or isn\'t qualified?',
-    answer: 'We back our service with a written guarantee. Any appointment that fails to meet your agreed revenue, industry, or decision-maker criteria will be replaced at no additional cost. No-shows reported within 48 hours are rescheduled free of charge.',
+    answer: 'If an appointment doesn\'t meet your agreed criteria, we\'ll replace it at no additional cost. No-shows reported within 48 hours are rescheduled free of charge.',
   },
   {
     id: 'faq-5',
     question: 'Do you work with brokers outside the US?',
-    answer: 'Currently, Elite Scholars specializes in supporting licensed business brokers, M&A advisors, and exit planners across North America (United States & Canada), where our proprietary business database and verification protocols operate with maximum accuracy.',
+    answer: 'Currently, Elite Scholars specializes in supporting licensed business brokers, M&A advisors, and exit planners across North America (United States & Canada), where our business database and verification protocols operate with maximum accuracy.',
   },
   {
     id: 'faq-6',
-    question: 'What\'s the difference between the Starter and Pro plans?',
-    answer: 'Starter is designed for solo brokers targeting sellers with $500K–$1M in annual revenue, delivering 10 qualified appointments per month. Pro targets lower-middle-market sellers with $1M–$5M in revenue, providing 15 appointments monthly, priority dashboard support, and monthly strategic script reviews.',
+    question: 'What\'s the difference between the Basic and Pro plans?',
+    answer: 'Basic is designed for solo brokers targeting sellers with $500K–$3M in annual revenue, delivering 10 qualified appointments per month. Pro targets lower-middle-market sellers with $1M–$20M in revenue, providing 15 appointments monthly, priority dashboard support, and monthly strategic script reviews.',
   },
   {
     id: 'faq-7',
     question: 'Can I cancel if it\'s not working?',
-    answer: 'Our standard subscription terms require a 3-month initial commitment to allow sufficient campaign optimization and pipeline maturation. After the initial term, plans revert to month-to-month and can be paused or modified with 30 days notice.',
+    answer: 'Plans can be paused or modified with 30 days notice. We want to make sure you have enough time for the campaign to ramp up and start delivering results.',
   },
   {
     id: 'faq-8',
@@ -343,9 +352,9 @@ export const FAQ_ITEMS: FaqItem[] = [
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
+  { label: 'How It Works', href: '#how-it-works' },
   { label: 'About', href: '#problem' },
   { label: 'Services', href: '#different' },
-  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'ROI Calculator', href: '#roi-calculator' },
   { label: 'FAQ', href: '#faq' },

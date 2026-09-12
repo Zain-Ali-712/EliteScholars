@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             <div className="pt-2">
               <span className="inline-block px-3 py-1 bg-brass/10 border border-brass/30 text-brass text-[10px] font-bold uppercase tracking-wider rounded-full">
-                Institutional Quality Standard
+                Quality Standard
               </span>
             </div>
           </div>
@@ -91,7 +91,6 @@ export default function Footer() {
             <ul className="space-y-1.5 text-[11px] text-paper/60 font-public-sans">
               <li><a href="#privacy" className="hover:text-brass transition-colors">Privacy Policy</a></li>
               <li><a href="#terms" className="hover:text-brass transition-colors">Terms of Service</a></li>
-              <li><a href="#guarantee" className="hover:text-brass transition-colors">Lead Quality SLA Guarantee</a></li>
             </ul>
           </div>
 
@@ -103,7 +102,7 @@ export default function Footer() {
             &copy; {currentYear} {SITE.name}. All rights reserved.
           </p>
           <p className="mt-2 sm:mt-0 text-[11px] text-paper/60">
-            Engineered with research-grade diligence for M&amp;A professionals.
+            Built for M&amp;A professionals.
           </p>
         </div>
       </div>

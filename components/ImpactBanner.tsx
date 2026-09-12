@@ -31,7 +31,7 @@ export default function ImpactBanner() {
             <div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brass/10 border border-brass/25 text-brass text-[10px] sm:text-xs font-bold tracking-widest uppercase font-public-sans mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" />
-                Aggregate Track Record
+                Our Track Record
               </span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold font-fraunces text-white">
                 <span className="text-brass">Proven Scale</span> Across North American Brokerages

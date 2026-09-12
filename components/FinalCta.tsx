@@ -15,7 +15,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/broker-closing.jpg"
-              alt="Elite Scholars Brokerage Diligence"
+              alt="Elite Scholars Brokerage"
               fill
               className="object-cover object-center filter brightness-[0.3] contrast-125 scale-105"
             />
@@ -28,7 +28,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
             <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brass/20 border border-brass/40 rounded-full mb-3 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-brass animate-ping" aria-hidden="true" />
               <span className="font-public-sans text-xs font-bold text-brass uppercase tracking-wider">
-                Reserved Brokerage Territory
+                Ready to Get Started
               </span>
             </div>
 
@@ -37,7 +37,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
             </h2>
 
             <p className="text-xs sm:text-sm text-paper/90 font-public-sans max-w-xl mx-auto mb-6 leading-relaxed">
-              Schedule a 15-minute strategy call to review your target revenue criteria and explore guaranteed seller appointment allocation in your market.
+              Schedule a 15-minute strategy call to review your target revenue criteria and explore dedicated seller appointment allocation in your market.
             </p>
 
             {/* Pill CTA Action Bar (Matching Reference Image) */}
