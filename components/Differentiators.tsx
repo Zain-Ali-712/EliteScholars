@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { DIFFERENTIATORS } from '@/data/config'
 
 interface DifferentiatorsProps {
@@ -8,10 +7,82 @@ interface DifferentiatorsProps {
 }
 
 export default function Differentiators({ onOpenBooking }: DifferentiatorsProps) {
-  const cardMetrics = [
-    { tag: 'Checked Leads', image: '/images/services-sde.jpg' },
-    { tag: 'Live Tracking', image: '/images/services-transcripts.jpg' },
-    { tag: 'Fast Activation', image: '/images/services-activation.jpg' },
+  const cardData = [
+    {
+      step: '01',
+      tag: 'Checked Leads',
+      title: DIFFERENTIATORS[0].title,
+      description: DIFFERENTIATORS[0].description,
+      points: [
+        {
+          label: 'Target Revenue Bands',
+          detail: 'Vetted between $500K and $20M+ annual revenue before reaching your calendar.',
+        },
+        {
+          label: 'Direct Equity Decision-Maker',
+          detail: 'Confirmed founder, majority owner, or primary shareholder with authority to sell.',
+        },
+        {
+          label: 'Active Exit Motivation',
+          detail: 'Screened for genuine openness to valuation, exit planning, or immediate sale.',
+        },
+        {
+          label: 'Territory Alignment',
+          detail: 'Filtered strictly to your state, metropolitan market, or specialized broker niche.',
+        },
+      ],
+      footerNote: 'Standard 01',
+    },
+    {
+      step: '02',
+      tag: 'Live Tracking',
+      title: DIFFERENTIATORS[1].title,
+      description: DIFFERENTIATORS[1].description,
+      points: [
+        {
+          label: 'Real-Time Calendar Sync',
+          detail: 'Appointments appear directly on your Google or Outlook calendar with instant alerts.',
+        },
+        {
+          label: 'Complete Owner Dossier',
+          detail: 'Receive business background, revenue scope, and motivation notes before every call.',
+        },
+        {
+          label: 'Live Outreach Pipeline',
+          detail: 'Dashboard access shows accounts contacted, responses, and booked conversations.',
+        },
+        {
+          label: 'Direct Research Team',
+          detail: 'Dedicated outreach research team aligned directly with your territory criteria.',
+        },
+      ],
+      footerNote: 'Standard 02',
+    },
+    {
+      step: '03',
+      tag: 'Fast Activation',
+      title: DIFFERENTIATORS[2].title,
+      description: DIFFERENTIATORS[2].description,
+      points: [
+        {
+          label: '48–72 Hour Launch',
+          detail: 'From onboarding strategy session to active market outreach in 2 to 3 business days.',
+        },
+        {
+          label: '100% Done-For-You',
+          detail: 'Zero cold calling, list buying, or manual follow-ups required from your brokerage.',
+        },
+        {
+          label: 'First Meeting < 14 Days',
+          detail: 'Most broker partners conduct their first qualified seller meeting inside two weeks.',
+        },
+        {
+          label: 'Predictable Monthly Deal Flow',
+          detail: 'Consistent month-over-month meetings to keep your listing pipeline active.',
+        },
+      ],
+      footerNote: 'Standard 03',
+    },
   ]
 
   return (
@@ -34,60 +105,68 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
         {/* Outer Framed Container showing all 3 cards in the same row */}
         <div className="bg-[#F4F6F9] rounded-[28px] p-4 sm:p-6 border border-slate-200/60 shadow-xs">
           
-          {/* 3 Normal Cards Grid */}
+          {/* 3 Normal Cards Grid - Same Height */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-            {DIFFERENTIATORS.map((item, idx) => {
-              const meta = cardMetrics[idx]
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
-                >
-                  <div>
-                    {/* Visual Image Banner */}
-                    <div className="rounded-xl h-[170px] sm:h-[190px] w-full relative overflow-hidden shadow-xs border border-slate-100 mb-4 group-hover:border-slate-200 transition-colors">
-                      <Image
-                        src={meta.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink-navy/70 via-transparent to-transparent" />
-                      
-                      {/* Floating Tag inside image */}
-                      <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                        <span className="text-[10px] font-bold text-brass uppercase tracking-wider bg-ink-navy/85 backdrop-blur-sm border border-white/15 px-2.5 py-1 rounded-full font-public-sans">
-                          {meta.tag}
-                        </span>
-                      </div>
+            {cardData.map((card, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-slate-300 transition-all duration-300 flex flex-col justify-between group h-full"
+              >
+                <div>
+                  {/* Top Badge & Number Row */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-bold text-brass uppercase tracking-wider bg-brass/10 border border-brass/25 px-3 py-1 rounded-full font-public-sans">
+                      {card.tag}
+                    </span>
+                    <div className="w-8 h-8 rounded-lg bg-ink-navy text-brass font-fraunces font-bold text-xs flex items-center justify-center border border-brass/30 shadow-xs">
+                      {card.step}
                     </div>
-
-                    {/* Card Header: Step/Number Badge & Title */}
-                    <div className="flex items-center gap-2.5 mb-2.5">
-                      <div className="w-7 h-7 rounded-lg bg-ink-navy text-brass font-fraunces font-bold text-xs flex items-center justify-center border border-brass/30 shrink-0">
-                        0{idx + 1}
-                      </div>
-                      <h3 className="text-base sm:text-lg font-bold font-fraunces text-ink-navy leading-snug group-hover:text-brass-dark transition-colors">
-                        {item.title}
-                      </h3>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-xs sm:text-sm text-slate leading-relaxed font-public-sans">
-                      {item.description}
-                    </p>
                   </div>
 
-                  {/* Card Footer */}
-                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-public-sans">
-                    <span className="font-bold text-ink-navy flex items-center gap-1.5 text-[11px]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      0{idx + 1}
-                    </span>
+                  {/* Card Title */}
+                  <h3 className="text-lg sm:text-xl font-bold font-fraunces text-ink-navy mb-2.5 leading-snug group-hover:text-brass-dark transition-colors">
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-slate leading-relaxed font-public-sans mb-5 pb-4 border-b border-slate-100">
+                    {card.description}
+                  </p>
+
+                  {/* Data / Feature Points Checklist */}
+                  <div className="space-y-3 mb-6">
+                    {card.points.map((pt, pIdx) => (
+                      <div key={pIdx} className="flex items-start gap-2.5">
+                        <div className="w-4 h-4 rounded-full bg-brass/15 text-brass-dark flex items-center justify-center shrink-0 mt-0.5">
+                          <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold text-ink-navy font-public-sans leading-tight">
+                            {pt.label}
+                          </p>
+                          <p className="text-[11px] text-slate font-public-sans leading-relaxed mt-0.5">
+                            {pt.detail}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )
-            })}
+
+                {/* Card Footer Status */}
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-public-sans">
+                  <span className="font-bold text-ink-navy flex items-center gap-1.5 text-[11px]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    {card.footerNote}
+                  </span>
+                  <span className="text-[10px] font-semibold text-slate uppercase tracking-wider font-public-sans">
+                    Standard Protocol
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Bottom Action Strip */}

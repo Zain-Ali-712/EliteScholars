@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { PROCESS_STEPS } from '@/data/config'
 
 export default function HowItWorks() {
@@ -102,13 +101,11 @@ export default function HowItWorks() {
           <div aria-hidden="true" className="absolute -right-16 -top-16 w-36 h-36 bg-brass/10 rounded-full blur-2xl pointer-events-none" />
 
           <div className="flex items-center gap-3.5 relative z-10">
-            <div className="w-10 h-10 relative rounded-xl overflow-hidden shrink-0 border border-brass/40 shadow-xs">
-              <Image
-                src="/images/roadmap-team.jpg"
-                alt="M&A Advisory Deal Team"
-                fill
-                className="object-cover"
-              />
+            <div className="w-10 h-10 rounded-xl bg-brass/20 text-brass flex items-center justify-center shrink-0 border border-brass/40 shadow-xs">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
             </div>
             <div>
               <p className="text-xs sm:text-sm font-bold text-white font-fraunces">

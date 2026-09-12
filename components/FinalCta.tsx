@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { SITE } from '@/data/config'
 
 interface FinalCtaProps {
@@ -11,15 +10,12 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
       <div className="container-main max-w-5xl">
         <div className="relative rounded-[32px] overflow-hidden p-6 sm:p-10 md:p-12 shadow-2xl border border-ink-navy/20">
           
-          {/* Full-Bleed Background Image with Dark Overlay */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/broker-closing.jpg"
-              alt="Elite Scholars Brokerage"
-              fill
-              className="object-cover object-center filter brightness-[0.3] contrast-125 scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink-navy/90 via-ink-navy/80 to-ink-navy/90 backdrop-blur-xs" />
+          {/* Luxury Geometric Dark Mesh & Technical Grid Background */}
+          <div className="absolute inset-0 z-0 bg-ink-navy">
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(197,160,89,0.3),rgba(255,255,255,0))]" />
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brass/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -left-20 -top-20 w-80 h-80 bg-brass/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
           </div>
 
           {/* Center Glassmorphic Card Container */}

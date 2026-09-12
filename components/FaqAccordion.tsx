@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { FAQ_ITEMS } from '@/data/config'
 
 interface FaqAccordionProps {
@@ -101,13 +100,10 @@ export default function FaqAccordion({ onOpenBooking }: FaqAccordionProps) {
             {/* Middle Visual Feature Card */}
             <div className="bg-[#F4F6F9] p-3.5 sm:p-4 rounded-[28px] border border-slate-200/60 shadow-xs">
               <div className="bg-white p-3.5 sm:p-4 rounded-[20px] border border-slate-100 shadow-xs flex items-center gap-3.5">
-                <div className="w-20 h-20 relative rounded-xl overflow-hidden shrink-0 border border-brass/30 shadow-xs">
-                  <Image
-                    src="/images/faq-dashboard.jpg"
-                    alt="Seller Dashboard"
-                    fill
-                    className="object-cover object-top"
-                  />
+                <div className="w-12 h-12 rounded-2xl bg-ink-navy text-brass flex items-center justify-center shrink-0 border border-brass/30 shadow-xs">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
                 <div>
                   <span className="text-[9px] font-bold text-brass bg-brass/10 border border-brass/30 px-2 py-0.5 rounded-full font-public-sans uppercase">
@@ -127,13 +123,10 @@ export default function FaqAccordion({ onOpenBooking }: FaqAccordionProps) {
             <div className="bg-[#F4F6F9] p-3.5 sm:p-4.5 rounded-[28px] border border-slate-200/60 shadow-xs">
               <div className="bg-white p-4 sm:p-4.5 rounded-[20px] border border-slate-100 shadow-xs space-y-3.5">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 relative rounded-full overflow-hidden shrink-0 border-2 border-brass shadow-xs">
-                    <Image
-                      src="/images/faq-support.jpg"
-                      alt="Client Success Manager"
-                      fill
-                      className="object-cover object-top"
-                    />
+                  <div className="w-10 h-10 rounded-full bg-ink-navy text-brass flex items-center justify-center shrink-0 border-2 border-brass/50 shadow-xs">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
                   </div>
                   <div>
                     <p className="text-[11px] font-bold text-slate uppercase tracking-wider font-public-sans">

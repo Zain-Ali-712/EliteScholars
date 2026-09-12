@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { TESTIMONIALS } from '@/data/config'
 
 export default function Testimonials() {
@@ -21,13 +20,6 @@ export default function Testimonials() {
     TESTIMONIALS[(startIndex + 1) % TESTIMONIALS.length],
     TESTIMONIALS[(startIndex + 2) % TESTIMONIALS.length],
   ]
-
-  const getAvatarImage = (name: string) => {
-    if (name.includes('Marcus')) return '/images/testimonial-marcus.jpg'
-    if (name.includes('Elena')) return '/images/testimonial-elena.jpg'
-    if (name.includes('David')) return '/images/testimonial-david.jpg'
-    return '/images/testimonial-marcus.jpg'
-  }
 
   return (
     <section id="testimonials" className="py-10 md:py-14 bg-gradient-to-b from-[#F4F6F9]/70 via-white to-[#F4F6F9]/70 border-b border-[rgba(31,39,51,0.08)] relative overflow-hidden">
@@ -56,14 +48,9 @@ export default function Testimonials() {
               key={`${item.id}-${idx}`}
               className="bg-white rounded-[24px] border border-slate-200/80 p-6 shadow-sm hover:shadow-md hover:border-brass/40 transition-all duration-300 relative flex flex-col justify-between group overflow-visible"
             >
-              {/* Top Right Circular Avatar */}
-              <div className="w-11 h-11 rounded-full border-2 border-brass bg-ink-navy text-brass flex items-center justify-center font-fraunces font-bold text-xs shadow-md absolute -top-4 right-6 overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
-                <Image
-                  src={getAvatarImage(item.name)}
-                  alt={item.name}
-                  fill
-                  className="object-cover object-top"
-                />
+              {/* Top Right Circular Monogram Badge */}
+              <div className="w-11 h-11 rounded-full border-2 border-brass bg-ink-navy text-brass flex items-center justify-center font-fraunces font-bold text-sm shadow-md absolute -top-4 right-6 shrink-0 group-hover:scale-105 transition-transform select-none">
+                {item.name.split(' ').map((n) => n[0]).join('')}
               </div>
 
               <div>
@@ -100,12 +87,12 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Navigation Arrow Controls & Rating Metric Badge (Matching Reference Image) */}
+        {/* Navigation Arrow Controls & Rating Metric Badge */}
         <div className="mt-8 flex flex-col items-center gap-4">
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrev}
-              className="w-9 h-9 rounded-full bg-slate-100 text-ink-navy flex items-center justify-center hover:bg-ink-navy hover:text-white transition-colors shadow-xs"
+              className="w-9 h-9 rounded-full bg-slate-100 text-ink-navy flex items-center justify-center hover:bg-ink-navy hover:text-white transition-colors shadow-xs cursor-pointer"
               aria-label="Previous Testimonials"
             >
               <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -114,7 +101,7 @@ export default function Testimonials() {
             </button>
             <button
               onClick={handleNext}
-              className="w-9 h-9 rounded-full bg-ink-navy text-white flex items-center justify-center hover:bg-brass transition-colors shadow-xs"
+              className="w-9 h-9 rounded-full bg-ink-navy text-white flex items-center justify-center hover:bg-brass transition-colors shadow-xs cursor-pointer"
               aria-label="Next Testimonials"
             >
               <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -123,14 +110,14 @@ export default function Testimonials() {
             </button>
           </div>
 
-          {/* Rating Summary Box (Matching 4.9/5 & 500+ Box in Screenshot) */}
+          {/* Rating Summary Box */}
           <div className="bg-white rounded-[20px] border border-slate-200/80 p-3.5 px-6 shadow-xs flex items-center gap-6 text-center divide-x divide-slate-100">
             <div className="pr-3">
               <p className="text-lg sm:text-xl font-extrabold text-ink-navy font-public-sans leading-none">4.9/5</p>
               <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Average Rating</p>
             </div>
             <div className="pl-6">
-              <p className="text-lg sm:text-xl font-extrabold text-brass font-public-sans leading-none">100+</p>
+              <p className="text-lg sm:text-xl font-extrabold text-brass font-public-sans leading-none">60+</p>
               <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Verified Reviews</p>
             </div>
           </div>

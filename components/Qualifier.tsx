@@ -47,10 +47,10 @@ export default function Qualifier() {
           </p>
         </div>
 
-        {/* 2-Column Main Layout matching Dribbble reference */}
+        {/* 2-Column Main Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Left Column: Stacked Cards Panel */}
+          {/* Left Column: Stacked Interactive Cards Panel */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div className="bg-[#F4F6F9] rounded-[28px] p-4 sm:p-6 border border-slate-200/60 shadow-sm">
               <div className="space-y-3">
@@ -110,7 +110,7 @@ export default function Qualifier() {
               </div>
             </div>
 
-            {/* Honest Disqualifier Box */}
+            {/* Disqualifier Box */}
             <div className="mt-4 p-5 sm:p-6 bg-ink-navy text-white rounded-2xl border-l-4 border-l-brass border border-white/10 shadow-lg relative overflow-hidden">
               <div aria-hidden="true" className="absolute -right-16 -bottom-16 w-48 h-48 bg-brass/15 rounded-full blur-2xl pointer-events-none" />
 
@@ -132,27 +132,83 @@ export default function Qualifier() {
             </div>
           </div>
 
-          {/* Right Column: High-Quality Image Card */}
-          <div className="lg:col-span-5 relative min-h-[380px] lg:min-h-full rounded-[28px] overflow-hidden border border-slate-200/80 shadow-lg group">
-            <img
-              src="/images/qualifier-broker.jpg"
-              alt="Senior Business Broker Evaluation Session"
-              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-navy/90 via-ink-navy/30 to-transparent" />
+          {/* Right Column: Territory & Partner Fit Card (Replacing AI photo) */}
+          <div className="lg:col-span-5 bg-ink-navy text-white rounded-[28px] p-6 sm:p-8 border border-brass/30 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+            {/* Ambient luxury glow & technical grid */}
+            <div aria-hidden="true" className="absolute -right-16 -top-16 w-52 h-52 bg-brass/15 rounded-full blur-3xl pointer-events-none" />
+            <div aria-hidden="true" className="absolute -left-16 -bottom-16 w-52 h-52 bg-brass/10 rounded-full blur-3xl pointer-events-none" />
+            <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
-            {/* Floating Glass Overlay Card */}
-            <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-ink-navy/85 backdrop-blur-md border border-white/20 text-white flex items-center gap-3 shadow-xl">
-              <div className="w-10 h-10 rounded-xl bg-brass/20 text-brass flex items-center justify-center shrink-0 border border-brass/40">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+            <div className="relative z-10">
+              {/* Header Badge */}
+              <div className="flex items-center justify-between mb-5">
+                <span className="text-[10px] font-bold text-brass uppercase tracking-wider bg-brass/15 border border-brass/30 px-3 py-1 rounded-full font-public-sans">
+                  Partner Profile
+                </span>
+                <span className="text-[11px] font-bold text-paper/80 font-public-sans">
+                  1 Broker Per Territory
+                </span>
               </div>
-              <div>
-                <p className="text-[10px] sm:text-xs font-bold text-brass uppercase tracking-wider font-public-sans">Our Standard</p>
-                <p className="text-xs text-white/90 font-medium font-public-sans">Every appointment is checked</p>
+
+              {/* Title */}
+              <h3 className="text-xl sm:text-2xl font-bold font-fraunces text-white mb-2 leading-snug">
+                Territory Allocation Standard
+              </h3>
+              <p className="text-xs sm:text-sm text-paper/80 font-public-sans mb-6 leading-relaxed">
+                To prevent client overlap and protect outreach integrity, we limit active partnership capacity per market.
+              </p>
+
+              {/* Criteria List */}
+              <div className="space-y-3">
+                <div className="p-3.5 bg-white/5 border border-white/10 rounded-xl flex items-start gap-3 backdrop-blur-xs">
+                  <div className="w-5 h-5 rounded-full bg-brass/20 text-brass flex items-center justify-center shrink-0 mt-0.5 border border-brass/40">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white font-public-sans">Active Advisory Credentials</p>
+                    <p className="text-[11px] text-paper/70 font-public-sans mt-0.5">Licensed broker, M&amp;A firm, or investment boutique</p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 bg-white/5 border border-white/10 rounded-xl flex items-start gap-3 backdrop-blur-xs">
+                  <div className="w-5 h-5 rounded-full bg-brass/20 text-brass flex items-center justify-center shrink-0 mt-0.5 border border-brass/40">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white font-public-sans">Established Listing Target</p>
+                    <p className="text-[11px] text-paper/70 font-public-sans mt-0.5">Focusing on business exits between $500K and $20M+</p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 bg-white/5 border border-white/10 rounded-xl flex items-start gap-3 backdrop-blur-xs">
+                  <div className="w-5 h-5 rounded-full bg-brass/20 text-brass flex items-center justify-center shrink-0 mt-0.5 border border-brass/40">
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white font-public-sans">Calendar Execution Capacity</p>
+                    <p className="text-[11px] text-paper/70 font-public-sans mt-0.5">Ready to conduct discovery calls within 24–48h of booking</p>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Bottom Status Banner */}
+            <div className="relative z-10 mt-6 pt-4 border-t border-white/15 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs font-bold text-white font-public-sans">Market Exclusivity Protected</span>
+              </div>
+              <span className="text-[11px] font-bold text-brass uppercase font-public-sans">
+                North America
+              </span>
+            </div>
+
           </div>
 
         </div>

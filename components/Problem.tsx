@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Problem() {
   return (
     <section id="problem" className="py-12 md:py-16 bg-gradient-to-b from-white via-[#F8FAFC] to-white border-b border-[rgba(31,39,51,0.08)] relative overflow-hidden">
@@ -8,44 +6,102 @@ export default function Problem() {
 
       <div className="container-main relative z-10">
         
-        {/* 2-Column Layout matching Dribbble reference media_1789041758270.png */}
+        {/* 2-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Left Column: Visual Image Container stretched to match right column height (~5 Cols) */}
-          <div className="lg:col-span-5 relative min-h-[420px] lg:min-h-full rounded-[28px] overflow-hidden border border-slate-200/80 shadow-lg group">
-            <Image
-              src="/images/problem-analytics.jpg"
-              alt="M&A Advisory Strategy Session"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-navy/80 via-transparent to-transparent" />
+          {/* Left Column: Visual Data Card - Replacing AI image with high-impact Infographic Card (~5 Cols) */}
+          <div className="lg:col-span-5 bg-ink-navy text-white rounded-[28px] p-6 sm:p-8 border border-brass/30 shadow-xl flex flex-col justify-between relative overflow-hidden group">
+            {/* Subtle background ambient mesh & technical grid */}
+            <div aria-hidden="true" className="absolute -right-16 -top-16 w-56 h-56 bg-brass/15 rounded-full blur-3xl pointer-events-none" />
+            <div aria-hidden="true" className="absolute -left-16 -bottom-16 w-56 h-56 bg-brass/10 rounded-full blur-3xl pointer-events-none" />
+            <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
-            {/* Top Floating Glass Badge */}
-            <div className="absolute top-5 left-5 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-slate-200/80 text-ink-navy flex items-center gap-3 shadow-md z-10">
-              <div className="w-8 h-8 rounded-xl bg-ink-navy text-brass flex items-center justify-center shrink-0 shadow-xs">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            <div className="relative z-10">
+              {/* Card Header Pill */}
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-[10px] font-bold text-brass uppercase tracking-wider bg-brass/15 border border-brass/30 px-3 py-1 rounded-full font-public-sans">
+                  Broker Time Audit
+                </span>
+                <span className="text-[11px] font-semibold text-emerald-400 flex items-center gap-1.5 font-public-sans">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  Live Benchmark
+                </span>
               </div>
-              <div>
-                <p className="text-xs font-bold text-ink-navy font-public-sans leading-none">70% Time Saved</p>
-                <p className="text-[10px] text-slate font-public-sans mt-0.5">Zero cold outreach required</p>
+
+              {/* Big Stat Hero */}
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-5xl sm:text-6xl font-extrabold font-fraunces text-white leading-none">
+                    70%
+                  </span>
+                  <span className="text-xs sm:text-sm font-bold text-brass font-public-sans uppercase tracking-wider">
+                    Lost Hours
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-paper/80 font-public-sans leading-relaxed">
+                  Of a typical broker&apos;s workweek is spent chasing unvetted contacts, gatekeepers, and dead-end seller lists.
+                </p>
+              </div>
+
+              {/* Visual Time Breakdown Graphic */}
+              <div className="space-y-3.5 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 backdrop-blur-xs">
+                <p className="text-[11px] font-bold text-paper/90 uppercase tracking-wider font-public-sans">
+                  Typical Weekly Time Breakdown
+                </p>
+
+                {/* Bar 1: Cold Lists */}
+                <div>
+                  <div className="flex justify-between text-xs font-public-sans mb-1">
+                    <span className="text-paper/75">Cold outreach &amp; bad contact sheets</span>
+                    <span className="text-rose-400 font-bold">45%</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full bg-rose-400/90 rounded-full w-[45%]" />
+                  </div>
+                </div>
+
+                {/* Bar 2: Gatekeepers & Voicemails */}
+                <div>
+                  <div className="flex justify-between text-xs font-public-sans mb-1">
+                    <span className="text-paper/75">Gatekeepers &amp; unmotivated owners</span>
+                    <span className="text-amber-400 font-bold">25%</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full bg-amber-400/90 rounded-full w-[25%]" />
+                  </div>
+                </div>
+
+                {/* Bar 3: Actual Listing Closing */}
+                <div>
+                  <div className="flex justify-between text-xs font-public-sans mb-1">
+                    <span className="text-brass font-bold">Closing qualified business listings</span>
+                    <span className="text-brass font-bold">Only 30%</span>
+                  </div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full bg-brass rounded-full w-[30%]" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Bottom Floating Dark Glass Badge */}
-            <div className="absolute bottom-5 right-5 p-3.5 rounded-2xl bg-ink-navy/85 backdrop-blur-md border border-white/20 text-white flex items-center gap-3 shadow-xl z-10">
-              <div className="w-9 h-9 rounded-xl bg-brass/20 text-brass flex items-center justify-center shrink-0 border border-brass/40">
-                <svg className="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+            {/* Bottom Benefit Highlight Box */}
+            <div className="relative z-10 mt-6 pt-4 border-t border-white/15 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-brass/20 text-brass flex items-center justify-center border border-brass/40 shrink-0">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-white font-public-sans">100% Checked Leads</p>
+                  <p className="text-[10px] text-paper/70 font-public-sans">Direct to verified decision-makers</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs font-bold text-brass uppercase tracking-wider font-public-sans leading-none">100% Checked</p>
-                <p className="text-[10px] text-white/90 font-medium font-public-sans mt-0.5">Pre-screened sellers</p>
-              </div>
+              <span className="text-[11px] font-bold text-brass uppercase font-public-sans shrink-0">
+                0 Cold Calls
+              </span>
             </div>
+
           </div>
 
           {/* Right Column: Copy, Problem Breakdown & Reality Gap (~7 Cols) */}
@@ -155,15 +211,12 @@ export default function Problem() {
               </div>
             </div>
 
-            {/* Bottom Summary Strip */}
+            {/* Bottom Summary Strip - Clean Vector Badge Replacing Tiny AI Photo */}
             <div className="p-3 sm:p-3.5 bg-ink-navy text-white rounded-xl border border-brass/30 flex items-center gap-3 shadow-md">
-              <div className="w-8 h-8 relative rounded-lg overflow-hidden shrink-0 border border-brass/40">
-                <Image
-                  src="/images/problem-diligence.jpg"
-                  alt="Financial Documents"
-                  fill
-                  className="object-cover"
-                />
+              <div className="w-8 h-8 rounded-lg bg-brass/20 text-brass flex items-center justify-center shrink-0 border border-brass/40 shadow-xs">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
               <p className="text-xs font-semibold text-white/90 font-public-sans leading-snug">
                 Advisors spend 100% of their time closing listings instead of chasing cold names.
