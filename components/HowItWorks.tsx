@@ -50,26 +50,26 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="py-18 md:py-24 bg-gradient-to-br from-[#4E238E] via-[#6330B4] to-[#7B3ECC] relative overflow-hidden text-white">
+    <section id="how-it-works" className="py-18 md:py-24 bg-gradient-to-br from-[#155EEF] via-[#1D4ED8] to-[#0A225C] relative overflow-hidden text-white">
       {/* Background Dot Texture Pattern */}
       <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
-      {/* Playful Ambient Lighting Effects (Matching BrokerPartnerz Reference) */}
+      {/* Playful Ambient Lighting Effects */}
       <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[750px] h-[360px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
       <div aria-hidden="true" className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#E87722]/20 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-purple-900/35 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-blue-900/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
 
         {/* Centered Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-14 sm:mb-18">
-          <div className="text-xs font-extrabold uppercase tracking-widest text-purple-200/90 mb-3">
+          <div className="text-xs font-extrabold uppercase tracking-widest text-blue-100/90 mb-3">
             SIMPLE &amp; TRANSPARENT
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
             Our Process in <span className="text-[#FBBF24]">3 Steps</span>
           </h2>
-          <p className="text-sm sm:text-base text-purple-100/90 leading-relaxed font-normal max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed font-normal max-w-xl mx-auto">
             No complicated setup, no learning curve. From strategy session to confirmed appointments &mdash; here is exactly how it works.
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function HowItWorks() {
                   {step.icon}
                 </div>
                 {/* Orange Step Number Badge */}
-                <span className="w-6 h-6 rounded-full bg-[#E87722] text-white font-extrabold text-xs flex items-center justify-center absolute top-0 right-0 shadow-md border-2 border-purple-900">
+                <span className="w-6 h-6 rounded-full bg-[#E87722] text-white font-extrabold text-xs flex items-center justify-center absolute top-0 right-0 shadow-md border-2 border-blue-950">
                   {step.num}
                 </span>
               </div>
@@ -156,12 +156,12 @@ export default function HowItWorks() {
               </h3>
 
               {/* Step Description */}
-              <p className="text-xs sm:text-sm text-purple-100/90 leading-relaxed text-center font-normal mb-6">
+              <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed text-center font-normal mb-6">
                 {step.description}
               </p>
 
               {/* Bottom Feature Highlight */}
-              <div className="mt-auto pt-4 border-t border-white/15 w-full flex items-center justify-center gap-1.5 text-[11px] font-semibold text-purple-200">
+              <div className="mt-auto pt-4 border-t border-white/15 w-full flex items-center justify-center gap-1.5 text-[11px] font-semibold text-blue-200">
                 <svg className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
@@ -172,13 +172,13 @@ export default function HowItWorks() {
 
         </div>
 
-        {/* Bottom Callout Banner - Translucent Purple Card */}
+        {/* Bottom Callout Banner - Translucent Blue Card */}
         <div className="p-6 sm:p-7 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-3xl shadow-xl max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden">
           <div className="text-center sm:text-left">
             <p className="text-base sm:text-lg font-bold text-white leading-snug">
               Ready to review seller availability in your market?
             </p>
-            <p className="text-xs sm:text-sm text-purple-200 mt-1 font-medium">
+            <p className="text-xs sm:text-sm text-blue-200 mt-1 font-medium">
               We limit broker capacity per territory to guarantee outreach exclusivity.
             </p>
           </div>

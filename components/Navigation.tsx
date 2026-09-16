@@ -9,13 +9,10 @@ interface NavigationProps {
 
 export default function Navigation({ onOpenBooking }: NavigationProps) {
   const [activeSection, setActiveSection] = useState('hero')
-  const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-
       const sections = NAV_LINKS.map((link) => link.href.substring(1))
       const scrollPosition = window.scrollY + 120
 
@@ -37,11 +34,7 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-sm'
-          : 'bg-white/80 backdrop-blur-sm border-b border-slate-100 py-4'
-      }`}
+      className="relative z-50 w-full bg-white border-b border-slate-200/80 py-4 shadow-xs"
     >
       <div className="container-main flex items-center justify-between">
         {/* Monogram logo */}

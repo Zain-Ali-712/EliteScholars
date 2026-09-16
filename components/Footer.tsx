@@ -4,10 +4,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gradient-to-br from-[#351966] via-[#4A2386] to-[#26104E] text-purple-100/80 pt-16 pb-12 border-t border-white/15 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#0A1A3F] via-[#102B66] to-[#061126] text-blue-100/80 pt-16 pb-12 border-t border-white/15 relative overflow-hidden">
       {/* Playful Ambient Background Lighting */}
       <div aria-hidden="true" className="absolute -right-20 -bottom-20 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -left-20 top-0 w-80 h-80 bg-[#E87722]/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-20 top-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/15">
@@ -22,11 +22,11 @@ export default function Footer() {
                 {SITE.name}
               </span>
             </div>
-            <p className="text-xs text-purple-200/80 leading-relaxed font-medium">
+            <p className="text-xs text-blue-200/80 leading-relaxed font-medium">
               Done-for-you cold outreach and verified seller appointments engineered exclusively for business brokers and M&amp;A advisors.
             </p>
             <div className="pt-1">
-              <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 text-purple-200 text-[10px] font-bold uppercase tracking-wider rounded-full backdrop-blur-xs">
+              <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 text-blue-200 text-[10px] font-bold uppercase tracking-wider rounded-full backdrop-blur-xs">
                 Verified Quality Standard
               </span>
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs font-medium">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-purple-200/80 hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <a href={link.href} className="text-blue-200/80 hover:text-amber-300 transition-colors flex items-center gap-1.5">
                     <span className="text-amber-400 text-xs">&rsaquo;</span>
                     {link.label}
                   </a>
@@ -56,20 +56,20 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5 text-xs font-medium">
               <li>
-                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Phone</span>
+                <span className="block text-blue-300/70 text-[10px] uppercase font-bold tracking-wider">Phone</span>
                 <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="font-bold text-white hover:text-amber-300 transition-colors">
                   {SITE.phone}
                 </a>
               </li>
               <li>
-                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Email</span>
+                <span className="block text-blue-300/70 text-[10px] uppercase font-bold tracking-wider">Email</span>
                 <a href={`mailto:${SITE.email}`} className="font-bold text-white hover:text-amber-300 transition-colors">
                   {SITE.email}
                 </a>
               </li>
               <li>
-                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Headquarters</span>
-                <span className="text-purple-100 font-semibold">{SITE.address}</span>
+                <span className="block text-blue-300/70 text-[10px] uppercase font-bold tracking-wider">Headquarters</span>
+                <span className="text-blue-100 font-semibold">{SITE.address}</span>
               </li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <ul className="space-y-1.5 text-[11px] text-purple-200/70 font-medium">
+            <ul className="space-y-1.5 text-[11px] text-blue-200/70 font-medium">
               <li><a href="#privacy" className="hover:text-amber-300 transition-colors">Privacy Policy</a></li>
               <li><a href="#terms" className="hover:text-amber-300 transition-colors">Terms of Service</a></li>
             </ul>
@@ -101,11 +101,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-purple-200/70 font-medium">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-200/70 font-medium">
           <p>
             &copy; {currentYear} {SITE.name}. All rights reserved.
           </p>
-          <p className="mt-2 sm:mt-0 text-[11px] text-purple-300/80">
+          <p className="mt-2 sm:mt-0 text-[11px] text-blue-300/80">
             Built for M&amp;A professionals &amp; business brokers.
           </p>
         </div>

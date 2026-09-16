@@ -8,11 +8,11 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
   return (
     <section id="cta" className="py-8 sm:py-10 md:py-12 bg-white border-b border-slate-200/80 relative overflow-hidden">
       <div className="container-main max-w-4xl">
-        <div className="relative rounded-3xl overflow-hidden p-6 sm:p-8 md:p-10 shadow-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white text-center">
+        <div className="relative rounded-3xl overflow-hidden p-6 sm:p-8 md:p-10 shadow-xl bg-gradient-to-br from-[#155EEF] via-[#1D4ED8] to-[#0A225C] text-white text-center">
           
           {/* Subtle Ambient Light Orbs */}
           <div aria-hidden="true" className="absolute -right-16 -top-16 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-          <div aria-hidden="true" className="absolute -left-16 -bottom-16 w-60 h-60 bg-purple-400/20 rounded-full blur-2xl pointer-events-none" />
+          <div aria-hidden="true" className="absolute -left-16 -bottom-16 w-60 h-60 bg-blue-400/20 rounded-full blur-2xl pointer-events-none" />
 
           {/* Centered Content - Compact */}
           <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">

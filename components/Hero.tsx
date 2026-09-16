@@ -11,7 +11,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative pt-24 pb-6 sm:pb-8 md:pt-32 md:pb-8 bg-gradient-to-b from-[#EFF4FF]/70 via-[#F8FAFF] to-white overflow-hidden border-b border-slate-200/80"
+      className="relative pt-8 pb-6 sm:pb-8 md:pt-12 md:pb-8 bg-gradient-to-b from-[#EFF4FF]/70 via-[#F8FAFF] to-white overflow-hidden border-b border-slate-200/80"
     >
       {/* Light & Playful Background Glows */}
       <div
@@ -20,7 +20,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       />
       <div
         aria-hidden="true"
-        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-400/15 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-indigo-400/15 rounded-full blur-3xl pointer-events-none"
       />
       <div
         aria-hidden="true"
@@ -135,8 +135,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
               Targeted Outreach
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-purple-50 text-purple-700 border border-purple-200/80 shadow-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200/80 shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
               Qualified Seller Conversations
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/80 shadow-2xs">
