@@ -10,13 +10,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'ink-navy': '#1A2B4C',
-        'navy-light': '#243A66',
-        'navy-dark': '#121F38',
-        'brass': '#B8894F',
-        'paper': '#FAFAF9',
-        'charcoal': '#1F2733',
-        'slate': '#5C6470',
+        // Bright & Playful Theme (Inspired by brokerpartnerz.com)
+        'brand-blue': '#155EEF',
+        'brand-blue-hover': '#1048C6',
+        'brand-blue-light': '#EFF4FF',
+        'brand-purple': '#825CE5',
+        'brand-purple-light': '#F4F0FF',
+        'brand-orange': '#FF8000',
+        'brand-orange-light': '#FFF6ED',
+        'brand-emerald': '#10B981',
+        'brand-emerald-light': '#ECFDF5',
+        'brand-bg': '#F8FAFF',
+        'brand-card': '#FFFFFF',
+        'brand-dark': '#0F172A',
+        'brand-slate': '#475569',
+        'brand-muted': '#94A3B8',
+        'brand-border': '#E2E8F0',
+
+        // Compatibility palette
+        'ink-navy': '#0F172A',
+        'navy-light': '#1E293B',
+        'navy-dark': '#0A0F1D',
+        'brass': '#155EEF',
+        'brass-dark': '#1048C6',
+        'brass-light': '#EFF4FF',
+        'paper': '#FFFFFF',
+        'charcoal': '#0F172A',
+        'slate': '#475569',
       },
       fontFamily: {
         fraunces: ['var(--font-fraunces)', 'Georgia', 'serif'],
@@ -46,6 +66,9 @@ const config: Config = {
         'sm': '2px',
         'DEFAULT': '4px',
         'md': '6px',
+        'xl': '12px',
+        '2xl': '16px',
+        '3xl': '24px',
       },
       maxWidth: {
         'content': '72ch',

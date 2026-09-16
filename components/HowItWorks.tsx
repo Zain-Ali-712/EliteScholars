@@ -1,126 +1,121 @@
 import { PROCESS_STEPS } from '@/data/config'
 
 export default function HowItWorks() {
-  const stepTags = [
-    'Step 1',
-    'Step 2',
-    'Step 3',
-  ]
-
-  const stepIcons = [
-    // Step 1: Target / Adjustments icon
-    <svg key="1" className="w-5 h-5 text-brass" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-    </svg>,
-    // Step 2: Lightning / Live Outreach icon
-    <svg key="2" className="w-5 h-5 text-brass" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-    </svg>,
-    // Step 3: Calendar / Verified Booking icon
-    <svg key="3" className="w-5 h-5 text-brass" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-    </svg>,
+  const stepThemes = [
+    {
+      pill: 'bg-blue-50 text-blue-600 border-blue-200',
+      numBg: 'bg-blue-600 text-white',
+      borderHover: 'hover:border-blue-300 hover:shadow-blue-500/10',
+      tag: 'Step 01',
+    },
+    {
+      pill: 'bg-purple-50 text-purple-600 border-purple-200',
+      numBg: 'bg-purple-600 text-white',
+      borderHover: 'hover:border-purple-300 hover:shadow-purple-500/10',
+      tag: 'Step 02',
+    },
+    {
+      pill: 'bg-emerald-50 text-emerald-600 border-emerald-200',
+      numBg: 'bg-emerald-600 text-white',
+      borderHover: 'hover:border-emerald-300 hover:shadow-emerald-500/10',
+      tag: 'Step 03',
+    },
   ]
 
   return (
-    <section id="how-it-works" className="py-12 md:py-16 bg-gradient-to-b from-white via-slate-50/60 to-white border-b border-[rgba(31,39,51,0.08)] relative overflow-hidden">
-      {/* Background ambient radial glow effect */}
-      <div aria-hidden="true" className="absolute -left-24 top-1/3 w-72 h-72 bg-brass/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="how-it-works" className="py-16 md:py-20 bg-gradient-to-b from-[#F8FAFF] via-white to-[#F8FAFF] border-b border-slate-200/80 relative overflow-hidden">
+      {/* Playful Ambient Glows */}
+      <div aria-hidden="true" className="absolute -left-20 top-1/4 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 bottom-1/4 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
 
-        {/* Section Header */}
-        <div className="max-w-2xl mb-10 text-left">
-          <div className="agency-pill mb-3">
-            <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span>Our Process</span>
+        {/* Centered Section Header */}
+        <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-200 shadow-xs mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+            <span>Our 3-Step Process</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-fraunces text-ink-navy mb-2.5">
-            How we <span className="text-brass">build</span> your pipeline
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+            How We <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Build</span> Your Pipeline
           </h2>
-          <p className="text-sm md:text-base text-slate font-public-sans">
-            Here&apos;s how we get qualified sellers onto your calendar, step by step.
+          <p className="text-base text-slate-600 leading-relaxed font-medium">
+            A simple, predictable done-for-you workflow engineered to put qualified sellers directly on your calendar.
           </p>
         </div>
 
-        {/* Outer Container Frame for Roadmap */}
-        <div className="bg-[#F4F6F9] rounded-[28px] p-4 sm:p-6 border border-slate-200/60 shadow-xs mb-8">
-
-          {/* 3 Step Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-            {PROCESS_STEPS.map((step, idx) => (
+        {/* 3 Step Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-12">
+          {PROCESS_STEPS.map((step, idx) => {
+            const theme = stepThemes[idx]
+            return (
               <div
                 key={step.step}
-                className="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 relative group flex flex-col justify-between overflow-hidden"
+                className={`bg-white rounded-3xl p-7 sm:p-8 border-2 border-slate-200/80 shadow-sm hover:shadow-xl ${theme.borderHover} transition-all duration-300 relative group flex flex-col justify-between`}
               >
-                {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brass via-brass-light to-brass opacity-80 group-hover:opacity-100 transition-opacity" />
-
-                {/* Background Watermark Step Number */}
-                <span className="text-6xl font-extrabold font-fraunces text-slate-100 absolute right-4 top-2 select-none pointer-events-none group-hover:text-brass/10 transition-colors">
-                  0{step.step}
-                </span>
-
                 <div>
-                  {/* Step Header: Icon Badge + Phase Tag */}
-                  <div className="flex items-center justify-between gap-2 mb-4 relative z-10">
-                    <div className="w-10 h-10 rounded-xl bg-ink-navy text-brass flex items-center justify-center border border-brass/40 shadow-xs group-hover:scale-105 transition-transform">
-                      {stepIcons[idx]}
+                  {/* Top Step Number Badge */}
+                  <div className="flex items-center justify-between gap-3 mb-6">
+                    <div className={`w-12 h-12 rounded-2xl ${theme.numBg} font-extrabold text-base flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
+                      0{step.step}
                     </div>
-                    <span className="text-[10px] font-bold text-brass uppercase tracking-wider bg-brass/10 border border-brass/20 px-2.5 py-1 rounded-full font-public-sans">
-                      {stepTags[idx]}
+                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border ${theme.pill}`}>
+                      {theme.tag}
                     </span>
                   </div>
 
                   {/* Step Title */}
-                  <h3 className="text-base sm:text-lg font-bold text-ink-navy mb-2 font-fraunces relative z-10 group-hover:text-brass-dark transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-blue-600 transition-colors">
                     {step.title}
                   </h3>
 
                   {/* Step Description */}
-                  <p className="text-xs sm:text-sm text-slate leading-relaxed font-public-sans mb-5 relative z-10 min-h-[52px]">
+                  <p className="text-sm text-slate-600 leading-relaxed font-medium mb-6">
                     {step.description}
                   </p>
                 </div>
 
-                {/* Step Footer */}
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-public-sans relative z-10">
-                  <span className="font-bold text-ink-navy flex items-center gap-1.5 text-[11px]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    Step 0{step.step}
+                {/* Step Footer Status */}
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
+                  <span className="flex items-center gap-1.5 text-emerald-600 font-bold">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Phase 0{step.step} Active
                   </span>
+                  <span>100% Done-For-You</span>
                 </div>
               </div>
-            ))}
-          </div>
-
+            )
+          })}
         </div>
 
-        {/* Bottom Callout Banner - Sleek Dark Pill Card */}
-        <div className="p-4 sm:p-5 bg-ink-navy text-white rounded-2xl border border-brass/30 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 relative overflow-hidden">
-          <div aria-hidden="true" className="absolute -right-16 -top-16 w-36 h-36 bg-brass/10 rounded-full blur-2xl pointer-events-none" />
+        {/* Bottom Callout Banner - Light & Playful Gradient Card */}
+        <div className="p-6 sm:p-8 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white rounded-3xl shadow-xl shadow-blue-500/20 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div aria-hidden="true" className="absolute -right-20 -top-20 w-56 h-56 bg-white/10 rounded-full blur-2xl pointer-events-none" />
 
-          <div className="flex items-center gap-3.5 relative z-10">
-            <div className="w-10 h-10 rounded-xl bg-brass/20 text-brass flex items-center justify-center shrink-0 border border-brass/40 shadow-xs">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="flex items-center gap-4 relative z-10 text-left">
+            <div className="w-12 h-12 rounded-2xl bg-white/15 text-white flex items-center justify-center shrink-0 border border-white/25 shadow-sm">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
             <div>
-              <p className="text-xs sm:text-sm font-bold text-white font-fraunces">
-                Ready to review your territory&apos;s seller availability?
+              <p className="text-base sm:text-lg font-bold text-white leading-snug">
+                Ready to review seller availability in your market?
               </p>
-              <p className="text-[11px] sm:text-xs text-paper/75 font-public-sans">
-                Our onboarding research team limits active broker capacity per geographic market to maintain pipeline quality.
+              <p className="text-xs sm:text-sm text-blue-100 mt-1 font-medium">
+                We limit broker capacity per territory to guarantee outreach exclusivity and high response rates.
               </p>
             </div>
           </div>
 
-          <a href="#cta" className="btn-primary text-xs py-2.5 px-5 shrink-0 rounded-full flex items-center gap-1.5 shadow-md hover:shadow-lg relative z-10">
-            <span>Check Territory Availability</span>
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          <a
+            href="#cta"
+            className="w-full md:w-auto px-6 py-3.5 bg-white text-blue-600 font-bold text-sm rounded-full hover:bg-blue-50 transition-all shadow-md flex items-center justify-center gap-2 shrink-0 relative z-10"
+          >
+            <span>Check Your Territory</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
         </div>

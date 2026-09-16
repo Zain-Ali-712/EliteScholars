@@ -6,57 +6,48 @@ interface FinalCtaProps {
 
 export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
   return (
-    <section id="cta" className="py-8 md:py-12 bg-white border-b border-[rgba(31,39,51,0.08)]">
-      <div className="container-main max-w-5xl">
-        <div className="relative rounded-[32px] overflow-hidden p-6 sm:p-10 md:p-12 shadow-2xl border border-ink-navy/20">
+    <section id="cta" className="py-8 sm:py-10 md:py-12 bg-white border-b border-slate-200/80 relative overflow-hidden">
+      <div className="container-main max-w-4xl">
+        <div className="relative rounded-3xl overflow-hidden p-6 sm:p-8 md:p-10 shadow-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white text-center">
           
-          {/* Luxury Geometric Dark Mesh & Technical Grid Background */}
-          <div className="absolute inset-0 z-0 bg-ink-navy">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(197,160,89,0.3),rgba(255,255,255,0))]" />
-            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-brass/15 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -left-20 -top-20 w-80 h-80 bg-brass/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
-          </div>
+          {/* Subtle Ambient Light Orbs */}
+          <div aria-hidden="true" className="absolute -right-16 -top-16 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+          <div aria-hidden="true" className="absolute -left-16 -bottom-16 w-60 h-60 bg-purple-400/20 rounded-full blur-2xl pointer-events-none" />
 
-          {/* Center Glassmorphic Card Container */}
-          <div className="relative z-10 bg-white/10 backdrop-blur-md border border-white/25 rounded-[28px] p-6 sm:p-8 md:p-10 text-center max-w-3xl mx-auto shadow-2xl">
+          {/* Centered Content - Compact */}
+          <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brass/20 border border-brass/40 rounded-full mb-3 shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-brass animate-ping" aria-hidden="true" />
-              <span className="font-public-sans text-xs font-bold text-brass uppercase tracking-wider">
-                Ready to Get Started
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/15 backdrop-blur-md border border-white/25 rounded-full mb-3.5 shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+              <span className="text-[11px] font-bold text-white uppercase tracking-wider">
+                Ready to Get Started?
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold font-fraunces max-w-2xl mx-auto leading-snug mb-3">
-              See if Elite Scholars is the <span className="text-brass">right fit</span> for your brokerage.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-2.5 tracking-tight">
+              See If Elite Scholars Is the <span className="underline decoration-amber-400 decoration-wavy underline-offset-4">Right Fit</span> for You
             </h2>
 
-            <p className="text-xs sm:text-sm text-paper/90 font-public-sans max-w-xl mx-auto mb-6 leading-relaxed">
-              Schedule a 15-minute strategy call to review your target revenue criteria and explore dedicated seller appointment allocation in your market.
+            <p className="text-xs sm:text-sm text-white/90 font-medium max-w-md mx-auto mb-5 leading-relaxed">
+              Schedule a 15-minute territory review to explore dedicated seller appointment allocation in your market.
             </p>
 
-            {/* Pill CTA Action Bar (Matching Reference Image) */}
-            <div className="p-1.5 bg-white/15 backdrop-blur-lg border border-white/25 rounded-full flex items-center justify-between max-w-md mx-auto shadow-xl">
-              <span className="text-xs font-semibold text-white/90 pl-4 font-public-sans hidden sm:inline">
-                Territory Consultation
-              </span>
-              <button
-                onClick={onOpenBooking}
-                className="w-full sm:w-auto bg-white text-ink-navy font-bold text-xs sm:text-sm px-6 py-3 rounded-full hover:bg-brass hover:text-white transition-all shadow-md flex items-center justify-center gap-2"
-              >
-                <span>Book Strategy Call</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-            </div>
+            {/* Pill CTA Action Button */}
+            <button
+              onClick={onOpenBooking}
+              className="bg-white text-slate-900 hover:text-blue-600 font-extrabold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer group hover:scale-105"
+            >
+              <span>Book Strategy Call</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
 
-            {/* Direct Line / Contact Footer */}
-            <div className="mt-5 pt-3 border-t border-white/15 flex flex-wrap items-center justify-center gap-4 text-[11px] font-semibold text-paper/80 font-public-sans">
-              <span>Direct Line: <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="text-brass hover:underline font-bold">{SITE.phone}</a></span>
+            {/* Direct Line / Contact Sub-bar */}
+            <div className="mt-4 pt-3.5 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-white/90">
+              <span>Direct: <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="text-white hover:text-amber-300 underline font-bold">{SITE.phone}</a></span>
               <span>&bull;</span>
-              <span>Email: <a href={`mailto:${SITE.email}`} className="text-brass hover:underline font-bold">{SITE.email}</a></span>
+              <span>Email: <a href={`mailto:${SITE.email}`} className="text-white hover:text-amber-300 underline font-bold">{SITE.email}</a></span>
             </div>
 
           </div>

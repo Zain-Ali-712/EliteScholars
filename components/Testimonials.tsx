@@ -22,103 +22,146 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-10 md:py-14 bg-gradient-to-b from-[#F4F6F9]/70 via-white to-[#F4F6F9]/70 border-b border-[rgba(31,39,51,0.08)] relative overflow-hidden">
-      {/* Background glow effect */}
-      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-72 h-72 bg-brass/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="testimonials" className="py-16 md:py-20 bg-gradient-to-b from-[#F8FAFF] via-white to-[#F8FAFF] border-b border-slate-200/80 relative overflow-hidden">
+      {/* Background Playful Ambient Glows */}
+      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 top-1/3 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         {/* Centered Section Header */}
-        <div className="max-w-2xl mx-auto text-center mb-10">
-          <div className="agency-pill mb-3 inline-flex">
-            <span className="w-2 h-2 rounded-full bg-brass" aria-hidden="true" />
-            <span>Verified Advisor Testimonials</span>
+        <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-600 border border-purple-200 shadow-xs mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
+            <span>Client Success Stories</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-ink-navy leading-tight">
-            What Our <span className="text-brass">Clients</span> Say
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+            What Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Clients</span> Say
           </h2>
-          <p className="text-xs sm:text-sm text-slate font-public-sans leading-relaxed mt-2">
+          <p className="text-base text-slate-600 leading-relaxed font-medium">
             Hear directly from M&amp;A advisors and firm principals who scaled listing inventory with Elite Scholars.
           </p>
         </div>
 
-        {/* 3 Compact Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto pt-4">
-          {visibleTestimonials.map((item, idx) => (
-            <div
-              key={`${item.id}-${idx}`}
-              className="bg-white rounded-[24px] border border-slate-200/80 p-6 shadow-sm hover:shadow-md hover:border-brass/40 transition-all duration-300 relative flex flex-col justify-between group overflow-visible"
-            >
-              {/* Top Right Circular Monogram Badge */}
-              <div className="w-11 h-11 rounded-full border-2 border-brass bg-ink-navy text-brass flex items-center justify-center font-fraunces font-bold text-sm shadow-md absolute -top-4 right-6 shrink-0 group-hover:scale-105 transition-transform select-none">
-                {item.name.split(' ').map((n) => n[0]).join('')}
-              </div>
+        {/* 3 Video Testimonials Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-7 max-w-6xl mx-auto items-stretch mb-12">
+          {visibleTestimonials.map((item, idx) => {
+            const cardThemes = [
+              {
+                border: 'border-blue-300 hover:border-blue-500 shadow-blue-500/5',
+                bg: 'bg-gradient-to-b from-blue-50/60 via-white to-white',
+                badge: 'bg-blue-100 text-blue-800 border-blue-200',
+                avatarBg: 'bg-gradient-to-tr from-blue-600 to-indigo-600',
+              },
+              {
+                border: 'border-purple-300 hover:border-purple-500 shadow-purple-500/5',
+                bg: 'bg-gradient-to-b from-purple-50/60 via-white to-white',
+                badge: 'bg-purple-100 text-purple-800 border-purple-200',
+                avatarBg: 'bg-gradient-to-tr from-purple-600 to-indigo-600',
+              },
+              {
+                border: 'border-emerald-300 hover:border-emerald-500 shadow-emerald-500/5',
+                bg: 'bg-gradient-to-b from-emerald-50/60 via-white to-white',
+                badge: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                avatarBg: 'bg-gradient-to-tr from-emerald-600 to-teal-500',
+              },
+            ]
+            const theme = cardThemes[idx % cardThemes.length]
 
-              <div>
-                {/* 5-Star Rating Row */}
-                <div className="flex items-center gap-1 text-brass mb-3 pt-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  ))}
+            return (
+              <div
+                key={`${item.id}-${idx}`}
+                className={`${theme.bg} rounded-3xl border-2 ${theme.border} p-5 md:p-4.5 lg:p-6 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between group`}
+              >
+                <div>
+                  {/* Embedded Video Player */}
+                  {item.videoUrl && (
+                    <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border-2 border-slate-200/80 shadow-xs mb-3.5 group-hover:shadow-md transition-shadow">
+                      <video
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="w-full h-full object-cover"
+                        src={item.videoUrl}
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  )}
+
+                  {/* 5-Star Rating Row */}
+                  <div className="flex items-center gap-1 text-amber-400 mb-2.5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                    <span className="text-[11px] font-bold text-slate-500 ml-1 font-sans">5.0</span>
+                  </div>
+
+                  {/* Testimonial Quote */}
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4 font-medium min-h-[55px] md:min-h-[70px] lg:min-h-[55px]">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
                 </div>
 
-                {/* Testimonial Quote */}
-                <p className="text-xs sm:text-sm text-charcoal/90 leading-relaxed font-public-sans italic mb-4">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
+                {/* Author Info & Stat Badge in Same Column */}
+                <div className="pt-3.5 border-t border-slate-100 flex flex-col items-start gap-2">
+                  <div className="flex items-center gap-2.5 w-full">
+                    <div className={`w-9 h-9 rounded-xl ${theme.avatarBg} text-white flex items-center justify-center font-extrabold text-xs shadow-xs shrink-0`}>
+                      {item.name.split(' ').map((n) => n[0]).join('')}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-tight truncate">
+                        {item.name}
+                      </h3>
+                      <p className="text-[11px] text-slate-500 font-medium truncate">
+                        {item.title}, {item.firm}
+                      </p>
+                    </div>
+                  </div>
+                  {item.stats && (
+                    <span className={`text-[10px] font-extrabold ${theme.badge} border px-2.5 py-0.5 rounded-full self-start shadow-2xs`}>
+                      {item.stats}
+                    </span>
+                  )}
+                </div>
               </div>
-
-              {/* Author Info & Stat Badge */}
-              <div className="pt-3 border-t border-slate-100">
-                <h3 className="text-xs sm:text-sm font-bold text-ink-navy font-public-sans">
-                  {item.name}
-                </h3>
-                <p className="text-[11px] text-slate font-public-sans">
-                  {item.title}, {item.firm}
-                </p>
-                {item.stats && (
-                  <span className="inline-block mt-2 text-[10px] font-bold text-brass bg-brass/10 border border-brass/30 px-2.5 py-0.5 rounded-full font-public-sans">
-                    {item.stats}
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
-        {/* Navigation Arrow Controls & Rating Metric Badge */}
-        <div className="mt-8 flex flex-col items-center gap-4">
-          <div className="flex items-center gap-2">
+        {/* Navigation Controls & Rating Metric Badge */}
+        <div className="flex flex-col items-center gap-5">
+          <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="w-9 h-9 rounded-full bg-slate-100 text-ink-navy flex items-center justify-center hover:bg-ink-navy hover:text-white transition-colors shadow-xs cursor-pointer"
+              className="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-colors shadow-xs cursor-pointer"
               aria-label="Previous Testimonials"
             >
-              <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg className="w-5 h-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
               </svg>
             </button>
             <button
               onClick={handleNext}
-              className="w-9 h-9 rounded-full bg-ink-navy text-white flex items-center justify-center hover:bg-brass transition-colors shadow-xs cursor-pointer"
+              className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-indigo-600 transition-colors shadow-md hover:shadow-lg cursor-pointer"
               aria-label="Next Testimonials"
             >
-              <svg className="w-4 h-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg className="w-5 h-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>
             </button>
           </div>
 
           {/* Rating Summary Box */}
-          <div className="bg-white rounded-[20px] border border-slate-200/80 p-3.5 px-6 shadow-xs flex items-center gap-6 text-center divide-x divide-slate-100">
-            <div className="pr-3">
-              <p className="text-lg sm:text-xl font-extrabold text-ink-navy font-public-sans leading-none">4.9/5</p>
-              <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Average Rating</p>
+          <div className="bg-white rounded-2xl border-2 border-slate-200/80 py-3 px-8 shadow-xs flex items-center gap-8 text-center divide-x divide-slate-100">
+            <div>
+              <p className="text-xl sm:text-2xl font-extrabold text-slate-900 leading-none">4.9 / 5.0</p>
+              <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mt-1">Average Satisfaction</p>
             </div>
-            <div className="pl-6">
-              <p className="text-lg sm:text-xl font-extrabold text-brass font-public-sans leading-none">60+</p>
-              <p className="text-[10px] font-bold text-slate font-public-sans uppercase tracking-wider mt-1">Verified Reviews</p>
+            <div className="pl-8">
+              <p className="text-xl sm:text-2xl font-extrabold text-blue-600 leading-none">60+</p>
+              <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mt-1">Broker Partners</p>
             </div>
           </div>
         </div>

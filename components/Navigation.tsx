@@ -39,8 +39,8 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-md border-b border-ink-navy/10 py-3 shadow-md'
-          : 'bg-[#FAFAF9] border-b border-ink-navy/5 py-4'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-sm'
+          : 'bg-white/80 backdrop-blur-sm border-b border-slate-100 py-4'
       }`}
     >
       <div className="container-main flex items-center justify-between">
@@ -49,10 +49,10 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
           href="#hero"
           className="flex items-center gap-2.5 group text-decoration-none focus-visible:outline-2"
         >
-          <div className="w-9 h-9 rounded-xl bg-ink-navy flex items-center justify-center text-paper font-fraunces font-bold text-sm tracking-widest border border-brass/40 transition-all duration-300 group-hover:bg-brass group-hover:scale-105 shadow-xs">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-extrabold text-base tracking-tight shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
             ES
           </div>
-          <span className="font-fraunces font-bold text-lg tracking-tight text-ink-navy">
+          <span className="font-extrabold text-xl tracking-tight text-slate-900">
             {SITE.name}
           </span>
         </a>
@@ -66,10 +66,10 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className={`font-public-sans text-sm font-medium transition-colors ${
+                className={`text-sm font-semibold transition-colors ${
                   isActive
-                    ? 'text-ink-navy font-semibold underline underline-offset-4 decoration-brass'
-                    : 'text-slate hover:text-ink-navy'
+                    ? 'text-blue-600 font-bold underline underline-offset-8 decoration-blue-600 decoration-2'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {link.label}
@@ -82,22 +82,22 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
         <div className="hidden sm:flex items-center gap-5">
           <a
             href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`}
-            className="font-public-sans text-xs font-semibold text-charcoal hover:text-brass transition-colors"
+            className="text-xs font-bold text-slate-700 hover:text-blue-600 transition-colors"
           >
             {SITE.phone}
           </a>
           <button
             onClick={onOpenBooking}
-            className="btn-primary text-xs py-2.5 px-4"
+            className="btn-primary text-xs py-2.5 px-5 shadow-sm"
           >
-            Book a Strategy Call
+            Book Strategy Call
           </button>
         </div>
 
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-ink-navy focus-visible:outline-2"
+          className="lg:hidden p-2 text-slate-700 hover:text-blue-600 focus-visible:outline-2 cursor-pointer"
           aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
           aria-expanded={mobileMenuOpen}
         >
@@ -118,14 +118,14 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-[rgba(31,39,51,0.1)] bg-paper px-4 pt-3 pb-6 animate-pipeline-in">
+        <div className="lg:hidden border-b border-slate-200 bg-white/95 backdrop-blur-md px-5 pt-4 pb-6 shadow-xl animate-pipeline-in">
           <nav className="flex flex-col gap-3 mb-4">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-public-sans text-base text-charcoal hover:text-brass py-1 border-b border-[rgba(31,39,51,0.05)]"
+                className="text-base font-semibold text-slate-800 hover:text-blue-600 py-1.5 border-b border-slate-100"
               >
                 {link.label}
               </a>
@@ -134,7 +134,7 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
           <div className="flex flex-col gap-3 pt-2">
             <a
               href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`}
-              className="font-public-sans text-sm font-medium text-slate text-center"
+              className="text-sm font-bold text-slate-600 text-center"
             >
               Direct: {SITE.phone}
             </a>
@@ -145,7 +145,7 @@ export default function Navigation({ onOpenBooking }: NavigationProps) {
               }}
               className="btn-primary w-full text-center text-sm py-3"
             >
-              Book a Strategy Call
+              Book Strategy Call
             </button>
           </div>
         </div>
