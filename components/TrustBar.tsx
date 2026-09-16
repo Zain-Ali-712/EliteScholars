@@ -34,8 +34,16 @@ export default function TrustBar() {
   ]
 
   return (
-    <section id="stats" className="py-14 sm:py-16 bg-white border-b border-slate-200/80">
-      <div className="container-main">
+    <section id="stats" className="py-10 sm:py-12 bg-white relative overflow-hidden border-b border-slate-200/80">
+      {/* Subtle Dot Grid Pattern & Ambient Glows */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[radial-gradient(#E2E8F0_1px,transparent_1px)] [background-size:24px_24px] opacity-75 pointer-events-none" 
+      />
+      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 top-1/2 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-main relative z-10">
         
         {/* Centered Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-10 sm:mb-12">

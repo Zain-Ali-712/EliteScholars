@@ -11,7 +11,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative pt-24 pb-14 md:pt-32 md:pb-20 bg-gradient-to-b from-[#EFF4FF]/70 via-[#F8FAFF] to-white overflow-hidden border-b border-slate-200/80"
+      className="relative pt-24 pb-6 sm:pb-8 md:pt-32 md:pb-8 bg-gradient-to-b from-[#EFF4FF]/70 via-[#F8FAFF] to-white overflow-hidden border-b border-slate-200/80"
     >
       {/* Light & Playful Background Glows */}
       <div
@@ -126,8 +126,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         </div>
 
         {/* Proof Line Below Hero - Compact with only user-provided data */}
-        <div className="mt-8 pt-6 border-t border-slate-200/60 text-center max-w-2xl mx-auto">
-          <p className="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight mb-2.5">
+        <div className="mt-5 pt-4 border-t border-slate-200/60 text-center max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight mb-2">
             {HERO_PROOF.headline}
           </p>
           <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3">

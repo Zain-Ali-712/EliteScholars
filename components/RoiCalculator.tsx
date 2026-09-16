@@ -46,7 +46,11 @@ export default function RoiCalculator() {
 
   return (
     <section id="roi-calculator" className="py-14 md:py-18 bg-gradient-to-b from-white via-purple-50/15 to-white border-b border-slate-200/80 relative overflow-hidden">
-      {/* Background Playful Ambient Glows */}
+      {/* Subtle Micro Dot Pattern & Ambient Glows */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" 
+      />
       <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
       <div aria-hidden="true" className="absolute -right-20 bottom-1/3 w-80 h-80 bg-purple-400/15 rounded-full blur-3xl pointer-events-none" />
 

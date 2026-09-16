@@ -4,25 +4,29 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-800">
-      <div className="container-main">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+    <footer className="bg-gradient-to-br from-[#351966] via-[#4A2386] to-[#26104E] text-purple-100/80 pt-16 pb-12 border-t border-white/15 relative overflow-hidden">
+      {/* Playful Ambient Background Lighting */}
+      <div aria-hidden="true" className="absolute -right-20 -bottom-20 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-20 top-0 w-80 h-80 bg-[#E87722]/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-main relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/15">
           
           {/* Col 1: Brand & Monogram */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-indigo-500 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 border border-white/20">
                 ES
               </div>
               <span className="font-extrabold text-xl text-white tracking-tight">
                 {SITE.name}
               </span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed font-medium">
+            <p className="text-xs text-purple-200/80 leading-relaxed font-medium">
               Done-for-you cold outreach and verified seller appointments engineered exclusively for business brokers and M&amp;A advisors.
             </p>
             <div className="pt-1">
-              <span className="inline-block px-3 py-1 bg-blue-900/40 border border-blue-500/30 text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded-full">
+              <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 text-purple-200 text-[10px] font-bold uppercase tracking-wider rounded-full backdrop-blur-xs">
                 Verified Quality Standard
               </span>
             </div>
@@ -36,8 +40,8 @@ export default function Footer() {
             <ul className="space-y-2 text-xs font-medium">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="hover:text-blue-400 transition-colors flex items-center gap-1.5">
-                    <span className="text-blue-500 text-xs">&rsaquo;</span>
+                  <a href={link.href} className="text-purple-200/80 hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                    <span className="text-amber-400 text-xs">&rsaquo;</span>
                     {link.label}
                   </a>
                 </li>
@@ -52,20 +56,20 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5 text-xs font-medium">
               <li>
-                <span className="block text-slate-500 text-[10px] uppercase font-bold tracking-wider">Phone</span>
-                <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="font-bold text-slate-200 hover:text-blue-400 transition-colors">
+                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Phone</span>
+                <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="font-bold text-white hover:text-amber-300 transition-colors">
                   {SITE.phone}
                 </a>
               </li>
               <li>
-                <span className="block text-slate-500 text-[10px] uppercase font-bold tracking-wider">Email</span>
-                <a href={`mailto:${SITE.email}`} className="font-bold text-slate-200 hover:text-blue-400 transition-colors">
+                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Email</span>
+                <a href={`mailto:${SITE.email}`} className="font-bold text-white hover:text-amber-300 transition-colors">
                   {SITE.email}
                 </a>
               </li>
               <li>
-                <span className="block text-slate-500 text-[10px] uppercase font-bold tracking-wider">Headquarters</span>
-                <span className="text-slate-300">{SITE.address}</span>
+                <span className="block text-purple-300/70 text-[10px] uppercase font-bold tracking-wider">Headquarters</span>
+                <span className="text-purple-100 font-semibold">{SITE.address}</span>
               </li>
             </ul>
           </div>
@@ -80,7 +84,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:border-blue-500 hover:text-blue-400 transition-colors text-white"
+                className="p-2.5 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 hover:text-amber-300 transition-colors text-white"
                 aria-label="LinkedIn Profile"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -88,20 +92,20 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <ul className="space-y-1.5 text-[11px] text-slate-500 font-medium">
-              <li><a href="#privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#terms" className="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+            <ul className="space-y-1.5 text-[11px] text-purple-200/70 font-medium">
+              <li><a href="#privacy" className="hover:text-amber-300 transition-colors">Privacy Policy</a></li>
+              <li><a href="#terms" className="hover:text-amber-300 transition-colors">Terms of Service</a></li>
             </ul>
           </div>
 
         </div>
 
         {/* Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-medium">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-purple-200/70 font-medium">
           <p>
             &copy; {currentYear} {SITE.name}. All rights reserved.
           </p>
-          <p className="mt-2 sm:mt-0 text-[11px] text-slate-400">
+          <p className="mt-2 sm:mt-0 text-[11px] text-purple-300/80">
             Built for M&amp;A professionals &amp; business brokers.
           </p>
         </div>

@@ -2,10 +2,14 @@ import { COMPARISON_LEFT, COMPARISON_RIGHT } from '@/data/config'
 
 export default function Problem() {
   return (
-    <section id="problem" className="py-16 md:py-20 bg-white border-b border-slate-200/80 relative overflow-hidden">
-      {/* Background Subtle Radial Light Glow */}
-      <div aria-hidden="true" className="absolute -left-20 top-1/4 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -right-20 bottom-1/4 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="problem" className="py-16 md:py-20 bg-gradient-to-b from-[#FAFBFD] via-white to-[#F7F9FD] border-b border-slate-200/80 relative overflow-hidden">
+      {/* Subtle Geometric Grid Pattern & Ambient Glows */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[linear-gradient(to_right,#E2E8F0_1px,transparent_1px),linear-gradient(to_bottom,#E2E8F0_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-50" 
+      />
+      <div aria-hidden="true" className="absolute -left-20 top-1/4 w-80 h-80 bg-rose-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 bottom-1/4 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         

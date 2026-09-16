@@ -35,7 +35,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
             {/* Pill CTA Action Button */}
             <button
               onClick={onOpenBooking}
-              className="bg-white text-slate-900 hover:text-blue-600 font-extrabold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer group hover:scale-105"
+              className="btn-primary text-xs sm:text-sm px-8 py-3.5 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer group hover:scale-105 border-2 border-white/40"
             >
               <span>Book Strategy Call</span>
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

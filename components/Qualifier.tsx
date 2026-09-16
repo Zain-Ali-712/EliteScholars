@@ -2,7 +2,15 @@ import { QUALIFIERS, DISQUALIFIERS, DISQUALIFIER_STATEMENT } from '@/data/config
 
 export default function Qualifier() {
   return (
-    <section id="qualifier" className="py-16 md:py-20 bg-white border-b border-slate-200/80 relative overflow-hidden">
+    <section id="qualifier" className="py-16 md:py-20 bg-gradient-to-b from-white via-[#F8FAFC] to-white border-b border-slate-200/80 relative overflow-hidden">
+      {/* Playful Ambient Dual Glows & Dot Texture */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[radial-gradient(#E2E8F0_1px,transparent_1px)] [background-size:22px_22px] opacity-60 pointer-events-none" 
+      />
+      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 top-1/2 w-80 h-80 bg-rose-400/10 rounded-full blur-3xl pointer-events-none" />
+
       <div className="container-main relative z-10">
         
         {/* Centered Section Header */}
