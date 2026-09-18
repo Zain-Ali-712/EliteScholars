@@ -24,18 +24,18 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-16 md:py-20 bg-gradient-to-b from-[#F8FAFF] via-white to-[#F8FAFF] border-b border-slate-200/80 relative overflow-hidden">
       {/* Background Playful Ambient Glows */}
-      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-80 h-80 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
       <div aria-hidden="true" className="absolute -right-20 top-1/3 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         {/* Centered Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-600 border border-purple-200 shadow-xs mb-3.5">
-            <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200 shadow-xs mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
             <span>Client Success Stories</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            What Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Clients</span> Say
+            What Our <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Clients</span> Say
           </h2>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
             Hear directly from M&amp;A advisors and firm principals who scaled listing inventory with Elite Scholars.
@@ -50,13 +50,13 @@ export default function Testimonials() {
                 border: 'border-blue-300 hover:border-blue-500 shadow-blue-500/5',
                 bg: 'bg-gradient-to-b from-blue-50/60 via-white to-white',
                 badge: 'bg-blue-100 text-blue-800 border-blue-200',
-                avatarBg: 'bg-gradient-to-tr from-blue-600 to-indigo-600',
+                avatarBg: 'bg-gradient-to-tr from-blue-600 to-blue-700',
               },
               {
-                border: 'border-purple-300 hover:border-purple-500 shadow-purple-500/5',
-                bg: 'bg-gradient-to-b from-purple-50/60 via-white to-white',
-                badge: 'bg-purple-100 text-purple-800 border-purple-200',
-                avatarBg: 'bg-gradient-to-tr from-purple-600 to-indigo-600',
+                border: 'border-amber-300 hover:border-amber-500 shadow-amber-500/5',
+                bg: 'bg-gradient-to-b from-amber-50/40 via-white to-white',
+                badge: 'bg-amber-100 text-amber-800 border-amber-200',
+                avatarBg: 'bg-gradient-to-tr from-amber-500 to-orange-500',
               },
               {
                 border: 'border-emerald-300 hover:border-emerald-500 shadow-emerald-500/5',
@@ -144,7 +144,7 @@ export default function Testimonials() {
             </button>
             <button
               onClick={handleNext}
-              className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-indigo-600 transition-colors shadow-md hover:shadow-lg cursor-pointer"
+              className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg cursor-pointer"
               aria-label="Next Testimonials"
             >
               <svg className="w-5 h-5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">

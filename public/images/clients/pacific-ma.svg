@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <g transform="translate(6, 6)">
+    <rect x="2" y="2" width="44" height="44" rx="10" fill="#1E40AF" />
+    <path d="M14 34 V14 H26 C31 14 34 17 34 22 C34 27 31 30 26 30 H14" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="56" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#0F172A" letter-spacing="1">PACIFIC</text>
+    <text x="56" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="800" fill="#2563EB" letter-spacing="1.5">MERGERS &amp; ACQUISITIONS</text>
+  </g>
+</svg>

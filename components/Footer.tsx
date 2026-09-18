@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Col 1: Brand & Monogram */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-indigo-500 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 border border-white/20">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-blue-600 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 border border-white/20">
                 ES
               </div>
               <span className="font-extrabold text-xl text-white tracking-tight">

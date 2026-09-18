@@ -4,24 +4,21 @@ import AnimatedCounter from '@/components/AnimatedCounter'
 export default function ImpactBanner() {
   const cardThemes = [
     {
-      iconBg: 'bg-gradient-to-tr from-blue-500 to-indigo-600 text-white shadow-md shadow-blue-500/20',
+      iconBg: 'bg-gradient-to-tr from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/25',
       numColor: 'text-blue-600',
-      borderColor: 'border-blue-200 hover:border-blue-400 hover:shadow-blue-500/10',
-      bgCard: 'bg-gradient-to-b from-blue-50/40 via-white to-white',
+      borderColor: 'border-2 border-blue-200/90 hover:border-blue-400 hover:shadow-blue-500/15',
       badge: 'Brokers Served',
     },
     {
-      iconBg: 'bg-gradient-to-tr from-purple-500 to-pink-500 text-white shadow-md shadow-purple-500/20',
-      numColor: 'text-purple-600',
-      borderColor: 'border-purple-200 hover:border-purple-400 hover:shadow-purple-500/10',
-      bgCard: 'bg-gradient-to-b from-purple-50/40 via-white to-white',
+      iconBg: 'bg-gradient-to-tr from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-500/25',
+      numColor: 'text-emerald-600',
+      borderColor: 'border-2 border-emerald-300/90 hover:border-emerald-400 hover:shadow-emerald-500/15',
       badge: 'Deal Facilitation',
     },
     {
-      iconBg: 'bg-gradient-to-tr from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/20',
-      numColor: 'text-emerald-600',
-      borderColor: 'border-emerald-200 hover:border-emerald-400 hover:shadow-emerald-500/10',
-      bgCard: 'bg-gradient-to-b from-emerald-50/40 via-white to-white',
+      iconBg: 'bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-md shadow-orange-500/25',
+      numColor: 'text-orange-600',
+      borderColor: 'border-2 border-amber-300/90 hover:border-amber-400 hover:shadow-amber-500/15',
       badge: 'Lead Vetting',
     },
   ]
@@ -42,45 +39,53 @@ export default function ImpactBanner() {
   ]
 
   return (
-    <section id="impact" className="py-12 md:py-16 bg-white border-b border-slate-200/80 relative overflow-hidden">
-      {/* Background Playful Glows */}
-      <div aria-hidden="true" className="absolute -left-20 top-1/2 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -right-20 top-1/2 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="impact" className="py-8 sm:py-10 md:py-11 bg-gradient-to-br from-[#EAF2FD] via-[#F6F9FF] to-[#EBF3FE] border-y border-blue-200/60 relative overflow-hidden text-slate-800">
+      {/* Subtle Dot Grid Pattern with Blue Micro Accents */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[radial-gradient(rgba(37,99,235,0.08)_1.2px,transparent_1.2px)] [background-size:20px_20px] pointer-events-none" 
+      />
 
-      <div className="container-main relative z-10">
+      {/* Radiant Ambient Glows (Dominant Blue with Only a Very Subtle Warm Touch) */}
+      <div aria-hidden="true" className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[550px] h-[300px] bg-blue-400/20 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-16 top-0 w-72 h-72 bg-sky-300/20 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[400px] h-[250px] bg-blue-500/12 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-16 bottom-0 w-64 h-64 bg-orange-300/12 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container-main relative z-10 max-w-5xl">
         
-        {/* Centered Section Header */}
-        <div className="max-w-2xl mx-auto text-center mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-200 shadow-xs mb-3">
-            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+        {/* Centered Compact Section Header */}
+        <div className="max-w-2xl mx-auto text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-blue-100 text-blue-700 border border-blue-200/90 shadow-2xs mb-2.5 backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
             <span>Our Track Record</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-2.5">
-            Proven Scale Across <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">North American Brokerages</span>
+          <h2 className="text-2xl sm:text-3xl md:text-3xl font-extrabold text-slate-900 tracking-tight mb-1.5 leading-tight">
+            Proven Scale for <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Brokers Nationwide</span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium max-w-lg mx-auto">
             Real performance benchmarks achieved for business brokers and M&amp;A advisory firms nationwide.
           </p>
         </div>
 
-        {/* 3 Stat Cards Container */}
-        <div className="bg-gradient-to-r from-blue-50/80 via-purple-50/50 to-emerald-50/80 rounded-3xl p-5 sm:p-6 md:p-5 lg:p-8 border-2 border-blue-200 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 lg:gap-5">
+        {/* 3 Stat Cards Container - Compact */}
+        <div className="bg-white/80 backdrop-blur-md rounded-2xl md:rounded-3xl p-3.5 sm:p-5 border border-blue-200/70 shadow-xl shadow-blue-500/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             {IMPACT_STATS.map((stat, idx) => {
               const theme = cardThemes[idx]
               return (
                 <div 
                   key={idx} 
-                  className={`bg-white border-2 ${theme.borderColor} ${theme.bgCard} rounded-2xl p-4 sm:p-5 md:p-3.5 lg:p-5 flex items-center gap-3 lg:gap-4 transition-all duration-300 shadow-sm hover:shadow-lg group`}
+                  className={`bg-white/95 rounded-xl md:rounded-2xl p-3.5 sm:p-4.5 flex items-center gap-3.5 shadow-sm hover:shadow-lg transition-all duration-300 group ${theme.borderColor}`}
                 >
-                  <div className={`w-11 h-11 lg:w-13 lg:h-13 rounded-2xl ${theme.iconBg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
+                  <div className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl ${theme.iconBg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
                     {icons[idx]}
                   </div>
                   <div className="min-w-0">
-                    <p className={`text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold ${theme.numColor} tracking-tight leading-none mb-1`}>
+                    <p className={`text-2xl sm:text-3xl lg:text-3xl font-extrabold ${theme.numColor} tracking-tight leading-none mb-0.5`}>
                       <AnimatedCounter value={stat.value} />
                     </p>
-                    <p className="text-xs lg:text-sm font-bold text-slate-700 leading-snug">
+                    <p className="text-xs sm:text-xs lg:text-sm font-bold text-slate-800 leading-tight">
                       {stat.label}
                     </p>
                   </div>
@@ -92,5 +97,6 @@ export default function ImpactBanner() {
 
       </div>
     </section>
+
   )
 }

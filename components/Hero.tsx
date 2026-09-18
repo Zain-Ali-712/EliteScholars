@@ -13,6 +13,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       aria-labelledby="hero-heading"
       className="relative pt-8 pb-6 sm:pb-8 md:pt-12 md:pb-8 bg-gradient-to-b from-[#EFF4FF]/70 via-[#F8FAFF] to-white overflow-hidden border-b border-slate-200/80"
     >
+      {/* Big-Box Geometric Grid Pattern covering central area with smooth fade mask */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,99,235,0.08)_1.5px,transparent_1.5px),linear-gradient(to_bottom,rgba(37,99,235,0.08)_1.5px,transparent_1.5px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_75%_55%_at_50%_15%,#000_35%,transparent_100%)] pointer-events-none" 
+      />
+
       {/* Light & Playful Background Glows */}
       <div
         aria-hidden="true"
@@ -20,7 +26,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
       />
       <div
         aria-hidden="true"
-        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-indigo-400/15 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-sky-400/15 rounded-full blur-3xl pointer-events-none"
       />
       <div
         aria-hidden="true"
@@ -43,7 +49,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             {/* Main Headlines */}
             <h1 id="hero-heading" className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 leading-[1.18] tracking-tight mb-5">
               STOP CHASING YOUR NEXT LISTING.{' '}
-              <span className="block mt-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="block mt-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 bg-clip-text text-transparent">
                 START TALKING TO BUSINESS OWNERS READY TO SELL.
               </span>
             </h1>
@@ -89,7 +95,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <div className="w-full max-w-[540px] bg-white rounded-3xl p-2.5 sm:p-3 border-2 border-blue-200/80 shadow-2xl shadow-blue-500/10 relative group">
               
               {/* Playful Floating Top Pill */}
-              <div className="absolute -top-3.5 left-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[11px] font-bold px-3.5 py-1 rounded-full shadow-md z-20 flex items-center gap-1.5">
+              <div className="absolute -top-3.5 left-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-[11px] font-bold px-3.5 py-1 rounded-full shadow-md z-20 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -135,8 +141,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
               Targeted Outreach
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200/80 shadow-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-700 border border-sky-200/80 shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
               Qualified Seller Conversations
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200/80 shadow-2xs">

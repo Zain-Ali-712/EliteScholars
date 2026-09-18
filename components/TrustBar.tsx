@@ -11,10 +11,10 @@ export default function TrustBar() {
       tag: 'Nationwide',
     },
     {
-      borderColor: 'border-purple-200 hover:border-purple-400',
-      iconBg: 'bg-purple-50 text-purple-600',
-      badgeBg: 'bg-purple-50 text-purple-700 border-purple-200',
-      numColor: 'text-purple-600',
+      borderColor: 'border-sky-200 hover:border-sky-400',
+      iconBg: 'bg-sky-50 text-sky-600',
+      badgeBg: 'bg-sky-50 text-sky-700 border-sky-200',
+      numColor: 'text-sky-600',
       tag: 'Fast Start',
     },
     {
@@ -41,7 +41,7 @@ export default function TrustBar() {
         className="absolute inset-0 bg-[radial-gradient(#E2E8F0_1px,transparent_1px)] [background-size:24px_24px] opacity-75 pointer-events-none" 
       />
       <div aria-hidden="true" className="absolute -left-20 top-1/2 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -right-20 top-1/2 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 top-1/2 w-72 h-72 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         
@@ -51,8 +51,8 @@ export default function TrustBar() {
             <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
             <span>Proven Track Record</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
-            Predictable Deal Flow, Measured in Real Numbers
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3 whitespace-normal">
+            Predictable Deal Flow in Real Numbers
           </h2>
           <p className="text-sm sm:text-base text-slate-600 font-medium">
             How our targeted outreach consistently fuels seller pipelines for business brokers nationwide.

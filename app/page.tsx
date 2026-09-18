@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import TrustBar from '@/components/TrustBar'
+import TrustedClients from '@/components/TrustedClients'
 import HowItWorks from '@/components/HowItWorks'
 import Problem from '@/components/Problem'
 import Differentiators from '@/components/Differentiators'
@@ -18,9 +20,12 @@ import Footer from '@/components/Footer'
 import BookingModal from '@/components/BookingModal'
 
 export default function Home() {
+  const router = useRouter()
   const [isBookingOpen, setIsBookingOpen] = useState(false)
 
-  const handleOpenBooking = () => setIsBookingOpen(true)
+  const handleOpenBooking = () => {
+    router.push('/booking')
+  }
   const handleCloseBooking = () => setIsBookingOpen(false)
 
   return (
@@ -53,7 +58,10 @@ export default function Home() {
         {/* 9. Interactive ROI calculator */}
         <RoiCalculator />
 
-        {/* 10. Testimonials */}
+        {/* 10. Our Trusted Clients Marquee (along with Testimonials) */}
+        <TrustedClients />
+
+        {/* 10.5. Testimonials */}
         <Testimonials />
 
         {/* 11. Impact stats banner */}

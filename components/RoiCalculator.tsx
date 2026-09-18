@@ -45,14 +45,14 @@ export default function RoiCalculator() {
   const netBarHeight = Math.min(100, Math.max(12, (Math.max(0, netProfit) / maxVal) * 100))
 
   return (
-    <section id="roi-calculator" className="py-14 md:py-18 bg-gradient-to-b from-white via-purple-50/15 to-white border-b border-slate-200/80 relative overflow-hidden">
+    <section id="roi-calculator" className="py-14 md:py-18 bg-gradient-to-b from-[#F7F9FD] via-white to-[#F7F9FD] border-b border-slate-200/80 relative overflow-hidden">
       {/* Subtle Micro Dot Pattern & Ambient Glows */}
       <div 
         aria-hidden="true" 
         className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none" 
       />
-      <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -right-20 bottom-1/3 w-80 h-80 bg-purple-400/15 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-blue-400/12 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -right-20 bottom-1/3 w-80 h-80 bg-sky-400/12 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
         {/* Centered Section Header */}
@@ -62,7 +62,7 @@ export default function RoiCalculator() {
             <span>Interactive ROI Calculator</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-3">
-            Calculate Your <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">Pipeline ROI</span>
+            Calculate Your <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Pipeline ROI</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
             Adjust expected deal sizes, conversion rates, and monthly appointment targets to project your annual return.
@@ -79,7 +79,7 @@ export default function RoiCalculator() {
               
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold shadow-md shadow-blue-500/20">
+                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-700 text-white flex items-center justify-center font-bold shadow-md shadow-blue-500/20">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                     </svg>
@@ -108,7 +108,7 @@ export default function RoiCalculator() {
                     </svg>
                     <span>Appointments Per Month</span>
                   </label>
-                  <span className="font-extrabold text-white bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-0.5 rounded-full text-xs shadow-xs">
+                  <span className="font-extrabold text-white bg-gradient-to-r from-blue-600 to-blue-700 px-3 py-0.5 rounded-full text-xs shadow-xs">
                     {leadsPerMonth} appointments/mo
                   </span>
                 </div>
@@ -120,7 +120,7 @@ export default function RoiCalculator() {
                   step={1}
                   value={leadsPerMonth}
                   onChange={(e) => setLeadsPerMonth(Number(e.target.value))}
-                  className="w-full h-2.5 bg-blue-200/60 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                  className="w-full h-2.5 bg-blue-200/60 rounded-lg appearance-none cursor-pointer accent-blue-600"
                 />
               </div>
 
@@ -148,7 +148,7 @@ export default function RoiCalculator() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor={listingRateId} className="flex items-center gap-1.5 text-xs font-bold text-slate-800 mb-1.5">
-                    <svg className="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>Lead-to-Listing Rate (%)</span>
@@ -161,13 +161,13 @@ export default function RoiCalculator() {
                     step={1}
                     value={leadToListingRate}
                     onChange={(e) => setLeadToListingRate(Number(e.target.value))}
-                    className="w-full px-3.5 py-2.5 border border-slate-200 border-l-4 border-l-purple-500 rounded-xl text-xs sm:text-sm font-semibold focus:border-purple-500 focus:ring-2 focus:ring-purple-100 focus:outline-hidden transition-all bg-slate-50/50"
+                    className="w-full px-3.5 py-2.5 border border-slate-200 border-l-4 border-l-emerald-500 rounded-xl text-xs sm:text-sm font-semibold focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 focus:outline-hidden transition-all bg-slate-50/50"
                   />
                 </div>
 
                 <div>
                   <label htmlFor={closeRateId} className="flex items-center gap-1.5 text-xs font-bold text-slate-800 mb-1.5">
-                    <svg className="w-3.5 h-3.5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-3.5 h-3.5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     <span>Listing-to-Close Rate (%)</span>
@@ -180,7 +180,7 @@ export default function RoiCalculator() {
                     step={5}
                     value={listingToCloseRate}
                     onChange={(e) => setListingToCloseRate(Number(e.target.value))}
-                    className="w-full px-3.5 py-2.5 border border-slate-200 border-l-4 border-l-indigo-500 rounded-xl text-xs sm:text-sm font-semibold focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 focus:outline-hidden transition-all bg-slate-50/50"
+                    className="w-full px-3.5 py-2.5 border border-slate-200 border-l-4 border-l-blue-500 rounded-xl text-xs sm:text-sm font-semibold focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-hidden transition-all bg-slate-50/50"
                   />
                 </div>
               </div>
@@ -229,15 +229,15 @@ export default function RoiCalculator() {
             </div>
 
             {/* Output Visual Box (5 Cols) */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-white via-purple-50/25 to-indigo-50/30 border-2 border-purple-300 rounded-3xl p-6 sm:p-7 shadow-xl shadow-purple-500/10 relative overflow-hidden flex flex-col justify-between">
+            <div className="lg:col-span-5 bg-gradient-to-b from-white via-blue-50/20 to-emerald-50/30 border-2 border-blue-200/90 rounded-3xl p-6 sm:p-7 shadow-xl shadow-blue-500/5 relative overflow-hidden flex flex-col justify-between">
               
               <div className="relative z-10 space-y-5">
                 
                 {/* Panel Header */}
-                <div className="flex items-center justify-between pb-3 border-b border-purple-100">
+                <div className="flex items-center justify-between pb-3 border-b border-blue-100">
                   <div>
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-purple-700 uppercase tracking-wider bg-purple-100/90 px-3 py-0.5 rounded-full border border-purple-300">
-                      <svg className="w-3 h-3 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-blue-700 uppercase tracking-wider bg-blue-100/90 px-3 py-0.5 rounded-full border border-blue-300">
+                      <svg className="w-3 h-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                       </svg>
                       <span>Projected Output</span>
@@ -246,7 +246,7 @@ export default function RoiCalculator() {
                       Annual Financial Impact
                     </h3>
                   </div>
-                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold shadow-md shadow-purple-500/20">
+                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-700 text-white flex items-center justify-center font-bold shadow-md shadow-blue-500/20">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
@@ -254,7 +254,7 @@ export default function RoiCalculator() {
                 </div>
 
                 {/* Visual Bar Comparison Graphic */}
-                <div className="p-4 bg-white/90 border-2 border-purple-100 rounded-2xl relative z-10 shadow-sm">
+                <div className="p-4 bg-white/90 border-2 border-blue-100 rounded-2xl relative z-10 shadow-sm">
                   <p className="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3">
                     Investment vs Revenue Breakdown
                   </p>
@@ -272,12 +272,12 @@ export default function RoiCalculator() {
 
                     {/* Gross Commission Bar */}
                     <div className="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
-                      <span className="text-[10px] font-extrabold text-purple-700">{formatCurrency(projectedGrossCommission)}</span>
+                      <span className="text-[10px] font-extrabold text-blue-700">{formatCurrency(projectedGrossCommission)}</span>
                       <div
-                        className="w-full bg-gradient-to-t from-purple-600 via-indigo-600 to-blue-500 rounded-t-lg transition-all duration-300 shadow-sm"
+                        className="w-full bg-gradient-to-t from-blue-600 to-sky-400 rounded-t-lg transition-all duration-300 shadow-sm"
                         style={{ height: `${grossBarHeight}%` }}
                       />
-                      <span className="text-[9px] font-extrabold text-purple-700 uppercase tracking-wider">Gross</span>
+                      <span className="text-[9px] font-extrabold text-blue-700 uppercase tracking-wider">Gross</span>
                     </div>
 
                     {/* Net Profit Bar */}
@@ -294,17 +294,17 @@ export default function RoiCalculator() {
                 </div>
 
                 {/* Metric Summary Rows */}
-                <div className="space-y-2.5 pt-2 border-t border-purple-100">
+                <div className="space-y-2.5 pt-2 border-t border-slate-100">
                   <div className="flex justify-between items-baseline text-xs sm:text-sm">
                     <span className="text-slate-600 font-medium">Deals Closed / Year</span>
-                    <span className="font-extrabold text-purple-800 bg-purple-100/70 px-2.5 py-0.5 rounded-lg border border-purple-200">
+                    <span className="font-extrabold text-blue-800 bg-blue-100/70 px-2.5 py-0.5 rounded-lg border border-blue-200">
                       {annualDeals.toFixed(1)} deals
                     </span>
                   </div>
 
-                  <div className="pt-2 border-t border-purple-100">
+                  <div className="pt-2 border-t border-slate-100">
                     <p className="text-xs text-slate-500 font-medium mb-1">Net Projected Profit</p>
-                    <p className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-purple-700 via-indigo-600 to-emerald-600 bg-clip-text text-transparent">
+                    <p className="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-700 via-blue-600 to-emerald-600 bg-clip-text text-transparent">
                       {formatCurrency(netProfit)}
                     </p>
                   </div>
@@ -313,7 +313,7 @@ export default function RoiCalculator() {
               </div>
 
               {/* ROI Multiple Pill Badge */}
-              <div className="mt-5 p-4 bg-gradient-to-r from-purple-100/70 via-indigo-50 to-emerald-100/70 border-2 border-emerald-300 rounded-2xl text-center relative z-10 shadow-2xs">
+              <div className="mt-5 p-4 bg-gradient-to-r from-blue-50 via-emerald-50/40 to-emerald-100/60 border-2 border-emerald-300 rounded-2xl text-center relative z-10 shadow-2xs">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                     <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

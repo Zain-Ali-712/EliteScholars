@@ -215,3 +215,54 @@ body {
 .panel-border:hover {
   box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
 }
+
+/* === Smooth Infinite Marquee Animation === */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* === Arrow Pulse / Micro-Animation === */
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-arrow-bounce {
+  animation: arrowBounce 1.4s ease-in-out infinite;
+}
+
+/* === Arrow Blinking Animation for CTA Pill === */
+@keyframes arrowBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(3px);
+  }
+}
+
+.animate-arrow-blink {
+  animation: arrowBlink 1.4s ease-in-out infinite;
+}
+

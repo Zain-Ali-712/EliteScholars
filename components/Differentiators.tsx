@@ -20,10 +20,10 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
       ],
     },
     {
-      borderColor: 'border-purple-200 hover:border-purple-400',
-      badge: 'bg-purple-50 text-purple-700 border-purple-200',
-      iconBg: 'bg-purple-600 text-white',
-      accentText: 'text-purple-600',
+      borderColor: 'border-emerald-200 hover:border-emerald-400',
+      badge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      iconBg: 'bg-emerald-600 text-white',
+      accentText: 'text-emerald-600',
       bullets: [
         'Live call recordings for every conversation',
         'Complete owner & business dossier',
@@ -38,23 +38,27 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
       bullets: [
         'Campaign launches in 48–72 hours',
         '100% done-for-you cold outreach',
-        'First meeting booked inside 14 days',
+        'First meeting booked within 48 hours',
       ],
     },
   ]
 
   return (
-    <section id="different" className="py-16 md:py-20 bg-gradient-to-b from-white via-[#F8FAFF] to-white border-b border-slate-200/80 relative overflow-hidden">
+    <section id="different" className="py-16 md:py-20 bg-gradient-to-b from-[#F7F9FD] via-white to-[#F6F9FE] border-b border-slate-200/80 relative overflow-hidden">
+      {/* Light, Soft Ambient Background Glows */}
+      <div aria-hidden="true" className="absolute top-0 right-1/4 w-80 h-80 bg-blue-300/12 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute bottom-0 left-1/4 w-72 h-72 bg-emerald-300/10 rounded-full blur-3xl pointer-events-none" />
+
       <div className="container-main relative z-10">
         
         {/* Centered Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-600 border border-purple-200 shadow-xs mb-3.5">
-            <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-600 border border-blue-200 shadow-xs mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
             <span>Why Brokers Choose Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            What Makes <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Elite Scholars</span> Different
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+            Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Elite Scholars</span>
           </h2>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
             Here&apos;s what sets our targeted broker outreach apart from generic lead services.

@@ -49,38 +49,79 @@ export default function HowItWorks() {
     },
   ]
 
-  return (
-    <section id="how-it-works" className="py-18 md:py-24 bg-gradient-to-br from-[#155EEF] via-[#1D4ED8] to-[#0A225C] relative overflow-hidden text-white">
-      {/* Background Dot Texture Pattern */}
-      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+  const stepThemes = [
+    {
+      cardBorder: 'border-2 border-blue-200/90 hover:border-blue-500 shadow-blue-500/5 hover:shadow-blue-500/15',
+      cardBg: 'bg-gradient-to-b from-blue-50/50 via-white to-white',
+      cornerGlow: 'bg-blue-400/20 group-hover:bg-blue-400/35',
+      iconOuter: 'bg-blue-50 border-2 border-blue-200 group-hover:border-blue-400 shadow-blue-500/10',
+      iconInner: 'bg-gradient-to-tr from-blue-600 to-cyan-500 text-white shadow-blue-500/25',
+      badgeBg: 'bg-blue-600 text-white',
+      tagBg: 'bg-blue-50 border-blue-200 text-blue-700',
+      highlightBg: 'text-blue-700 bg-blue-50/80 border-blue-100',
+      checkColor: 'text-blue-600',
+    },
+    {
+      cardBorder: 'border-2 border-amber-300/90 hover:border-amber-500 shadow-amber-500/5 hover:shadow-amber-500/15',
+      cardBg: 'bg-gradient-to-b from-amber-50/50 via-white to-white',
+      cornerGlow: 'bg-amber-400/25 group-hover:bg-amber-400/40',
+      iconOuter: 'bg-amber-50 border-2 border-amber-200 group-hover:border-amber-400 shadow-amber-500/10',
+      iconInner: 'bg-gradient-to-tr from-amber-500 to-orange-500 text-white shadow-orange-500/25',
+      badgeBg: 'bg-[#FF8000] text-white',
+      tagBg: 'bg-amber-50 border-amber-200 text-amber-800',
+      highlightBg: 'text-amber-800 bg-amber-50/80 border-amber-200/70',
+      checkColor: 'text-amber-600',
+    },
+    {
+      cardBorder: 'border-2 border-emerald-300/90 hover:border-emerald-500 shadow-emerald-500/5 hover:shadow-emerald-500/15',
+      cardBg: 'bg-gradient-to-b from-emerald-50/50 via-white to-white',
+      cornerGlow: 'bg-emerald-400/25 group-hover:bg-emerald-400/40',
+      iconOuter: 'bg-emerald-50 border-2 border-emerald-200 group-hover:border-emerald-400 shadow-emerald-500/10',
+      iconInner: 'bg-gradient-to-tr from-emerald-500 to-teal-600 text-white shadow-emerald-500/25',
+      badgeBg: 'bg-emerald-600 text-white',
+      tagBg: 'bg-emerald-50 border-emerald-200 text-emerald-800',
+      highlightBg: 'text-emerald-800 bg-emerald-50/80 border-emerald-200/70',
+      checkColor: 'text-emerald-600',
+    },
+  ]
 
-      {/* Playful Ambient Lighting Effects */}
-      <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-[750px] h-[360px] bg-white/10 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#E87722]/20 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute -left-20 top-1/3 w-80 h-80 bg-blue-900/40 rounded-full blur-3xl pointer-events-none" />
+  return (
+    <section id="how-it-works" className="py-16 md:py-22 bg-gradient-to-br from-[#EAF2FD] via-[#F6F9FF] to-[#EBF3FE] border-b border-slate-200/80 relative overflow-hidden text-slate-800">
+      {/* Delicate Dotted Pattern with Smooth Radial Fade Mask */}
+      <div 
+        aria-hidden="true" 
+        className="absolute inset-0 bg-[radial-gradient(rgba(37,99,235,0.14)_1.5px,transparent_1.5px)] bg-[size:1.75rem_1.75rem] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_35%,#000_40%,transparent_100%)] pointer-events-none" 
+      />
+
+      {/* Radiant Ambient Glows (Dominant Blue with Only a Very Subtle Warm Touch) */}
+      <div aria-hidden="true" className="absolute top-0 left-1/4 w-[650px] h-[650px] bg-blue-400/20 rounded-full blur-3xl pointer-events-none -translate-y-1/4" />
+      <div aria-hidden="true" className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-sky-300/20 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute bottom-0 left-1/3 w-[550px] h-[450px] bg-blue-500/12 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute -bottom-10 right-10 w-64 h-64 bg-orange-300/12 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-main relative z-10">
 
         {/* Centered Section Header */}
-        <div className="max-w-2xl mx-auto text-center mb-14 sm:mb-18">
-          <div className="text-xs font-extrabold uppercase tracking-widest text-blue-100/90 mb-3">
-            SIMPLE &amp; TRANSPARENT
+        <div className="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-700 border border-blue-200/90 shadow-2xs mb-3.5">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+            <span>SIMPLE &amp; TRANSPARENT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
-            Our Process in <span className="text-[#FBBF24]">3 Steps</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-3.5 leading-tight">
+            Our Process in <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">3 Steps</span>
           </h2>
-          <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed font-normal max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-xl mx-auto">
             No complicated setup, no learning curve. From strategy session to confirmed appointments &mdash; here is exactly how it works.
           </p>
         </div>
 
-        {/* 3 Step Cards Grid with Curved Dotted Connectors */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative max-w-6xl mx-auto items-stretch mb-14">
+        {/* 3 Step Cards Grid with Multi-Color Themed Connectors */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative max-w-6xl mx-auto items-stretch mb-12">
           
-          {/* Connecting Curved Dotted Arrow 1 (Desktop/Tablet) */}
+          {/* Connecting Curved Dotted Arrow 1 (Step 1 Blue -> Step 2 Amber) */}
           <div 
             aria-hidden="true"
-            className="hidden md:block absolute top-9 lg:top-11 left-[33.3%] -translate-x-1/2 w-28 lg:w-36 h-12 text-[#FBBF24] z-20 pointer-events-none select-none drop-shadow-md"
+            className="hidden md:block absolute top-9 lg:top-11 left-[33.3%] -translate-x-1/2 w-28 lg:w-36 h-12 text-amber-500 z-20 pointer-events-none select-none drop-shadow-sm"
           >
             <svg className="w-full h-full" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path 
@@ -100,10 +141,10 @@ export default function HowItWorks() {
             </svg>
           </div>
 
-          {/* Connecting Curved Dotted Arrow 2 (Desktop/Tablet) */}
+          {/* Connecting Curved Dotted Arrow 2 (Step 2 Amber -> Step 3 Emerald) */}
           <div 
             aria-hidden="true"
-            className="hidden md:block absolute top-9 lg:top-11 left-[66.7%] -translate-x-1/2 w-28 lg:w-36 h-12 text-[#FBBF24] z-20 pointer-events-none select-none drop-shadow-md"
+            className="hidden md:block absolute top-9 lg:top-11 left-[66.7%] -translate-x-1/2 w-28 lg:w-36 h-12 text-emerald-500 z-20 pointer-events-none select-none drop-shadow-sm"
           >
             <svg className="w-full h-full" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path 
@@ -123,78 +164,88 @@ export default function HowItWorks() {
             </svg>
           </div>
 
-          {steps.map((step) => (
-            <div
-              key={step.num}
-              className="bg-white/10 backdrop-blur-md border border-white/20 hover:border-white/35 rounded-3xl p-7 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl hover:bg-white/[0.14] transition-all duration-300 hover:-translate-y-1.5 relative group overflow-hidden h-full"
-            >
-              {/* Subtle Card Corner Glow */}
-              <div 
-                aria-hidden="true" 
-                className="absolute -top-12 -right-12 w-28 h-28 bg-[#FBBF24]/10 rounded-full blur-2xl group-hover:bg-[#FBBF24]/20 transition-all duration-500 pointer-events-none" 
-              />
+          {steps.map((step, idx) => {
+            const theme = stepThemes[idx]
+            return (
+              <div
+                key={step.num}
+                className={`${theme.cardBg} ${theme.cardBorder} backdrop-blur-md rounded-3xl p-7 sm:p-8 flex flex-col items-center text-center shadow-xl transition-all duration-300 hover:-translate-y-1.5 relative group overflow-hidden h-full text-slate-800`}
+              >
+                {/* Subtle Card Corner Glow */}
+                <div 
+                  aria-hidden="true" 
+                  className={`absolute -top-12 -right-12 w-28 h-28 ${theme.cornerGlow} rounded-full blur-2xl transition-all duration-500 pointer-events-none`} 
+                />
 
-              {/* Double Circular Glassmorphic Icon Frame */}
-              <div className="w-20 h-20 sm:w-22 sm:h-22 rounded-full bg-white/10 border border-white/25 backdrop-blur-md flex items-center justify-center relative mb-5 shadow-xl group-hover:scale-105 group-hover:border-white/40 transition-all duration-300">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 flex items-center justify-center">
-                  {step.icon}
+                {/* Double Circular Icon Frame */}
+                <div className={`w-20 h-20 sm:w-22 sm:h-22 rounded-full ${theme.iconOuter} flex items-center justify-center relative mb-5 shadow-md group-hover:scale-105 transition-all duration-300`}>
+                  <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full ${theme.iconInner} flex items-center justify-center shadow-md`}>
+                    {step.icon}
+                  </div>
+                  {/* Step Number Badge */}
+                  <span className={`w-6 h-6 rounded-full ${theme.badgeBg} font-extrabold text-xs flex items-center justify-center absolute top-0 right-0 shadow-md border-2 border-white`}>
+                    {step.num}
+                  </span>
                 </div>
-                {/* Orange Step Number Badge */}
-                <span className="w-6 h-6 rounded-full bg-[#E87722] text-white font-extrabold text-xs flex items-center justify-center absolute top-0 right-0 shadow-md border-2 border-blue-950">
-                  {step.num}
-                </span>
+
+                {/* Pill Tag */}
+                <div className={`inline-flex items-center justify-center px-3.5 py-1 rounded-full ${theme.tagBg} border text-[11px] font-bold uppercase tracking-wider mb-3.5 shadow-2xs`}>
+                  {step.tag}
+                </div>
+
+                {/* Step Title */}
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2.5 text-center leading-snug">
+                  {step.title}
+                </h3>
+
+                {/* Step Description */}
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-center font-normal mb-6">
+                  {step.description}
+                </p>
+
+                {/* Bottom Feature Highlight */}
+                <div className={`mt-auto pt-3.5 border-t border-slate-100 w-full flex items-center justify-center gap-1.5 text-[11px] font-semibold ${theme.highlightBg} py-2 px-3 rounded-xl border`}>
+                  <svg className={`w-3.5 h-3.5 ${theme.checkColor} shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{step.highlight}</span>
+                </div>
               </div>
-
-              {/* Glassmorphic Pill Tag */}
-              <div className="inline-flex items-center justify-center px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-[#FDE68A] text-[11px] font-bold uppercase tracking-wider mb-3.5 shadow-2xs">
-                {step.tag}
-              </div>
-
-              {/* Step Title */}
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 text-center leading-snug">
-                {step.title}
-              </h3>
-
-              {/* Step Description */}
-              <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed text-center font-normal mb-6">
-                {step.description}
-              </p>
-
-              {/* Bottom Feature Highlight */}
-              <div className="mt-auto pt-4 border-t border-white/15 w-full flex items-center justify-center gap-1.5 text-[11px] font-semibold text-blue-200">
-                <svg className="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>{step.highlight}</span>
-              </div>
-            </div>
-          ))}
+            )
+          })}
 
         </div>
 
-        {/* Bottom Callout Banner - Translucent Blue Card */}
-        <div className="p-6 sm:p-7 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-3xl shadow-xl max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden">
-          <div className="text-center sm:text-left">
+        {/* Bottom Callout Banner */}
+        <div className="p-6 sm:p-7 bg-gradient-to-r from-blue-600 via-[#1A56DB] to-blue-700 border border-blue-400/30 rounded-3xl shadow-xl shadow-blue-500/20 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden text-white">
+          <div aria-hidden="true" className="absolute -right-10 -bottom-10 w-32 h-32 bg-orange-400/12 rounded-full blur-2xl pointer-events-none" />
+          <div aria-hidden="true" className="absolute top-0 left-10 w-48 h-48 bg-cyan-400/20 rounded-full blur-2xl pointer-events-none" />
+
+          <div className="text-center sm:text-left relative z-10">
             <p className="text-base sm:text-lg font-bold text-white leading-snug">
               Ready to review seller availability in your market?
             </p>
-            <p className="text-xs sm:text-sm text-blue-200 mt-1 font-medium">
+            <p className="text-xs sm:text-sm text-blue-100/90 mt-1 font-medium">
               We limit broker capacity per territory to guarantee outreach exclusivity.
             </p>
           </div>
 
           <a
             href="#cta"
-            className="btn-primary text-xs sm:text-sm py-3 px-6 shrink-0 shadow-lg border border-white/30"
+            className="rounded-full bg-white hover:bg-cyan-50 text-blue-700 font-extrabold text-xs sm:text-sm py-3 px-6 shrink-0 shadow-lg inline-flex items-center gap-2.5 group transition-all duration-300 hover:scale-[1.02] border border-white/80 relative z-10"
           >
             <span>Check Your Territory</span>
-            <svg className="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            <span className="w-6 h-6 rounded-full bg-blue-600/15 border border-blue-600/25 flex items-center justify-center shrink-0 group-hover:bg-blue-600/25 transition-colors">
+              <svg className="w-3.5 h-3.5 text-blue-700 animate-arrow-blink group-hover:animate-none group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
           </a>
         </div>
 
       </div>
     </section>
+
+
   )
 }
