@@ -20,7 +20,7 @@ export default function Qualifier() {
             <span>Eligibility Standard</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Is Elite Scholars <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Right for You?</span>
+            Is BrokerLeadz <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">Right for You?</span>
           </h2>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
             We work best with business brokers and advisors who are serious about growing their deal flow. Here&apos;s who we are built for.

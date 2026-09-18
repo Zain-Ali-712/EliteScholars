@@ -110,7 +110,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                   preload="metadata"
                   playsInline
                   className="w-full h-full object-cover rounded-2xl"
-                  title="Elite Scholars Seller Pipeline Video"
+                  title="BrokerLeadz Seller Pipeline Video"
                 >
                   Your browser does not support HTML5 video.
                 </video>

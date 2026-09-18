@@ -16,14 +16,14 @@ export default function Footer() {
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-500 to-blue-600 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 border border-white/20">
-                ES
+                BL
               </div>
               <span className="font-extrabold text-xl text-white tracking-tight">
                 {SITE.name}
               </span>
             </div>
             <p className="text-xs text-blue-200/80 leading-relaxed font-medium">
-              Done-for-you cold outreach and verified seller appointments engineered exclusively for business brokers and M&amp;A advisors.
+              We deliver guaranteed, pre-vetted seller conversations directly to Business Brokers and M&amp;A Advisors - so you focus purely on closing deals.
             </p>
             <div className="pt-1">
               <span className="inline-block px-3 py-1 bg-white/10 border border-white/20 text-blue-200 text-[10px] font-bold uppercase tracking-wider rounded-full backdrop-blur-xs">

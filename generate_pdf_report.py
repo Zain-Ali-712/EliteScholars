@@ -19,7 +19,7 @@ c_dark_text = (30/255, 41/255, 59/255)  # #1E293B
 page.draw_rect(fitz.Rect(0, 0, 595, 6), color=None, fill=c_brass)
 
 # Header
-page.insert_text((48, 50), 'ELITE SCHOLARS', fontsize=11, fontname='helv', color=c_brass)
+page.insert_text((48, 50), 'BROKERLEADZ', fontsize=11, fontname='helv', color=c_brass)
 page.insert_text((48, 74), 'Daily Changes Summary Report', fontsize=20, fontname='helv', color=c_navy)
 page.insert_text((48, 93), 'Summary of design, copy, and structural updates applied today (Sep 12, 2026)', fontsize=10, fontname='helv', color=c_slate)
 
@@ -100,7 +100,7 @@ page.insert_text((60, box_y + 32), 'All updates tested, Next.js build verified w
 
 # Footer line & text
 page.draw_line(fitz.Point(48, 790), fitz.Point(547, 790), color=c_border, width=1)
-page.insert_text((48, 808), 'Elite Scholars Web Platform - Daily Changes Summary - September 12, 2026', fontsize=8.5, fontname='helv', color=c_slate)
+page.insert_text((48, 808), 'BrokerLeadz Web Platform - Daily Changes Summary - September 12, 2026', fontsize=8.5, fontname='helv', color=c_slate)
 page.insert_text((495, 808), 'Page 1 of 1', fontsize=8.5, fontname='helv', color=c_slate)
 
 # Clean up test.pdf if it exists

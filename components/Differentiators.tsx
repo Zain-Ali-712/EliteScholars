@@ -58,7 +58,7 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
             <span>Why Brokers Choose Us</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Elite Scholars</span>
+            Why Choose <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">BrokerLeadz</span>
           </h2>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
             Here&apos;s what sets our targeted broker outreach apart from generic lead services.
@@ -66,7 +66,7 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
         </div>
 
         {/* 3 Simple, Playful, Equal-Height Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-10">
           {DIFFERENTIATORS.map((item, idx) => {
             const style = cardStyles[idx]
             return (
@@ -121,6 +121,26 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
               </div>
             )
           })}
+        </div>
+
+        {/* Lead Criteria Replacement Guarantee Banner */}
+        <div className="max-w-4xl mx-auto mb-10 bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/90 border-2 border-emerald-300/90 rounded-3xl p-6 sm:p-7 shadow-md shadow-emerald-900/5 flex flex-col sm:flex-row items-center gap-5">
+          <div className="w-13 h-13 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md">
+            <svg className="w-7 h-7 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <div className="text-center sm:text-left flex-1">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-300 mb-1.5">
+              <span>Lead Criteria Replacement Guarantee</span>
+            </div>
+            <h4 className="text-base sm:text-lg font-extrabold text-slate-900 mb-1">
+              Guaranteed Criteria Match &bull; Free Instant Replacement
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+              We will provide replacement for your lead if it does not satisfy your criteria, like if we mistakenly gave you the wrong lead that does not match your criteria we will give you replacement for that lead.
+            </p>
+          </div>
         </div>
 
         {/* Bottom CTA Bar */}

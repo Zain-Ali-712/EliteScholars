@@ -35,13 +35,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
         <div className="mb-3 pr-8">
           <span className="inline-block uppercase text-blue-600 text-[10px] font-extrabold tracking-wider bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200 mb-1.5">
-            Discovery Call &bull; Ehsan Mansha
+            Discovery Call &bull; Ahsaan Mansha
           </span>
           <h3 id="booking-modal-title" className="text-xl sm:text-2xl font-extrabold text-slate-900">
             Book Your Strategy Call
           </h3>
           <p className="text-xs text-slate-500 font-medium">
-            Select a date and time on the calendar to meet directly with Ehsan Mansha, CEO &amp; Founder.
+            Select a date and time on the calendar to meet directly with Ahsaan Mansha, CEO &amp; Founder.
           </p>
         </div>
 

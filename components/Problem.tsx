@@ -173,11 +173,11 @@ export default function Problem() {
                   </ul>
                 </div>
 
-                {/* Right Card: Elite Scholars */}
+                {/* Right Card: BrokerLeadz */}
                 <div className="p-4 bg-white border-2 border-blue-400 rounded-2xl shadow-md relative">
                   <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-100">
                     <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider">
-                      Elite Scholars
+                      BrokerLeadz
                     </span>
                     <span className="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">
                       High Quality

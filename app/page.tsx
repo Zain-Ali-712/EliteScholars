@@ -46,7 +46,7 @@ export default function Home() {
         {/* 5. The problem */}
         <Problem />
 
-        {/* 6. What makes Elite Scholars different */}
+        {/* 6. What makes BrokerLeadz different */}
         <Differentiators onOpenBooking={handleOpenBooking} />
 
         {/* 7. Who we work with */}

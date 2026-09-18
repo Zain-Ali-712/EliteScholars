@@ -32,7 +32,7 @@ export default function FaqAccordion({ onOpenBooking }: FaqAccordionProps) {
             Questions? We&apos;ve Got <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Answers</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-            Clear answers about how Elite Scholars fuels your pipeline with verified seller meetings.
+            Clear answers about how BrokerLeadz fuels your pipeline with verified seller meetings.
           </p>
         </div>
 

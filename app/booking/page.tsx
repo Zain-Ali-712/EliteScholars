@@ -5,14 +5,12 @@ import BookingCalendar from '@/components/BookingCalendar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Book a Strategy Call with Ehsan Mansha | Elite Scholars',
+  title: 'Book a Strategy Call with Ahsaan Mansha | BrokerLeadz',
   description:
-    'Schedule an exclusive 1-on-1 discovery session with Ehsan Mansha, CEO of Elite Scholars. Diagnose your seller pipeline and explore exclusive territory availability.',
+    'Schedule an exclusive 1-on-1 discovery session with Ahsaan Mansha, CEO of BrokerLeadz. Diagnose your seller pipeline and explore exclusive territory availability.',
 }
 
 export default function BookingPage() {
-  const featuredTestimonials = TESTIMONIALS.slice(0, 3)
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#DFEDFE] via-[#F4F8FE] to-[#E9F3FE] text-slate-800 relative overflow-hidden">
       {/* ── Big-Box Geometric Grid Pattern covering upper area with smooth fade mask ── */}
@@ -35,7 +33,7 @@ export default function BookingPage() {
             className="flex items-center gap-2.5 group text-decoration-none focus-visible:outline-2"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-700 flex items-center justify-center text-white font-extrabold text-sm tracking-tight shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-              ES
+              BL
             </div>
             <span className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900">
               {SITE.name}
@@ -83,7 +81,7 @@ export default function BookingPage() {
               <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
                 Book Your Strategy Call with{' '}
                 <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 bg-clip-text text-transparent">
-                  Ehsan Mansha
+                  Ahsaan Mansha
                 </span>
               </h1>
               
@@ -99,7 +97,7 @@ export default function BookingPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span>Direct 1-on-1 Zoom with Founder &amp; CEO Ehsan Mansha</span>
+                  <span>Direct 1-on-1 Zoom with Founder &amp; CEO Ahsaan Mansha</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
@@ -156,7 +154,7 @@ export default function BookingPage() {
 
           </div>
 
-          {/* ═══ BOTTOM SECTION: "Meet Ehsan Mansha" & "What Happens On The Call" (Side-by-Side) ═══ */}
+          {/* ═══ BOTTOM SECTION: "Meet Ahsaan Mansha" & "What Happens On The Call" (Side-by-Side) ═══ */}
           <div className="mt-8 pt-12 border-t border-slate-200/90 mb-16 sm:mb-20">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200 mb-2">
@@ -172,12 +170,12 @@ export default function BookingPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
               
-              {/* ─── LEFT: Meet Ehsan Mansha Executive Card ─── */}
+              {/* ─── LEFT: Meet Ahsaan Mansha Executive Card ─── */}
               <div className="lg:col-span-6 bg-white/95 backdrop-blur-md border-2 border-blue-200/90 rounded-3xl p-5 sm:p-6 shadow-xl shadow-blue-900/5 flex flex-col justify-between h-full">
                 <div>
                   <div className="flex items-center gap-3.5 pb-3 border-b border-slate-100">
                     <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-700 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 shrink-0 border border-blue-400/30">
-                      EM
+                      AM
                     </div>
                     <div>
                       <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
@@ -185,23 +183,23 @@ export default function BookingPage() {
                         <span>Direct Founder Access</span>
                       </div>
                       <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">
-                        Meet Ehsan Mansha
+                        Meet Ahsaan Mansha
                       </h3>
                       <p className="text-xs font-semibold text-blue-700">
-                        Founder &amp; CEO, Elite Scholars
+                        Founder &amp; CEO, BrokerLeadz
                       </p>
                     </div>
                   </div>
 
                   <div className="py-4 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
                     <p>
-                      Ehsan is the Founder &amp; CEO of Elite Scholars, partnering directly with boutique M&amp;A advisory firms and business brokers to build high-conversion seller listing pipelines.
+                      Ahsaan is the Founder &amp; CEO of BrokerLeadz, partnering directly with boutique M&amp;A advisory firms and business brokers to build high-conversion seller listing pipelines.
                     </p>
                     <p>
                       He personally architects outreach campaign strategies, oversees proprietary data verification, and trains our dedicated US calling team so brokers connect exclusively with qualified owners ready to sell.
                     </p>
                     <p>
-                      Drawing on extensive background in executive outbound sourcing, Ehsan ensures complete campaign transparency—every call recorded, every lead diligence-checked.
+                      Drawing on extensive background in executive outbound sourcing, Ahsaan ensures complete campaign transparency—every call recorded, every lead diligence-checked.
                     </p>
                   </div>
 
@@ -342,15 +340,15 @@ export default function BookingPage() {
                 <span>Verified Client Experiences</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Hear Directly From Brokers Who Work With Ehsan
+                Hear Directly From Brokers Who Work With Ahsaan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2">
-                Real M&amp;A advisors and business brokers share their results and experience partnering with Ehsan Mansha and Elite Scholars.
+                Real M&amp;A advisors and business brokers share their results and experience partnering with Ahsaan Mansha and BrokerLeadz.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {featuredTestimonials.map((item, idx) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {TESTIMONIALS.map((item, idx) => {
                 const cardBorders = [
                   'border-blue-200 hover:border-blue-400 shadow-blue-500/5',
                   'border-emerald-200 hover:border-emerald-400 shadow-emerald-500/5',
@@ -362,8 +360,31 @@ export default function BookingPage() {
                     className={`bg-white/95 backdrop-blur-md border-2 ${cardBorders[idx % cardBorders.length]} rounded-3xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between`}
                   >
                     <div>
+                      {/* Top: Client Name, Firm, and Star Rating */}
+                      <div className="flex items-start justify-between gap-3 pb-3 mb-3 border-b border-slate-100">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
+                            {item.name.split(' ').map((n) => n[0]).join('')}
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-slate-900">{item.name}</div>
+                            <div className="text-[10px] text-blue-700 font-semibold">{item.firm}</div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-0.5 text-amber-400 bg-amber-50/80 px-2 py-0.5 rounded-full border border-amber-200/60 shrink-0">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                          ))}
+                          <span className="text-[10px] font-bold text-amber-800 ml-0.5">5.0</span>
+                        </div>
+                      </div>
+
+                      {/* Middle: Video */}
                       {item.videoUrl && (
-                        <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 mb-3.5">
+                        <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 mb-3.5 shadow-xs">
                           <video
                             controls
                             playsInline
@@ -376,28 +397,10 @@ export default function BookingPage() {
                         </div>
                       )}
 
-                      <div className="flex items-center gap-1 text-amber-400 mb-2">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                          </svg>
-                        ))}
-                        <span className="text-[11px] font-bold text-slate-500 ml-1">5.0</span>
-                      </div>
-
-                      <p className="text-xs text-slate-600 italic leading-relaxed line-clamp-4 mb-4">
+                      {/* Bottom: Quote (2-3 lines) */}
+                      <p className="text-xs text-slate-600 italic leading-relaxed line-clamp-3">
                         &ldquo;{item.quote}&rdquo;
                       </p>
-                    </div>
-
-                    <div className="pt-3 border-t border-slate-100 flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0">
-                        {item.name.split(' ').map((n) => n[0]).join('')}
-                      </div>
-                      <div>
-                        <div className="text-xs font-bold text-slate-900">{item.name}</div>
-                        <div className="text-[10px] text-blue-700 font-semibold">{item.title} &bull; {item.firm}</div>
-                      </div>
                     </div>
                   </div>
                 )

@@ -132,9 +132,9 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
     // Approx 10am to 10:20am in UTC format
     const startStr = `${dateStr}T140000Z`
     const endStr = `${dateStr}T142000Z`
-    const title = encodeURIComponent('Elite Scholars Strategy Call with Ehsan Mansha')
+    const title = encodeURIComponent('BrokerLeadz Strategy Call with Ahsaan Mansha')
     const details = encodeURIComponent(
-      `Discovery Strategy Session with Ehsan Mansha, CEO of Elite Scholars.\nTopic: Brokerage Pipeline & Exclusive Territory Review\nPhone: ${SITE.phone}\nZoom meeting link sent to your work email.`
+      `Discovery Strategy Session with Ahsaan Mansha, CEO of BrokerLeadz.\nTopic: Brokerage Pipeline & Exclusive Territory Review\nPhone: ${SITE.phone}\nZoom meeting link sent to your work email.`
     )
     const location = encodeURIComponent('Zoom Video Conference')
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startStr}/${endStr}&details=${details}&location=${location}`
@@ -162,7 +162,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
           </span>
         </div>
         <div className="text-[10px] sm:text-[11px] font-semibold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">
-          With Ehsan Mansha
+          With Ahsaan Mansha
         </div>
       </div>
 
@@ -335,7 +335,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
                   {formattedSelectedDate} at {selectedTime} ({currentTzAbbr})
                 </p>
                 <p className="text-[10px] font-medium text-slate-500">
-                  20-Min Discovery Session with Ehsan Mansha
+                  20-Min Discovery Session with Ahsaan Mansha
                 </p>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
               <span>Scheduling Strategy Session...</span>
             ) : (
               <>
-                <span>Confirm Strategy Session with Ehsan Mansha</span>
+                <span>Confirm Strategy Session with Ahsaan Mansha</span>
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -480,7 +480,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-sm mx-auto mt-1">
               Thank you, <strong className="text-slate-900">{fullName || 'Broker'}</strong>. Your consultation with{' '}
-              <strong className="text-slate-900">Ehsan Mansha, CEO</strong> is locked in.
+              <strong className="text-slate-900">Ahsaan Mansha, CEO</strong> is locked in.
             </p>
           </div>
 
@@ -496,7 +496,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
               <svg className="w-4 h-4 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
-              <span>Host: Ehsan Mansha, CEO & Founder</span>
+              <span>Host: Ahsaan Mansha, CEO & Founder</span>
             </div>
             <div className="flex items-center gap-2.5 text-xs font-semibold text-slate-800">
               <svg className="w-4 h-4 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -536,7 +536,7 @@ export default function BookingCalendar({ onSuccess }: BookingCalendarProps) {
           </div>
 
           <p className="text-[11px] text-slate-500 pt-2">
-            Need immediate assistance? Call Ehsan&apos;s direct desk:{' '}
+            Need immediate assistance? Call Ahsaan&apos;s direct desk:{' '}
             <a href={`tel:${SITE.phone.replace(/[^0-9+]/g, '')}`} className="text-blue-600 font-bold hover:underline">
               {SITE.phone}
             </a>
