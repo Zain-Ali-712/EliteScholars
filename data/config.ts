@@ -9,6 +9,7 @@ export interface SiteConfig {
   ogImage: string
   ctaLink: string
   primaryKeyword: string
+  calendlyUrl?: string
 }
 
 export interface StatItem {
@@ -105,6 +106,7 @@ export const SITE: SiteConfig = {
   ogImage: '/images/og-image.jpg',
   ctaLink: '#cta',
   primaryKeyword: 'business broker lead generation',
+  calendlyUrl: 'https://calendly.com/ehsaanmughal22/business-acquisitions-ahsaan-from-pakistan?month=2026-09',
 }
 
 export const HERO_PROOF = {
@@ -389,7 +391,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'Southeast Business Advisors LLC',
     location: 'Atlanta, GA',
     quote: 'Brokerleadz delivered verified seller appointments that aligned with our acquisition mandates from day one. Ahsaan and his team communicate with total transparency, and their outbound diligence saves us countless hours of cold outreach.',
-    videoUrl: '/TestimonialVideos/dave.MP4',
+    videoUrl: '/TestimonialVideos/dave.mp4',
     stats: 'High-Intent Seller Conversations',
   },
   {
