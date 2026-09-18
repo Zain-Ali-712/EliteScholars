@@ -100,7 +100,7 @@ export const SITE: SiteConfig = {
   description: 'We help business brokers and M&A advisors generate qualified seller conversations through targeted cold outreach.',
   url: 'https://brokerleadz.com',
   phone: '(510) 392 3699',
-  email: 'advisors@brokerleadz.com',
+  email: 'info@brokerleadz.com',
   address: '100 Financial Plaza, Suite 400, New York, NY 10005',
   ogImage: '/images/og-image.jpg',
   ctaLink: '#cta',
@@ -169,21 +169,27 @@ export const PIPELINE_MOCK: PipelineItem[] = [
 export const DIFFERENTIATORS: Differentiator[] = [
   {
     title: 'We check every lead before you get it',
-    description: 'Every potential seller is checked against what you\'re looking for — size, industry, and whether they\'re actually the decision-maker — before it ever reaches your calendar.',
+    description: 'Every prospect is verified against your criteria — revenue size, industry, and direct ownership authority — before touching your calendar.',
     tag: 'Checked Leads',
     accentColor: 'blue',
   },
   {
     title: 'You always know what\'s happening',
-    description: 'Every appointment is tracked in your dashboard in real time, with recorded calls and verified details, so you always know what\'s been booked.',
+    description: 'Every appointment is logged in real-time with live call recordings, full dossiers, and transparent pipeline tracking.',
     tag: 'Live Tracking',
     accentColor: 'sky',
   },
   {
     title: 'We do the work, fast',
-    description: 'We handle the outreach for you with dedicated US-timezone dialers, with most brokers getting their first booked meeting within 48 hours.',
+    description: 'Dedicated US-timezone dialers launch your campaign in 48–72 hours, delivering your first conversation promptly.',
     tag: 'Fast Activation',
-    accentColor: 'orange',
+    accentColor: 'amber',
+  },
+  {
+    title: 'Lead criteria replacement guarantee',
+    description: 'If any conversation falls outside your agreed parameters, we promptly provide an instant replacement lead at zero cost.',
+    tag: 'Replacement Guarantee',
+    accentColor: 'emerald',
   },
 ]
 
@@ -343,7 +349,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'Transworld Business Advisors',
     location: 'Charlotte, NC',
     quote: 'We’ve worked with Ahsaan Mansha for over a year now, and we are satisfied with the results. I strongly recommend Brokerleadz to any business or brokerage looking for real growth.',
-    videoUrl: '/TestimonialVideos/proctor.MP4',
+    videoUrl: '/TestimonialVideos/mike.mp4',
     stats: '1+ Year Partnership',
   },
   {
@@ -353,7 +359,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'First Choice Business Brokers',
     location: 'Denver, CO',
     quote: 'Brokerleadz ran cold calling for us securing 3 solid business listings in just 5 months. Ahsaan Mansha and his team is reliable, transparent, and delivers real results.',
-    videoUrl: '/TestimonialVideos/proctor.MP4',
+    videoUrl: '/TestimonialVideos/proctor.mp4',
     stats: '3 Solid Listings in 5 Months',
   },
   {
@@ -363,7 +369,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'Transworld Business Advisors',
     location: 'New York, NY',
     quote: 'Outstanding lead generation capabilities. Really been a help for last 4 months with targeted leads. Highly recommended for any broker.',
-    videoUrl: '/TestimonialVideos/todd.MP4',
+    videoUrl: '/TestimonialVideos/todd.mp4',
     stats: 'Targeted Leads for 4+ Months',
   },
   {
@@ -373,7 +379,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'Simple House Capital',
     location: 'Houston, TX',
     quote: 'Working with Ahsaan Mansha was an absolute game-changer. They completely outperformed expectations on our cold outreach campaigns across multiple niches.',
-    videoUrl: '/TestimonialVideos/dwight.MP4',
+    videoUrl: '/TestimonialVideos/dwight.mp4',
     stats: 'Outperformed Multi-Niche Outreach',
   },
   {
@@ -393,7 +399,7 @@ export const TESTIMONIALS: Testimonial[] = [
     firm: 'Simple House Capital',
     location: 'Dallas, TX',
     quote: 'The consistency of qualified seller appointments Ahsaan and his team bring to the table is unmatched. They know how to speak to business owners and get them interested in talking.',
-    videoUrl: '/TestimonialVideos/brandon.MP4',
+    videoUrl: '/TestimonialVideos/brandon.mp4',
     stats: 'Consistent Qualified Appointments',
   },
 ]

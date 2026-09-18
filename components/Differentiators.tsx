@@ -9,36 +9,59 @@ interface DifferentiatorsProps {
 export default function Differentiators({ onOpenBooking }: DifferentiatorsProps) {
   const cardStyles = [
     {
-      borderColor: 'border-blue-200 hover:border-blue-400',
+      borderColor: 'border-blue-200 hover:border-blue-400 shadow-blue-500/5',
       badge: 'bg-blue-50 text-blue-700 border-blue-200',
       iconBg: 'bg-blue-600 text-white',
       accentText: 'text-blue-600',
+      footerDot: 'bg-blue-500',
+      footerLeft: 'Standard Protocol',
+      footerRight: '100% Quality',
       bullets: [
         'Verified $500K – $50M revenue bands',
-        'Direct equity owners & founders',
-        'Active seller motivation confirmed',
+        'Direct equity owners & founders only',
+        'Active seller motivation pre-confirmed',
       ],
     },
     {
-      borderColor: 'border-emerald-200 hover:border-emerald-400',
-      badge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-      iconBg: 'bg-emerald-600 text-white',
-      accentText: 'text-emerald-600',
+      borderColor: 'border-sky-200 hover:border-sky-400 shadow-sky-500/5',
+      badge: 'bg-sky-50 text-sky-700 border-sky-200',
+      iconBg: 'bg-sky-600 text-white',
+      accentText: 'text-sky-600',
+      footerDot: 'bg-sky-500',
+      footerLeft: 'Complete Visibility',
+      footerRight: 'Direct Dossiers',
       bullets: [
         'Live call recordings for every conversation',
-        'Complete owner & business dossier',
-        'Real-time calendar sync & alerts',
+        'Complete owner & business dossier included',
+        'Real-time calendar sync & instant alerts',
       ],
     },
     {
-      borderColor: 'border-amber-200 hover:border-amber-400',
+      borderColor: 'border-amber-200 hover:border-amber-400 shadow-amber-500/5',
       badge: 'bg-amber-50 text-amber-700 border-amber-200',
       iconBg: 'bg-amber-600 text-white',
       accentText: 'text-amber-600',
+      footerDot: 'bg-amber-500',
+      footerLeft: 'Rapid Activation',
+      footerRight: 'Dedicated Dialers',
       bullets: [
         'Campaign launches in 48–72 hours',
-        '100% done-for-you cold outreach',
-        'First meeting booked within 48 hours',
+        '100% done-for-you targeted cold outreach',
+        'First qualified meeting delivered within 48 hours',
+      ],
+    },
+    {
+      borderColor: 'border-emerald-200 hover:border-emerald-400 shadow-emerald-500/5',
+      badge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      iconBg: 'bg-emerald-600 text-white',
+      accentText: 'text-emerald-600',
+      footerDot: 'bg-emerald-500',
+      footerLeft: 'Criteria Match Guarantee',
+      footerRight: '100% Risk-Free',
+      bullets: [
+        'Prompt free replacement if lead is off-criteria',
+        'Strict matching to your revenue, niche & territory',
+        'Zero financial risk on conversation quality',
       ],
     },
   ]
@@ -65,42 +88,42 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
           </p>
         </div>
 
-        {/* 3 Simple, Playful, Equal-Height Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-10">
+        {/* 4 Cards in a 2x2 Grid with Compact Vertical Height */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-stretch mb-10 max-w-5xl mx-auto">
           {DIFFERENTIATORS.map((item, idx) => {
-            const style = cardStyles[idx]
+            const style = cardStyles[idx % cardStyles.length]
             return (
               <div
                 key={idx}
-                className={`bg-white rounded-3xl p-6 sm:p-7 border-2 ${style.borderColor} shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full`}
+                className={`bg-white rounded-2xl p-5 sm:p-6 border-2 ${style.borderColor} shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between group h-full`}
               >
                 <div>
-                  {/* Top Badge & Step */}
-                  <div className="flex items-center justify-between mb-5">
-                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border ${style.badge}`}>
+                  {/* Top Badge & Step Number */}
+                  <div className="flex items-center justify-between mb-3.5">
+                    <span className={`text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border ${style.badge}`}>
                       {item.tag}
                     </span>
-                    <div className={`w-9 h-9 rounded-xl ${style.iconBg} font-bold text-xs flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform`}>
+                    <div className={`w-7 h-7 rounded-lg ${style.iconBg} font-bold text-xs flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform`}>
                       0{idx + 1}
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium mb-5 pb-4 border-b border-slate-100">
+                  <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-medium mb-3 pb-2.5 border-b border-slate-100">
                     {item.description}
                   </p>
 
                   {/* Bullets */}
-                  <ul className="space-y-2.5 mb-6">
+                  <ul className="space-y-1.5 mb-3.5">
                     {style.bullets.map((b, bIdx) => (
-                      <li key={bIdx} className="flex items-center gap-2 text-xs font-semibold text-slate-800">
-                        <span className={`w-4 h-4 rounded-full bg-slate-100 ${style.accentText} flex items-center justify-center shrink-0`}>
-                          <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <li key={bIdx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+                        <span className={`w-3.5 h-3.5 rounded-full bg-slate-100 ${style.accentText} flex items-center justify-center shrink-0`}>
+                          <svg className="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </span>
@@ -111,36 +134,16 @@ export default function Differentiators({ onOpenBooking }: DifferentiatorsProps)
                 </div>
 
                 {/* Footer status */}
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-500">
-                  <span className="flex items-center gap-1.5 text-emerald-600">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    Standard Protocol
+                <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-slate-500">
+                  <span className="flex items-center gap-1.5 text-slate-700">
+                    <span className={`w-2 h-2 rounded-full ${style.footerDot} animate-pulse`} />
+                    {style.footerLeft}
                   </span>
-                  <span>100% Quality</span>
+                  <span className="font-bold text-slate-700">{style.footerRight}</span>
                 </div>
               </div>
             )
           })}
-        </div>
-
-        {/* Lead Criteria Replacement Guarantee Banner */}
-        <div className="max-w-4xl mx-auto mb-10 bg-gradient-to-r from-blue-50/90 via-sky-50/70 to-emerald-50/90 border-2 border-emerald-300/90 rounded-3xl p-6 sm:p-7 shadow-md shadow-emerald-900/5 flex flex-col sm:flex-row items-center gap-5">
-          <div className="w-13 h-13 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md">
-            <svg className="w-7 h-7 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-            </svg>
-          </div>
-          <div className="text-center sm:text-left flex-1">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-300 mb-1.5">
-              <span>Lead Criteria Replacement Guarantee</span>
-            </div>
-            <h4 className="text-base sm:text-lg font-extrabold text-slate-900 mb-1">
-              Guaranteed Criteria Match &bull; Free Instant Replacement
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-              We will provide replacement for your lead if it does not satisfy your criteria, like if we mistakenly gave you the wrong lead that does not match your criteria we will give you replacement for that lead.
-            </p>
-          </div>
         </div>
 
         {/* Bottom CTA Bar */}

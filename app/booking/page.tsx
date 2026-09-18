@@ -68,75 +68,38 @@ export default function BookingPage() {
       <main className="py-8 sm:py-10 md:py-12 relative z-10">
         <div className="container-main">
 
-          {/* ═══ TOP SECTION: Headline & Value on LEFT, Interactive Calendar on RIGHT ═══ */}
+          {/* ═══ BROKERPARTNERZ-STYLE 2-COLUMN BOOKING CONTAINER ═══ */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mb-16 sm:mb-20">
             
-            {/* Left: Value Proposition, Guarantees & Stats */}
-            <div className="lg:col-span-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-700 border border-blue-200 shadow-2xs mb-3">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                <span>Exclusive 1-on-1 Strategy Session</span>
-              </div>
-              
-              <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
-                Book Your Strategy Call with{' '}
-                <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 bg-clip-text text-transparent">
-                  Ahsaan Mansha
-                </span>
-              </h1>
-              
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium mb-5 max-w-xl">
-                Select a date and time on the calendar to reserve your 20-minute consultation directly with our founder. We&apos;ll evaluate your territory, diagnose pipeline bottlenecks, and discover how our targeted cold outreach generates pre-qualified seller listings.
-              </p>
-
-              {/* Core Benefits Checklist */}
-              <div className="space-y-2.5 mb-6 text-xs sm:text-sm text-slate-700 font-semibold">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span>Direct 1-on-1 Zoom with Founder &amp; CEO Ahsaan Mansha</span>
+            {/* ─── LEFT COLUMN: Calendar & Booking Interface (~7 Cols) ─── */}
+            <div className="lg:col-span-7">
+              <div className="mb-5 text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-700 border border-blue-200 shadow-2xs mb-2.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span>Schedule Your Call</span>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span>Confidential review of your territory &amp; target verticals</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span>100% Free consultation &bull; Zero pitch pressure or obligation</span>
-                </div>
+                
+                <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 tracking-tight leading-tight mb-2.5">
+                  Book a Free Strategy Call with{' '}
+                  <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-sky-600 bg-clip-text text-transparent">
+                    Ahsaan Mansha
+                  </span>
+                </h1>
+                
+                <p className="text-xs sm:text-sm text-slate-600 font-medium max-w-xl leading-relaxed">
+                  Pick a time that works for you. No pressure, no pitch &mdash; just a real 15-minute conversation about your pipeline directly with our founder.
+                </p>
               </div>
 
-              {/* Stats Cards */}
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3 max-w-lg mb-5">
-                <div className="p-3 bg-white/95 backdrop-blur-xs rounded-2xl border-2 border-blue-200/90 shadow-sm text-center">
-                  <div className="text-base sm:text-lg font-extrabold text-blue-700">60+</div>
-                  <div className="text-[10px] sm:text-[11px] font-bold text-slate-500">Brokers Scaled</div>
-                </div>
-                <div className="p-3 bg-white/95 backdrop-blur-xs rounded-2xl border-2 border-emerald-200/90 shadow-sm text-center">
-                  <div className="text-base sm:text-lg font-extrabold text-emerald-700">$100M+</div>
-                  <div className="text-[10px] sm:text-[11px] font-bold text-slate-500">Deal Volume</div>
-                </div>
-                <div className="p-3 bg-white/95 backdrop-blur-xs rounded-2xl border-2 border-amber-200/90 shadow-sm text-center">
-                  <div className="text-base sm:text-lg font-extrabold text-amber-700">100%</div>
-                  <div className="text-[10px] sm:text-[11px] font-bold text-slate-500">Pre-Qualified</div>
-                </div>
+              {/* Interactive Calendar Component */}
+              <div className="shadow-sm rounded-2xl">
+                <BookingCalendar />
               </div>
 
-              {/* Quick Direct Desk Banner */}
-              <div className="p-3 bg-blue-50/70 rounded-2xl border border-blue-200/80 flex items-center justify-between text-xs text-slate-700 font-semibold max-w-lg">
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {/* Immediate Desk Phone Reassurance */}
+              <div className="mt-4 p-3.5 bg-blue-50/80 rounded-2xl border border-blue-200/80 flex items-center justify-between text-xs text-slate-700 font-semibold">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4 text-blue-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span>Prefer to speak immediately?</span>
@@ -147,190 +110,124 @@ export default function BookingPage() {
               </div>
             </div>
 
-            {/* Right: Customized Interactive Calendar (Prominent Above-the-Fold Position) */}
-            <div className="lg:col-span-6">
-              <BookingCalendar />
-            </div>
+            {/* ─── RIGHT COLUMN: Context, Founder Profile & What Happens (~5 Cols) ─── */}
+            <div className="lg:col-span-5 space-y-6">
 
-          </div>
-
-          {/* ═══ BOTTOM SECTION: "Meet Ahsaan Mansha" & "What Happens On The Call" (Side-by-Side) ═══ */}
-          <div className="mt-8 pt-12 border-t border-slate-200/90 mb-16 sm:mb-20">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-700 border border-blue-200 mb-2">
-                <span>Session Blueprint &bull; Leadership Profile</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Who You&apos;re Meeting &amp; What Happens On The Call
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2">
-                Complete transparency into our executive leadership and what to expect on your discovery session.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-              
-              {/* ─── LEFT: Meet Ahsaan Mansha Executive Card ─── */}
-              <div className="lg:col-span-6 bg-white/95 backdrop-blur-md border-2 border-blue-200/90 rounded-3xl p-5 sm:p-6 shadow-xl shadow-blue-900/5 flex flex-col justify-between h-full">
-                <div>
-                  <div className="flex items-center gap-3.5 pb-3 border-b border-slate-100">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-blue-700 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-blue-500/20 shrink-0 border border-blue-400/30">
-                      AM
-                    </div>
-                    <div>
-                      <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        <span>Direct Founder Access</span>
-                      </div>
-                      <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">
-                        Meet Ahsaan Mansha
-                      </h3>
-                      <p className="text-xs font-semibold text-blue-700">
-                        Founder &amp; CEO, BrokerLeadz
-                      </p>
-                    </div>
+              {/* 1. Meet with Ahsaan Mansha Card (with Professional Headshot Image) */}
+              <div className="bg-white/95 backdrop-blur-md border-2 border-blue-200/90 rounded-3xl p-5 sm:p-6 shadow-xl shadow-blue-900/5">
+                <div className="flex items-center gap-4 pb-4 border-b border-slate-100">
+                  <div className="relative shrink-0">
+                    <img
+                      src="/images/Ahsaan_Professional_Headshot.png"
+                      alt="Ahsaan Mansha, CEO & Founder of BrokerLeadz"
+                      className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl object-cover border-2 border-blue-200 shadow-md"
+                    />
+                    <span
+                      className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"
+                      title="Online & Ready for Sessions"
+                    />
                   </div>
-
-                  <div className="py-4 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
-                    <p>
-                      Ahsaan is the Founder &amp; CEO of BrokerLeadz, partnering directly with boutique M&amp;A advisory firms and business brokers to build high-conversion seller listing pipelines.
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200 mb-1">
+                      <span>CEO &bull; 15-Min Discovery</span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                      Meet with Ahsaan Mansha
+                    </h3>
+                    <p className="text-xs font-semibold text-blue-700">
+                      Founder &amp; CEO, BrokerLeadz
                     </p>
-                    <p>
-                      He personally architects outreach campaign strategies, oversees proprietary data verification, and trains our dedicated US calling team so brokers connect exclusively with qualified owners ready to sell.
-                    </p>
-                    <p>
-                      Drawing on extensive background in executive outbound sourcing, Ahsaan ensures complete campaign transparency—every call recorded, every lead diligence-checked.
-                    </p>
-                  </div>
-
-                  {/* Expertise Tags */}
-                  <div className="flex flex-wrap gap-2 pt-1 pb-3">
-                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                      M&amp;A Pipeline Strategy
-                    </span>
-                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                      Proprietary Sourcing
-                    </span>
-                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
-                      US Dialing Operations
-                    </span>
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
-                  <span className="text-blue-700 font-bold">Personal Desk: {SITE.phone}</span>
-                  <span>Zoom Video Conference</span>
-                </div>
-              </div>
-
-              {/* ─── RIGHT: What Happens On The Call (5 Simple Steps) ─── */}
-              <div className="lg:col-span-6 bg-white/95 backdrop-blur-md border-2 border-blue-200/90 rounded-3xl p-5 sm:p-6 shadow-xl shadow-blue-900/5 flex flex-col justify-between h-full">
-                <div>
-                  <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100">
-                    <div>
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200 mb-1 inline-block">
-                        Agenda &amp; Structure
-                      </span>
-                      <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
-                        What Happens On <span className="text-blue-600">The Call?</span>
-                      </h3>
-                    </div>
-                    <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 px-2.5 py-0.5 rounded-full">
-                      5 Simple Steps
-                    </span>
-                  </div>
-
-                  <div className="space-y-2 py-0.5">
-                    {/* Step 1: Blue Card */}
-                    <div className="p-2.5 rounded-2xl border-2 border-blue-200/90 bg-blue-50/30 hover:border-blue-400 transition-colors flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-xl bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                        1
-                      </div>
-                      <div>
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900">
-                          Pipeline &amp; Territory Diagnosis
-                        </h4>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          Review your target deal size ($500K–$50M), target verticals, and active sourcing bottlenecks.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Step 2: Amber Card */}
-                    <div className="p-2.5 rounded-2xl border-2 border-amber-300/90 bg-amber-50/30 hover:border-amber-400 transition-colors flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-xl bg-amber-500 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                        2
-                      </div>
-                      <div>
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900">
-                          Exclusive Territory Verification
-                        </h4>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          Confirm whether your geographic market and industry focus qualify for dedicated exclusivity.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Step 3: Emerald Card */}
-                    <div className="p-2.5 rounded-2xl border-2 border-emerald-300/90 bg-emerald-50/30 hover:border-emerald-400 transition-colors flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                        3
-                      </div>
-                      <div>
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900">
-                          Zero-Cost Strategy Session
-                        </h4>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          100% free and transparent discovery. No high-pressure sales pitches, tactics, or obligations.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Step 4: Sky/Cyan Card */}
-                    <div className="p-2.5 rounded-2xl border-2 border-sky-300/90 bg-sky-50/30 hover:border-sky-400 transition-colors flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-xl bg-sky-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                        4
-                      </div>
-                      <div>
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900">
-                          System &amp; QA Transparency
-                        </h4>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          Inspect our data sources, US dialers, qualification criteria, and call recording QA.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Step 5: Orange Card */}
-                    <div className="p-2.5 rounded-2xl border-2 border-orange-300/90 bg-orange-50/30 hover:border-orange-400 transition-colors flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-xl bg-orange-500 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                        5
-                      </div>
-                      <div>
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900">
-                          Actionable Launch Roadmap
-                        </h4>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          Agree on onboarding to initiate outreach and deliver your first seller call within 48 hours.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="py-3.5 space-y-2.5 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-medium">
+                  <p>
+                    Ahsaan is the CEO and founder of BrokerLeadz, providing specialized seller lead generation and outbound pipeline infrastructure for the last <strong>5&ndash;6 years</strong> to business brokers and M&amp;A advisors across the US.
+                  </p>
+                  <p>
+                    In this 15-minute discovery call, he will personally analyze if we are the right match, evaluate if your brokerage is fitting, and give clear answers to every concern and anything you want to ask. Once aligned, we proceed directly to the actual business.
+                  </p>
                 </div>
 
-                {/* Guarantee summary bar */}
-                <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
-                  <span className="flex items-center gap-1 text-emerald-700">
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Confidential &bull; Zero Obligation
+                {/* Micro Expertise Badges */}
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
+                    5–6 Years US Broker Experience
                   </span>
-                  <span>Direct Desk: {SITE.phone}</span>
+                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    Dedicated US Dialers
+                  </span>
+                  <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                    Criteria Replacement Guarantee
+                  </span>
+                </div>
+              </div>
+
+              {/* 2. What Happens on the Call? (Shorter & Simpler) */}
+              <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm">
+                <div className="flex items-center justify-between pb-2.5 mb-3 border-b border-slate-100">
+                  <h3 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
+                    What Happens on <span className="text-blue-600">the Call?</span>
+                  </h3>
+                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider bg-slate-100 px-2.5 py-0.5 rounded-full">
+                    15 Mins
+                  </span>
+                </div>
+
+                <div className="space-y-2 text-xs text-slate-600 font-medium leading-relaxed">
+                  <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-blue-50/40 border border-blue-100">
+                    <span className="w-5 h-5 rounded-full bg-blue-600 text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong className="text-slate-900 block font-bold">Pipeline &amp; Fit Check</strong>
+                      We diagnose your target revenue ($500K&ndash;$50M) and ensure we are the right match.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-sky-50/40 border border-sky-100">
+                    <span className="w-5 h-5 rounded-full bg-sky-600 text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong className="text-slate-900 block font-bold">Direct Answers to Any Concern</strong>
+                      Ahsaan answers your questions on dialers, call recordings, criteria, and territory exclusivity.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5 p-2.5 rounded-xl bg-emerald-50/40 border border-emerald-100">
+                    <span className="w-5 h-5 rounded-full bg-emerald-600 text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong className="text-slate-900 block font-bold">Action Plan &amp; Immediate Launch</strong>
+                      If aligned, we reserve your exclusive territory and launch outreach within 48 hours.
+                    </div>
+                  </div>
+                </div>
+
+                {/* Compact Reassurance */}
+                <div className="mt-3 p-2.5 bg-slate-50 border-l-2 border-blue-600 rounded-r-lg text-[11px] text-slate-600 italic leading-relaxed">
+                  &ldquo;If we&apos;re not the right fit, we&apos;ll tell you honestly and point you in the right direction.&rdquo;
+                </div>
+
+                {/* Compact Trust Checklist */}
+                <div className="mt-3 pt-2.5 border-t border-slate-100 grid grid-cols-2 gap-2 text-[11px] font-semibold text-slate-700">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                    <span>15 minutes only</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                    <span>Direct with Ahsaan</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+                    <span>Zero obligation</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0" />
+                    <span>Instant invite email</span>
+                  </div>
                 </div>
               </div>
 
             </div>
+
           </div>
 
           {/* 3. Proof Strip: Real Client Video Testimonials */}
@@ -347,7 +244,7 @@ export default function BookingPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 max-w-5xl mx-auto px-4 sm:px-6">
               {TESTIMONIALS.map((item, idx) => {
                 const cardBorders = [
                   'border-blue-200 hover:border-blue-400 shadow-blue-500/5',
@@ -357,50 +254,71 @@ export default function BookingPage() {
                 return (
                   <div
                     key={item.id}
-                    className={`bg-white/95 backdrop-blur-md border-2 ${cardBorders[idx % cardBorders.length]} rounded-3xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between`}
+                    className={`bg-white/95 backdrop-blur-md border-2 ${cardBorders[idx % cardBorders.length]} rounded-3xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow`}
                   >
-                    <div>
-                      {/* Top: Client Name, Firm, and Star Rating */}
-                      <div className="flex items-start justify-between gap-3 pb-3 mb-3 border-b border-slate-100">
-                        <div className="flex items-center gap-2.5">
-                          <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs">
-                            {item.name.split(' ').map((n) => n[0]).join('')}
+                    <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 h-full items-stretch">
+                      {/* Left: Client Info & Quote */}
+                      <div className="sm:col-span-7 flex flex-col justify-between">
+                        <div>
+                          {/* Name, Company & Stars in same column, different rows */}
+                          <div className="flex items-start gap-2.5 pb-2.5 mb-2.5 border-b border-slate-100">
+                            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-600 to-blue-700 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-xs mt-0.5">
+                              {item.name.split(' ').map((n) => n[0]).join('')}
+                            </div>
+                            <div className="flex flex-col space-y-0.5">
+                              {/* Row 1: Name */}
+                              <div className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">{item.name}</div>
+                              {/* Row 2: Company */}
+                              <div className="text-[11px] text-blue-700 font-semibold leading-snug">{item.firm}</div>
+                              {/* Row 3: Stars */}
+                              <div className="flex items-center gap-1 text-amber-400 pt-0.5">
+                                <div className="flex items-center gap-0.5">
+                                  {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
+                                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                    </svg>
+                                  ))}
+                                </div>
+                                <span className="text-[10px] font-bold text-amber-800 ml-0.5">5.0</span>
+                              </div>
+                            </div>
                           </div>
-                          <div>
-                            <div className="text-xs font-bold text-slate-900">{item.name}</div>
-                            <div className="text-[10px] text-blue-700 font-semibold">{item.firm}</div>
-                          </div>
+
+                          {/* Quote */}
+                          <p className="text-xs sm:text-[13px] text-slate-600 italic leading-relaxed font-medium">
+                            &ldquo;{item.quote}&rdquo;
+                          </p>
                         </div>
 
-                        <div className="flex items-center gap-0.5 text-amber-400 bg-amber-50/80 px-2 py-0.5 rounded-full border border-amber-200/60 shrink-0">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
-                              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                            </svg>
-                          ))}
-                          <span className="text-[10px] font-bold text-amber-800 ml-0.5">5.0</span>
-                        </div>
+                        {item.stats && (
+                          <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold">
+                            <span className="text-emerald-700 flex items-center gap-1">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                              Verified Result
+                            </span>
+                            <span className="text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded">
+                              {item.stats}
+                            </span>
+                          </div>
+                        )}
                       </div>
 
-                      {/* Middle: Video */}
-                      {item.videoUrl && (
-                        <div className="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 mb-3.5 shadow-xs">
-                          <video
-                            controls
-                            playsInline
-                            preload="metadata"
-                            className="w-full h-full object-cover"
-                            src={item.videoUrl}
-                          >
-                            Your browser does not support the video tag.
-                          </video>
+                      {/* Right: Portrait Video */}
+                      <div className="sm:col-span-5 flex items-center justify-center">
+                        <div className="relative aspect-[3/4] sm:aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-inner">
+                          {item.videoUrl ? (
+                            <video
+                              controls
+                              playsInline
+                              preload="metadata"
+                              className="w-full h-full object-cover"
+                              src={item.videoUrl}
+                            >
+                              Your browser does not support the video tag.
+                            </video>
+                          ) : null}
                         </div>
-                      )}
-
-                      {/* Bottom: Quote (2-3 lines) */}
-                      <p className="text-xs text-slate-600 italic leading-relaxed line-clamp-3">
-                        &ldquo;{item.quote}&rdquo;
-                      </p>
+                      </div>
                     </div>
                   </div>
                 )
