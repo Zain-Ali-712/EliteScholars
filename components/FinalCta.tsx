@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { SITE } from '@/data/config'
 
 interface FinalCtaProps {
@@ -8,13 +7,6 @@ interface FinalCtaProps {
 }
 
 export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
-  const [email, setEmail] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    onOpenBooking()
-  }
-
   return (
     <section id="cta" className="py-8 sm:py-10 md:py-12 bg-gradient-to-b from-white via-[#F8FAFF] to-white border-t border-slate-200/80 relative overflow-hidden">
       {/* Background Subtle Texture */}
@@ -55,28 +47,16 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
               Schedule a 15-minute territory review &mdash; lock in dedicated seller appointment outreach in your market.
             </p>
 
-            {/* Signature Pill Capsule (Seamless Round White Input + Button with Proper Arrow) */}
-            <form 
-              onSubmit={handleSubmit}
-              className="w-full max-w-lg mx-auto rounded-full bg-white border-2 border-blue-300/90 p-1.5 shadow-xl shadow-blue-500/10 hover:border-blue-400 focus-within:border-blue-600 focus-within:ring-4 focus-within:ring-blue-500/15 transition-all duration-300 flex flex-col sm:flex-row items-center gap-1.5 group/capsule"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                style={{ outline: 'none', boxShadow: 'none' }}
-                className="w-full sm:flex-1 bg-transparent px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none rounded-full text-center sm:text-left"
-              />
+            {/* CTA Button */}
+            <div className="w-full max-w-sm mx-auto flex justify-center mt-2">
               <button
-                type="submit"
-                className="w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-extrabold text-xs sm:text-sm px-5 sm:px-6 py-2.5 sm:py-3 flex items-center justify-center gap-2.5 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] cursor-pointer group shrink-0"
+                onClick={onOpenBooking}
+                className="w-full rounded-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-extrabold text-sm px-8 py-4 flex items-center justify-center gap-3 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.02] cursor-pointer group"
               >
                 <span>Book Strategy Call</span>
-                {/* Circular Arrow Badge with Proper Arrow */}
-                <span className="w-6 h-6 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shrink-0 group-hover:bg-white/30 transition-colors">
+                <span className="w-7 h-7 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shrink-0 group-hover:bg-white/30 transition-colors">
                   <svg 
-                    className="w-3.5 h-3.5 text-white animate-arrow-blink group-hover:animate-none group-hover:translate-x-0.5 group-hover:opacity-100 transition-all duration-200" 
+                    className="w-4 h-4 text-white animate-arrow-blink group-hover:animate-none group-hover:translate-x-0.5 group-hover:opacity-100 transition-all duration-200" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -85,7 +65,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
                   </svg>
                 </span>
               </button>
-            </form>
+            </div>
 
             {/* Trust Line Under Capsule */}
             <p className="text-[11px] sm:text-xs text-slate-500 mt-3 font-medium">
