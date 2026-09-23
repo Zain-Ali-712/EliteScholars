@@ -9,6 +9,7 @@ interface PricingProps {
 
 export default function Pricing({ onOpenBooking }: PricingProps) {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'quarterly'>('monthly')
+  const [region, setRegion] = useState<'US' | 'UK'>('US')
 
   const cardAccents = [
     {
@@ -96,15 +97,49 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
           </div>
         </div>
 
+        {/* US / UK Region-Currency Toggle */}
+        <div className="flex justify-center mb-10 -mt-4">
+          <div className="inline-flex p-1.5 bg-slate-100 rounded-full border border-slate-200 shadow-inner gap-1">
+            <button
+              type="button"
+              onClick={() => setRegion('US')}
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                region === 'US'
+                  ? 'bg-white text-slate-900 shadow-md'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <span>🇺🇸</span>
+              <span>US ($)</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setRegion('UK')}
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                region === 'UK'
+                  ? 'bg-white text-slate-900 shadow-md'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <span>🇬🇧</span>
+              <span>UK (£)</span>
+            </button>
+          </div>
+        </div>
+
         {/* 3 Tier Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-7 items-stretch mb-10">
           {PRICING_PLANS.map((plan, idx) => {
             const accent = cardAccents[idx]
             const isRec = plan.recommended
-            const displayPrice = billingCycle === 'quarterly' && plan.quarterlyPrice ? plan.quarterlyPrice : plan.price
+            const basePrice = region === 'UK' && plan.ukPrice ? plan.ukPrice : plan.price
+            const baseQuarterlyPrice = region === 'UK' ? plan.ukQuarterlyPrice ?? plan.ukPrice : plan.quarterlyPrice
+            const displayPrice = billingCycle === 'quarterly' && baseQuarterlyPrice ? baseQuarterlyPrice : basePrice
             const displayPeriod = billingCycle === 'quarterly' && plan.quarterlyPeriod ? plan.quarterlyPeriod : plan.period
             const displayCommitment = billingCycle === 'quarterly' && plan.quarterlyCommitment ? plan.quarterlyCommitment : plan.commitment
-            const hasDiscount = billingCycle === 'quarterly' && plan.quarterlyPrice && plan.quarterlyPrice !== plan.price
+            const hasDiscount = billingCycle === 'quarterly' && baseQuarterlyPrice && baseQuarterlyPrice !== basePrice
+            const displayPerLeadCost = region === 'UK' && plan.ukPerLeadCost ? plan.ukPerLeadCost : plan.perLeadCost
+            const displayPerLeadCosts = region === 'UK' && plan.ukPerLeadCosts ? plan.ukPerLeadCosts : plan.perLeadCosts
 
             return (
               <div
@@ -157,11 +192,11 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                     {/* Key Specs Breakdown Grid */}
                     <div className="mt-4 space-y-2 bg-white/80 backdrop-blur-sm rounded-2xl p-2.5 sm:p-3 border border-slate-200/80 shadow-2xs">
                       {/* Cost Per Lead - Separated Lines for Pay Per Lead */}
-                      {plan.perLeadCosts ? (
+                      {displayPerLeadCosts ? (
                         <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-1 text-xs">
                           <span className="text-slate-500 font-medium shrink-0 pt-0.5">Cost Per Lead:</span>
                           <div className="text-left sm:text-right space-y-1">
-                            {plan.perLeadCosts.map((cost, cIdx) => (
+                            {displayPerLeadCosts.map((cost, cIdx) => (
                               <div key={cIdx} className="font-bold text-slate-900 bg-amber-50/70 border border-amber-200/60 px-2 py-0.5 rounded-md text-[11px]">
                                 {cost}
                               </div>
@@ -171,7 +206,7 @@ export default function Pricing({ onOpenBooking }: PricingProps) {
                       ) : (
                         <div className="flex justify-between items-center text-xs">
                           <span className="text-slate-500 font-medium">Cost Per Lead:</span>
-                          <span className="font-bold text-slate-900">{plan.perLeadCost}</span>
+                          <span className="font-bold text-slate-900">{displayPerLeadCost}</span>
                         </div>
                       )}
 

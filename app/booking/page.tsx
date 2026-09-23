@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE, TESTIMONIALS } from '@/data/config'
 import Footer from '@/components/Footer'
+import CalendlyEmbed from '@/components/CalendlyEmbed'
 
 export const metadata: Metadata = {
   title: 'Book a Strategy Call with Ahsaan Mansha | BrokerLeadz',
@@ -133,19 +134,11 @@ export default function BookingPage() {
                   </div>
                 </div>
 
-                {/* Primary Action Button */}
+                {/* Embedded Calendly Widget */}
                 <div className="space-y-3">
-                  <a
-                    href={SITE.calendlyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary w-full text-sm sm:text-base py-4 px-8 rounded-full shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 transition-all flex items-center justify-center gap-2.5 cursor-pointer font-extrabold"
-                  >
-                    <span>Choose a Date &amp; Time on Calendly</span>
-                    <svg className="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                  <div className="rounded-2xl overflow-hidden border border-slate-100">
+                    <CalendlyEmbed url={SITE.calendlyUrl || ''} minHeight={680} />
+                  </div>
 
                   {/* Micro reassurance */}
                   <p className="text-xs text-slate-500 flex items-center justify-center gap-1.5 font-medium text-center pt-1">
@@ -154,6 +147,15 @@ export default function BookingPage() {
                     </svg>
                     <span>Instant calendar invite sent &bull; Select your local timezone</span>
                   </p>
+
+                  <a
+                    href={SITE.calendlyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center text-xs font-bold text-slate-400 hover:text-blue-600 transition-colors"
+                  >
+                    Having trouble? Open scheduler in a new tab &rarr;
+                  </a>
                 </div>
 
               </div>

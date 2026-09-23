@@ -56,6 +56,10 @@ export interface PricingPlan {
   features: string[]
   recommended?: boolean
   ctaText: string
+  ukPrice?: string
+  ukQuarterlyPrice?: string
+  ukPerLeadCost?: string
+  ukPerLeadCosts?: string[]
 }
 
 export interface TrustedClient {
@@ -279,6 +283,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Targeted by revenue, business type, and owner profile',
     ],
     ctaText: 'Select Basic Plan',
+    ukPrice: '£1,100',
+    ukQuarterlyPrice: '£880',
   },
   {
     name: 'Pro',
@@ -302,6 +308,8 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Targeted by revenue, business type, and owner profile',
     ],
     ctaText: 'Select Pro Plan',
+    ukPrice: '£1,850',
+    ukQuarterlyPrice: '£1,480',
   },
   {
     name: 'Pay Per Lead',
@@ -329,6 +337,13 @@ export const PRICING_PLANS: PricingPlan[] = [
       'Targeted by revenue, business type, and owner profile',
     ],
     ctaText: 'Start Pay Per Lead',
+    ukPrice: '£520',
+    ukQuarterlyPrice: '£520',
+    ukPerLeadCost: '£70 / lead (500k-1M) • £110 / lead (1M+)',
+    ukPerLeadCosts: [
+      '£70 / lead (500k-1M)',
+      '£110 / lead (1M+)',
+    ],
   },
 ]
 
